@@ -21,6 +21,7 @@
  */
 package test.fede.workspace.domain.internal;
 
+import static org.eclipse.swtbot.swt.finder.SWTBotAssert.assertEnabled;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -38,6 +39,7 @@ import java.util.concurrent.TimeoutException;
 
 import junit.framework.Assert;
 
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
 import org.junit.After;
@@ -54,6 +56,7 @@ import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.CadseRuntime;
 import fr.imag.adele.cadse.core.ChangeID;
+import fr.imag.adele.cadse.core.ContentItem;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.Link;
@@ -66,6 +69,7 @@ import fr.imag.adele.cadse.core.delta.ItemDelta;
 import fr.imag.adele.cadse.core.delta.LinkKey;
 import fr.imag.adele.cadse.core.delta.LinkDelta;
 import fr.imag.adele.cadse.core.impl.CadseIllegalArgumentException;
+import fr.imag.adele.cadse.core.key.SpaceKeyType;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 
 /**
@@ -861,6 +865,92 @@ Item currentItem;
 	}
 	
 	@Test
+	public void testgetItemDeleted() throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		assertNotNull(newaC);
+		copy = senario.getLogicalWorkspace().createTransaction();
+		Item a1 = copy.getItem(newaC.getId(), false);
+		assertNotNull(a1);
+		assertEquals(a1, copy.getItem(newaC.getId()));
+		assertEquals(a1, copy.getItem(newaC));
+		a1.delete(true);
+		Item a2 = copy.getItem(newaC.getId(), false);
+		assertNull(a2);
+		assertNull(copy.getItem(newaC.getId()));
+		assertNull(copy.getItem(newaC));
+		assertEquals(a1, copy.getItem(newaC.getId(), true));		
+	}
+	
+	@Test
+	public void testKey() throws CadseException {
+		SpaceKeyType spaceKeytype = new SpaceKeyType(TYPE_A, null);
+		TYPE_A.setSpaceKeyType(spaceKeytype);
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		assertNotNull(newa);
+		String k1 = senario.generator.newName();
+		newa.setName(k1);
+		assertTrue(copy.containsSpaceKey(newa.getKey()));
+		assertTrue(copy.containsSpaceKey(spaceKeytype.computeKey(k1, null)));
+		assertEquals(newa, copy.getItem(newa.getKey()));	
+		assertNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
+		copy.commit();
+		
+		Item newaC = newa.getBaseItem();
+		assertNotNull(newaC);
+		assertEquals(newaC, senario.getLogicalWorkspace().getItem(newa.getKey()));	
+		
+		// delete
+		copy = senario.getLogicalWorkspace().createTransaction();
+		Item a1 = copy.getItem(newaC.getId(), false);
+		assertNotNull(a1);
+		a1.delete(true);
+		assertNotNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
+		assertTrue(!copy.containsSpaceKey(newa.getKey()));
+		assertTrue(!copy.containsSpaceKey(spaceKeytype.computeKey(k1, null)));
+		assertNull(copy.getItem(newa.getKey()));	
+		copy.commit();
+		assertNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
+		
+		
+		//recreate a
+		copy = senario.getLogicalWorkspace().createTransaction();
+		newa = copy.createItem(TYPE_A, null, null);
+		assertNotNull(newa);
+		k1 = senario.generator.newName();
+		newa.setName(k1);
+		assertTrue(copy.containsSpaceKey(newa.getKey()));
+		assertTrue(copy.containsSpaceKey(spaceKeytype.computeKey(k1, null)));
+		assertEquals(newa, copy.getItem(newa.getKey()));	
+		assertNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
+		copy.commit();
+		newaC = newa.getBaseItem();
+
+		//rename
+		copy = senario.getLogicalWorkspace().createTransaction();
+		a1 = copy.getItem(newaC.getId(), false);
+		assertNotNull(a1);
+		String k2 = senario.generator.newName();
+		a1.setName(k2);
+		assertNull(senario.getLogicalWorkspace().getItem(a1.getKey()));
+		assertTrue(!copy.containsSpaceKey(newa.getKey()));
+		assertTrue(!copy.containsSpaceKey(spaceKeytype.computeKey(k1, null)));
+		assertNull(copy.getItem(newa.getKey()));	
+		
+		assertTrue(copy.containsSpaceKey(a1.getKey()));
+		assertTrue(copy.containsSpaceKey(spaceKeytype.computeKey(k2, null)));
+		assertNotNull(copy.getItem(a1.getKey()));	
+		assertNotNull(copy.getItem(spaceKeytype.computeKey(k2, null)));	
+		
+		copy.commit();
+		assertNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
+		assertEquals(newaC, senario.getLogicalWorkspace().getItem(a1.getKey()));	
+	}
+	
+	@Test
 	public void testgetOutgoingLinkMax1_notfound() throws CadseException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item newa = copy.createItem(TYPE_A, null, null);
@@ -1124,13 +1214,48 @@ Item currentItem;
 		
 		Item TypeACommited = createItemType(dm);
 		Item TypeBCommited = createItemType(dm);
-		
 		ItemDelta LinkA_TypeA = createLinkType(TypeACommited, TypeBCommited);
 		
 		checkIncomingLinks(TypeACommited);
 		checkIncomingLinks(TypeBCommited);
 		checkIncomingLinks(LinkA_TypeA.getBaseItem());
 		checkIncomingLinks(dm);
+	}
+	
+	@Test
+	public void testRenameCadseg() throws CadseException {
+		
+		Item cadseDefCommited = createCadseDefinition();
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemType(dm);
+		Item TypeBCommited = createItemType(dm);
+		ItemDelta LinkA_TypeA = createLinkType(TypeACommited, TypeBCommited);
+		
+		String cadseName = cadseDefCommited.getName();
+		IProject p = cadseDefCommited.getMainMappingContent(IProject.class);
+		assertNotNull(p);
+		assertEquals(cadseDefCommited.getQualifiedName(), p.getName());
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseName, cadseDefCommited.getQualifiedName());
+		
+		ContentItem ci = cadseDefCommited.getContentItem();
+		assertNotNull(ci);
+		assertEquals(ci, cadseDefCommited.getOutgoingItem(CadseGCST.ITEM_lt_CONTENTS, true));
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		String newName = senario.generator.newName();
+		ItemDelta renameCadseDefItem = copy.getItem(cadseDefCommited);
+		renameCadseDefItem.setName(newName);
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, renameCadseDefItem.getQualifiedName());
+		copy.commit();
+		assertEquals(newName, cadseDefCommited.getName());
+		p = cadseDefCommited.getMainMappingContent(IProject.class);
+		assertNotNull(p);
+		assertEquals(cadseDefCommited.getQualifiedName(), p.getName());
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, cadseDefCommited.getQualifiedName());
 		
 	}
 
