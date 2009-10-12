@@ -484,6 +484,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ui
         --> CadseDefinition CadseG
         --> ItemType Display
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='356812f5-2ada-43d6-9bff-491732a7a7a4' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ui' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -815,6 +816,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ui
         --> CadseDefinition CadseG
         --> ItemType Display
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='f7ccd609-f0af-4ca3-a900-280de99772ee' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ui' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -1024,6 +1026,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType DText
         --> CadseDefinition CadseG
         --> ItemType Display
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='3766ca7e-b9b2-42f2-8c24-466a094cad27' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ui' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -1306,19 +1309,18 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType ModelController
           --> ItemType Display
         --> CadseDefinition CadseG
-        --> ItemType DSymbolicBitMapUI
         --> ItemType DTree
         --> ItemType DCheckBox
-        --> ItemType DText
         --> ItemType DBrowser
         --> ItemType DCombo
-        --> ItemType DCheckedList
-        --> ItemType DList
+        --> ItemType DText
         --> ItemType DCheckedTree
+        --> ItemType DSymbolicBitMapUI
+        --> ItemType DList
+        --> ItemType DCheckedList
         --> ItemType Item
         --> ItemType InteractionController
         --> ItemType ModelController
-        --> CadseDefinition CadseG
         --> ItemType DCombo
         --> ItemType DCheckBox
         --> ItemType DCheckedList
@@ -1617,6 +1619,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType Display
         --> ItemType Attribute
         --> ItemType Field
+        --> CadseDefinition CadseG
         --> ItemType Display
         --> ItemType Attribute
         --> ItemType Field
@@ -1945,7 +1948,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType DSymbolicBitMapUI
         --> CadseDefinition CadseG
         --> ItemType Display
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='310aa05b-8f57-4f13-877e-215c5c68ea98' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ui' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -2084,6 +2086,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ui
         --> CadseDefinition CadseG
         --> ItemType Display
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='e5832896-73a6-42e5-ba9e-bfe34c694059' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -2174,7 +2177,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType IC_EnumForBrowser_Combo
         --> ItemType IC_StaticArrayOfObjectForBrowser_Combo
         --> ItemType InteractionController
-        --> CadseDefinition CadseG
         --> ItemType IC_EnumForBrowser_Combo
         --> ItemType IC_StaticArrayOfObjectForBrowser_Combo
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='b31f693e-e60f-4d33-8161-054508ac0d7b' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
@@ -2571,7 +2573,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ic
         --> CadseDefinition CadseG
         --> ItemType IC_AbstractForBrowser_Combo
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='371e0b2e-6598-4a85-b8cb-2bd749e1b7b0' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -2665,7 +2666,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType IC_FileResourceForBrowser_Combo_List
         --> CadseDefinition CadseG
         --> ItemType IC_ResourceTreeDialogForBrowser_Combo_List
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='5d0c7dee-0339-4ff5-bd09-5ec076ab3ca3' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -2774,7 +2774,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ic
         --> CadseDefinition CadseG
         --> ItemType InteractionController
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='8dc7c401-fd47-4710-9067-56a5de5ac8a7' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -2898,7 +2897,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ic
         --> CadseDefinition CadseG
         --> ItemType IC_LinkForBrowser_Combo_List
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='c2daa52e-5b72-4dac-84fd-c0a1f6007b06' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -2928,10 +2926,9 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> String id-runtime
         --> DataModel ic
         --> CadseDefinition CadseG
-        --> ItemType IC_FileResourceForBrowser_Combo_List
         --> ItemType IC_JarResourceForBrowser_Combo_List
+        --> ItemType IC_FileResourceForBrowser_Combo_List
         --> ItemType IC_AbstractTreeDialogForList_Browser_Combo
-        --> CadseDefinition CadseG
         --> ItemType IC_JarResourceForBrowser_Combo_List
         --> ItemType IC_FileResourceForBrowser_Combo_List
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='2471066e-d759-4d00-bfe1-d904c9684f15' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
@@ -3102,6 +3099,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ic
         --> CadseDefinition CadseG
         --> ItemType InteractionController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='3b63eab7-c487-45b5-b181-7dd3b663fde2' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3135,7 +3133,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ic
         --> CadseDefinition CadseG
         --> ItemType InteractionController
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='de8f9bbc-7ed2-48dd-bef3-5bb766137ede' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3168,16 +3165,16 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> Link parent
         --> DataModel ic
         --> CadseDefinition CadseG
-        --> ItemType JavaElementTreeController
-        --> ItemType IC_AbstractForChecked
-        --> ItemType IC_AbstractForBrowser_Combo
-        --> ItemType IC_FolderResource_ForBrowser_Combo_List
-        --> ItemType IC_JavaClassForBrowser_Combo
         --> ItemType PackageListController
-        --> ItemType IC_EnumForList
+        --> ItemType IC_JavaClassForBrowser_Combo
+        --> ItemType JavaElementTreeController
         --> ItemType IC_AbstractForList
         --> ItemType IC_AbstractTreeDialogForList_Browser_Combo
         --> ItemType IC_BooleanText
+        --> ItemType IC_EnumForList
+        --> ItemType IC_AbstractForBrowser_Combo
+        --> ItemType IC_AbstractForChecked
+        --> ItemType IC_FolderResource_ForBrowser_Combo_List
         --> ItemType Item
         --> ItemType IC_AbstractTreeDialogForList_Browser_Combo
         --> ItemType JavaElementTreeController
@@ -3219,7 +3216,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel ic
         --> CadseDefinition CadseG
         --> ItemType InteractionController
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='581c6f01-f6a5-4786-a136-3bbcec53adf7' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='ic' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3390,6 +3386,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel mc
         --> CadseDefinition CadseG
         --> ItemType ModelController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='60566074-9eb2-48bf-8a88-7e611e2e945e' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3504,9 +3501,10 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> String name
           --> ItemType LinkModelController
         --> CadseDefinition CadseG
-        --> ItemType MC_LinkToBoolean
         --> ItemType MC_DestLink
+        --> ItemType MC_LinkToBoolean
         --> ItemType ModelController
+        --> CadseDefinition CadseG
         --> ItemType MC_DestLink
         --> ItemType MC_LinkToBoolean
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='01bc4482-435a-467f-9715-1e6572b7a849' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
@@ -3582,6 +3580,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel mc
         --> CadseDefinition CadseG
         --> ItemType ModelController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='44f90fb9-a242-485d-b85c-98a7b7295b68' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3615,6 +3614,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel mc
         --> CadseDefinition CadseG
         --> ItemType LinkModelController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='c70a8552-349a-4285-9101-501748ce5a7e' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3677,6 +3677,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel mc
         --> CadseDefinition CadseG
         --> ItemType ModelController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='69462bcb-c14b-402f-a9b5-2631c78a743d' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3709,19 +3710,20 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> Link parent
         --> DataModel mc
         --> CadseDefinition CadseG
-        --> ItemType MC_NameAttribute
-        --> ItemType StringToResourceListModelController
-        --> ItemType StringToBooleanModelController
-        --> ItemType MC_Date
-        --> ItemType StringToEnumModelController
-        --> ItemType StringToPackageModelController
-        --> ItemType IntModelController
-        --> ItemType LinkModelController
-        --> ItemType ListOfStringModelController
-        --> ItemType StringToOneResourceModelController
         --> ItemType MC_StringToJavaElement
+        --> ItemType LinkModelController
+        --> ItemType IntModelController
+        --> ItemType StringToEnumModelController
+        --> ItemType StringToResourceListModelController
+        --> ItemType MC_NameAttribute
+        --> ItemType StringToPackageModelController
+        --> ItemType StringToBooleanModelController
+        --> ItemType StringToOneResourceModelController
+        --> ItemType ListOfStringModelController
+        --> ItemType MC_Date
         --> ItemType MC_StringListToEnumList
         --> ItemType Item
+        --> CadseDefinition CadseG
         --> ItemType StringToEnumModelController
         --> ItemType MC_StringToJavaElement
         --> ItemType StringToBooleanModelController
@@ -3794,6 +3796,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType IntModelController
         --> CadseDefinition CadseG
         --> ItemType ModelController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='c35779b4-b7e3-4794-bcb9-564c8da48d34' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -3871,6 +3874,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel mc
         --> CadseDefinition CadseG
         --> ItemType LinkModelController
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='bdec8ea0-a86f-4b7b-808b-59ccc98c9c68' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='mc' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -4060,8 +4064,8 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
             --> ItemType ComposerLink
             --> ItemType EclipseComposer
           --> CadseDefinition CadseG
-          --> ItemType AJProjectComposer
           --> ItemType JavaProjectComposer
+          --> ItemType AJProjectComposer
           --> ItemType Composer
           --> ItemType ComposerLink
           --> ItemType AJProjectComposer
@@ -4139,6 +4143,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> CadseDefinition CadseG
           --> ItemType EclipseComposer
           --> ItemType ComposerLink
+          --> CadseDefinition CadseG
           --> ItemType ComposerLink
           CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='2781b402-07e3-492d-b2cc-8a37bf68cb3f' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
             --> ContentItem Content of item creation dialog (ContentItem)
@@ -4209,6 +4214,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> CadseDefinition CadseG
           --> ItemType EclipseComposer
           --> ItemType ComposerLink
+          --> CadseDefinition CadseG
           --> ItemType ComposerLink
           CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='63e61c9c-cb34-41f1-b325-08d99ea7467e' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='java-composer' TW-version='0' requireNewRev='true' >
             --> ContentItem Content of item creation dialog (ContentItem)
@@ -4314,8 +4320,8 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
             --> String id-runtime
             --> ItemType Exporter
           --> CadseDefinition CadseG
-          --> ItemType EclipseExporter
           --> ItemType EclipseReExporter
+          --> ItemType EclipseExporter
           --> ItemType Item
           --> ItemType EclipseExporter
           --> ItemType EclipseReExporter
@@ -4465,8 +4471,8 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> DataModel exporter
           --> CadseDefinition CadseG
           --> ItemType JavaExporter
-          --> ItemType AspectJExporter
           --> ItemType FolderExporter
+          --> ItemType AspectJExporter
           --> ItemType Exporter
           --> ItemType AspectJExporter
           --> ItemType JavaExporter
@@ -4508,6 +4514,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> CadseDefinition CadseG
           --> ItemType JavaReExporter
           --> ItemType Exporter
+          --> CadseDefinition CadseG
           --> ItemType JavaReExporter
           CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='600ea8a4-a477-43b1-b64a-b7f91e044bb3' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
             --> ContentItem Content of item creation dialog (ContentItem)
@@ -4691,7 +4698,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> DataModel exporter
           --> CadseDefinition CadseG
           --> ItemType EclipseExporter
-          --> CadseDefinition CadseG
           CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='b08ee772-ded5-4598-855e-a5b2919ea52d' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='java-exporter' TW-version='0' requireNewRev='true' >
             --> ContentItem Content of item creation dialog (ContentItem)
             --> ItemType CreationDialog
@@ -4738,6 +4744,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> CadseDefinition CadseG
           --> ItemType AspectJReExporter
           --> ItemType EclipseReExporter
+          --> CadseDefinition CadseG
           --> ItemType AspectJReExporter
           CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='734c6d45-d22e-4aff-838a-7381da49427b' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='java-re-exporter' TW-version='0' requireNewRev='true' >
             --> ContentItem Content of item creation dialog (ContentItem)
@@ -4788,6 +4795,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Item
         --> ItemType CompositeItemType
+        --> CadseDefinition CadseG
         --> ItemType CompositeItemType
         CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='56bd2ec4-db9c-4e24-ba6d-21034077925c' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -4928,7 +4936,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType EclipseComposer
         --> ItemType Item
         --> ItemType ComposerLink
-        --> CadseDefinition CadseG
         --> ItemType EclipseComposer
         --> ItemType ComposerLink
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='3c64eac0-1f30-4b50-90b8-15b7ccf2e55a' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
@@ -5387,25 +5394,24 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> String name
           --> ItemType Attribute
         --> CadseDefinition CadseG
-        --> ItemType UnresolvedAttributeType
-        --> AttributeItemType Enum
-        --> AttributeItemType URL
-        --> AttributeItemType Key
-        --> AttributeItemType Double
-        --> ItemType SymbolicBitMap
-        --> ItemType Boolean
-        --> AttributeItemType Long
-        --> ItemType Link
-        --> ItemType Struct
-        --> ItemType List
-        --> AttributeItemType String
-        --> ItemType Integer
-        --> ItemType UUID
-        --> AttributeItemType ComputedString
         --> AttributeItemType Date
+        --> ItemType UUID
+        --> ItemType List
+        --> AttributeItemType ComputedString
+        --> AttributeItemType String
+        --> ItemType Link
+        --> AttributeItemType Double
+        --> ItemType Struct
+        --> AttributeItemType Long
+        --> AttributeItemType Enum
+        --> ItemType Boolean
+        --> AttributeItemType URL
+        --> ItemType Integer
+        --> ItemType UnresolvedAttributeType
+        --> AttributeItemType Key
+        --> ItemType SymbolicBitMap
         --> ItemType Item
         --> ItemType WCListener
-        --> CadseDefinition CadseG
         --> ItemType Struct
         --> AttributeItemType Enum
         --> AttributeItemType Date
@@ -6722,6 +6728,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType ItemType
         --> ItemType Link
         --> ItemType ItemType
+        --> CadseDefinition CadseG
         --> ItemType ItemType
         --> ItemType Link
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='c2d676ef-00d8-4bd5-a183-71d79d1f8145' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
@@ -7313,6 +7320,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> AttributeItemType String
         --> CadseDefinition CadseG
         --> ItemType Attribute
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='5270a9df-c53f-4c21-8a36-5fc3740b2d65' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -7717,6 +7725,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel attributes
         --> CadseDefinition CadseG
         --> ItemType Attribute
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='5c6a851a-9104-4d2a-bdf6-5203418fadcc' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -8014,6 +8023,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> AttributeItemType ComputedString
         --> CadseDefinition CadseG
         --> ItemType Attribute
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='9fdb68bf-c4a7-4244-906c-9a101439dfa9' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -8186,6 +8196,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel attributes
         --> CadseDefinition CadseG
         --> ItemType Attribute
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='b80034f7-828b-4717-9d09-0fb91e67fd73' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -8823,6 +8834,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Attribute
         --> ItemType Attribute
+        --> CadseDefinition CadseG
         --> ItemType Attribute
         CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='d2103a08-e51b-433f-b81c-7c9aec7aa196' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -8924,7 +8936,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel attributes
         --> CadseDefinition CadseG
         --> ItemType Attribute
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='d6aa9752-0547-4dbf-8ae2-d7258c8314a9' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -9014,7 +9025,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Item
         --> ItemType ViewItemType
-        --> CadseDefinition CadseG
         --> ItemType ViewItemType
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='4409c451-2d40-44a6-9ee9-d360ac17d3f3' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -9152,7 +9162,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType Item
         --> ItemType ItemType
         --> ItemType ViewLinkType
-        --> CadseDefinition CadseG
         --> ItemType ItemType
         --> ItemType ViewLinkType
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='6c395d31-252d-499a-933d-90c6ba68e850' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
@@ -9366,7 +9375,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Item
         --> ItemType Link
-        --> CadseDefinition CadseG
         --> ItemType Link
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='eb036542-c3ee-4acf-b6bb-4ec391e176c0' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -9547,7 +9555,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Item
         --> ItemType View
-        --> CadseDefinition CadseG
         --> ItemType View
         CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='44986435-bf90-464f-8e7a-6609ef62154d' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -9784,6 +9791,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel content
         --> CadseDefinition CadseG
         --> ItemType ContentItemType
+        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='d7290b72-c87c-4872-bd60-492842274176' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='content-item' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -9857,8 +9865,8 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> String name
           --> ItemType JavaProjectContentModel
         --> CadseDefinition CadseG
-        --> ItemType PDEProjectContentModel
         --> ItemType AspectJProjectContentModel
+        --> ItemType PDEProjectContentModel
         --> ItemType ProjectContentModel
         --> ItemType ResourceContentModel
         --> ItemType PDEProjectContentModel
@@ -10678,9 +10686,10 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> Link parent
         --> DataModel content
         --> CadseDefinition CadseG
-        --> ItemType FolderContentModel
         --> ItemType FileContentModel
+        --> ItemType FolderContentModel
         --> ItemType ContentItemType
+        --> CadseDefinition CadseG
         --> ItemType FileContentModel
         --> ItemType FolderContentModel
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='f2af80c1-811b-49c8-bdf1-aade4539f5fc' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='content-item' TW-version='0' requireNewRev='true' >
@@ -11000,12 +11009,11 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> String name
           --> ItemType ContentItemType
         --> CadseDefinition CadseG
-        --> ItemType ResourceContentModel
-        --> ItemType ProjectContentModel
         --> ItemType JavaJarFileContentModel
+        --> ItemType ResourceContentModel
         --> ItemType SubContentModel
+        --> ItemType ProjectContentModel
         --> ItemType Item
-        --> CadseDefinition CadseG
         --> ItemType ProjectContentModel
         --> ItemType ResourceContentModel
         --> ItemType JavaJarFileContentModel
@@ -11103,6 +11111,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType JavaProjectContentModel
         --> ItemType ResourceContentModel
+        --> CadseDefinition CadseG
         --> ItemType ResourceContentModel
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='6dfb463d-0fa2-44cc-a2c9-5d0e2bcf722c' committedDate='0' item-readonly='false' committedBy='' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='content-item' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -11917,6 +11926,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType ItemType
         --> ItemType EnumType
         --> ItemType ExtItemType
+        --> CadseDefinition CadseG
         --> ItemType DataModel
         --> ItemType ItemType
         --> ItemType EnumType
@@ -11992,7 +12002,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType EnumType
         --> CadseDefinition CadseG
         --> ItemType Item
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='7849cdaf-e6d5-41fd-8220-ba80071f4307' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -12525,7 +12534,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType ItemType
         --> ItemType Page
         --> ItemType Page
-        --> CadseDefinition CadseG
         --> ItemType AttributeItemType
         --> ItemType ExtItemType
         --> ItemType ItemType
@@ -13285,7 +13293,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> ItemType UIListener
         --> ItemType Page
         --> ItemType Field
-        --> CadseDefinition CadseG
         --> ItemType Field
         --> ItemType UIListener
         --> ItemType Page
@@ -13589,6 +13596,7 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Item
         --> ItemType Field
+        --> CadseDefinition CadseG
         --> ItemType Field
         CreationDialog creation-dialog<display-name='creation dialog' revModified='false' id='e002d1b7-bd14-42ee-a734-14955d87e29a' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
@@ -14018,14 +14026,13 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
           --> ItemType ContentItemType
           --> ItemType Item
         --> CadseDefinition CadseG
-        --> ItemType AbstractItemType
         --> ItemType CadseRuntime
+        --> ItemType AbstractItemType
         --> ItemType Item
         --> ItemType ItemType
         --> ItemType Item
         --> ItemType Attribute
         --> ItemType ContentItemType
-        --> CadseDefinition CadseG
         --> ItemType CadseRuntime
         --> ItemType AbstractItemType
         --> ItemType ItemType
@@ -14502,7 +14509,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel dataModel
         --> CadseDefinition CadseG
         --> ItemType Item
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='a8396d2c-e897-42c4-b8dc-8f1181589b88' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog
@@ -14738,8 +14744,8 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> CadseDefinition CadseG
         --> ItemType Menu
         --> ItemType MenuGroup
-        --> ItemType DynamicActions
         --> ItemType MenuAction
+        --> ItemType DynamicActions
         --> ItemType Item
         --> CadseDefinition CadseG
         --> ItemType DynamicActions
@@ -14794,7 +14800,6 @@ CadseDefinition CadseG<id-runtime='2b50360d-d835-4e98-80a8-bc55fe5421e7' id='0dc
         --> DataModel actions
         --> CadseDefinition CadseG
         --> ItemType MenuAbstract
-        --> CadseDefinition CadseG
         CreationDialog creation-dialog<display-name='creation dialog' extends-dialog-controller='false' revModified='false' automatic-short-name='false' id='cef37eba-958c-4997-831f-9b8ae0a58043' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' generate-automatic-short-name='' TW-version='0' requireNewRev='true' >
           --> ContentItem Content of item creation dialog (ContentItem)
           --> ItemType CreationDialog

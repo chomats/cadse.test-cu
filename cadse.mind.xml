@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:c-cadse version="0" name="Model.Workspace.mind" xmlns:ns2="http://fr.imag.adele/fede/workspace/model">
     <item unique-name="Model.Workspace.mind" short-name="mind" is-readonly="false" is-hidden="false" id="e55e9031-58b1-4ea8-961c-d8701f8d33f1">
-        <link type="contents" destinationId="3db15120-e396-43f8-b334-f84e1457b704"/>
+        <link type="contents" destinationId="30e48306-4dac-44a2-bb19-5e5613ac540d"/>
         <link type="instance-of" destinationId="07461b19-b1c4-4f45-a86b-db96ca524030"/>
         <link type="modified-attributes" destinationId="9f495f63-f260-4169-9006-6263e224fa15"/>
         <link type="modified-attributes" destinationId="e52c6ea0-0612-4706-92c0-1d521e472bd1"/>
@@ -130,7 +130,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="packages" is-readonly="false" is-hidden="false" id="6143a650-18c1-48c6-a574-8e1bf24715bc">
-        <link type="contents" destinationId="808abe7d-4929-49db-af6a-c2accfd3716f"/>
+        <link type="contents" destinationId="214a7b2e-6ad2-49fc-a5ac-74920467d767"/>
         <link type="instance-of" destinationId="ac03a3ca-23d6-4c8d-ba5c-c84cb42ff9ea"/>
         <link type="modified-attributes" destinationId="a76dc735-0d84-463f-b6d7-0ba34e7649fc"/>
         <link type="modified-attributes" destinationId="dee98c9b-ef77-4844-b9ac-8598684e5072"/>
@@ -186,7 +186,7 @@
         <attributes-value tw-rev-specific="false" id="4f63a396-120f-43d5-bdec-3813ddb60241" value="true" key="part"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="80afce42-764a-45c1-acc8-cc43762d26c3">
-        <link type="contents" destinationId="6cff54cc-0656-4b88-9d6a-c730e12f2e49"/>
+        <link type="contents" destinationId="c0f710d4-c629-4915-b734-28606540aa8a"/>
         <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
         <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -208,7 +208,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Creation Page mind::LIBRARY::creation-page-Library" short-name="creation-page-Library" is-readonly="false" is-hidden="false" id="1b37a2ef-8f3b-4b4f-af56-291b81b3b6a1">
-        <link type="contents" destinationId="6610979c-9b02-4bd6-924e-05ed23a9635a"/>
+        <link type="contents" destinationId="f3e23552-b5dc-43ae-98d2-940538220d06"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -241,7 +241,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="Field mind::LIBRARY::creation-page-Library::packages" short-name="packages" is-readonly="false" is-hidden="false" id="69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7">
-        <link type="contents" destinationId="f5c61b3d-cae1-4aff-95de-9bbc731f5bb2"/>
+        <link type="contents" destinationId="eb12900d-ac21-4503-9864-57b2b82a357d"/>
         <link type="instance-of" destinationId="a1922398-35c7-4711-90e9-8ec54331c003"/>
         <link type="modified-attributes" destinationId="0acb5f5e-30d3-4597-82fe-3835b925acf2"/>
         <link type="modified-attributes" destinationId="bf93587e-e10e-4dcd-acb0-cddbb32589d9"/>
@@ -270,7 +270,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="display" is-readonly="false" is-hidden="false" id="3860de24-79d6-47dd-9461-3f424ea2dcb0">
-        <link type="contents" destinationId="fe06ca76-c108-489d-ac99-77384c34c84b"/>
+        <link type="contents" destinationId="6e5bf5e5-c3be-491a-ad40-280f940838c7"/>
         <link type="instance-of" destinationId="1c2a361d-5c31-4f66-88ff-fdbae6e27ec2"/>
         <link type="modified-attributes" destinationId="e5c86831-4f23-4b68-8b0a-458916b9818b"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -299,7 +299,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="ic" is-readonly="false" is-hidden="false" id="818af808-8a0f-419f-ad5f-822cb35afcbe">
-        <link type="contents" destinationId="4becbd89-3db3-4243-890e-b261d6a60364"/>
+        <link type="contents" destinationId="8fbfceda-d509-43a6-bcba-3174cc475269"/>
         <link type="instance-of" destinationId="08fcca26-7bb7-454e-bbd3-da34b8e12680"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
         <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
@@ -321,7 +321,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="mc" is-readonly="false" is-hidden="false" id="516afad8-7673-4c2f-beeb-dfe9f8c5a3bf">
-        <link type="contents" destinationId="c45c3da7-c78c-48a2-a502-5f1aea1c2f53"/>
+        <link type="contents" destinationId="9d3146aa-75ed-496b-8690-a53ed5e3b008"/>
         <link type="instance-of" destinationId="8b02bffe-8011-45e3-b7bd-afbcec04a5cb"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
         <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
@@ -341,7 +341,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="f75217eb-6676-41c2-b3f2-a07e47308291">
-        <link type="contents" destinationId="5e094d37-fae4-4803-8fc3-07e6d3b31497"/>
+        <link type="contents" destinationId="7a33758e-7426-4b95-a0f2-f919ca62113a"/>
         <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
         <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -363,7 +363,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Modification Page mind::LIBRARY::modification-page-Library" short-name="modification-page-Library" is-readonly="false" is-hidden="false" id="7ecb9a2a-036f-4433-94e4-f2e7efcd3555">
-        <link type="contents" destinationId="3bfbfc28-e091-418e-8fd2-8ee32b777b39"/>
+        <link type="contents" destinationId="e8dfee02-edd5-44e7-91ab-e2dd9b9ae137"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -396,7 +396,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="Field mind::LIBRARY::modification-page-Library::packages" short-name="packages" is-readonly="false" is-hidden="false" id="e63b03e2-a0df-44ee-b6fe-cf9f348bcbb6">
-        <link type="contents" destinationId="634f8224-b5e4-486b-9e13-5d25102fc0d5"/>
+        <link type="contents" destinationId="78d1b2e4-fd75-415a-8c24-4f0a56bd330c"/>
         <link type="instance-of" destinationId="a1922398-35c7-4711-90e9-8ec54331c003"/>
         <link type="modified-attributes" destinationId="0acb5f5e-30d3-4597-82fe-3835b925acf2"/>
         <link type="modified-attributes" destinationId="bf93587e-e10e-4dcd-acb0-cddbb32589d9"/>
@@ -425,7 +425,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="display" is-readonly="false" is-hidden="false" id="9e943ba4-5bd8-4082-bfaf-b2a41d88df9b">
-        <link type="contents" destinationId="8317469f-bedb-491d-b124-4ff36c03b0f4"/>
+        <link type="contents" destinationId="3f0d5d2d-fe6a-4a28-ac0e-6d21b52a6b84"/>
         <link type="instance-of" destinationId="1c2a361d-5c31-4f66-88ff-fdbae6e27ec2"/>
         <link type="modified-attributes" destinationId="e5c86831-4f23-4b68-8b0a-458916b9818b"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -454,7 +454,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="ic" is-readonly="false" is-hidden="false" id="6bed9141-e257-45cd-844a-9a398b8f6f39">
-        <link type="contents" destinationId="9b61659a-df19-4127-bc62-1469991b7416"/>
+        <link type="contents" destinationId="125c1024-4b7f-429b-adef-b1f8606e71e6"/>
         <link type="instance-of" destinationId="08fcca26-7bb7-454e-bbd3-da34b8e12680"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
         <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
@@ -476,7 +476,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="mc" is-readonly="false" is-hidden="false" id="e958826e-47df-4a5c-95b7-3a721f5d3388">
-        <link type="contents" destinationId="6f7aa374-898c-4c08-abd8-232550f9d514"/>
+        <link type="contents" destinationId="0ca81812-cd58-4abe-90a2-063a543b84b4"/>
         <link type="instance-of" destinationId="8b02bffe-8011-45e3-b7bd-afbcec04a5cb"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
         <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
@@ -537,7 +537,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="components" is-readonly="false" is-hidden="false" id="bff02021-7afb-4d23-a496-26a6bdb70ded">
-        <link type="contents" destinationId="e2d188b6-9246-49e2-9052-b569f66a63a8"/>
+        <link type="contents" destinationId="93b449b5-f0b9-4ecb-a437-fec986f8bab7"/>
         <link type="instance-of" destinationId="ac03a3ca-23d6-4c8d-ba5c-c84cb42ff9ea"/>
         <link type="modified-attributes" destinationId="a76dc735-0d84-463f-b6d7-0ba34e7649fc"/>
         <link type="modified-attributes" destinationId="dee98c9b-ef77-4844-b9ac-8598684e5072"/>
@@ -593,7 +593,7 @@
         <attributes-value tw-rev-specific="false" id="4f63a396-120f-43d5-bdec-3813ddb60241" value="true" key="part"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="f1f9436b-9859-48ea-a49b-b19ec05cf071">
-        <link type="contents" destinationId="907b8cf6-e5c6-4a02-8a0d-769dfef2a00d"/>
+        <link type="contents" destinationId="dbfb346c-9b9f-4291-9cae-cf93a06bb2f2"/>
         <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
         <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -615,7 +615,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Creation Page mind::PACKAGE::creation-page-Package" short-name="creation-page-Package" is-readonly="false" is-hidden="false" id="a6f1d559-aac4-4e17-ad50-45388e2564be">
-        <link type="contents" destinationId="b36b9206-5b04-4874-935d-e2c393e2b8dc"/>
+        <link type="contents" destinationId="3c37de54-e008-4c51-9ce5-c5c69c51d392"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -646,7 +646,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="fe16e021-bab4-41a5-990f-a65f552b2da0">
-        <link type="contents" destinationId="0ae20e93-a088-4c3d-b223-59303cc930ff"/>
+        <link type="contents" destinationId="a6688c6d-d7c8-4d97-aa2a-cfc1b1fd663b"/>
         <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
         <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -668,7 +668,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Modification Page mind::PACKAGE::modification-page-Package" short-name="modification-page-Package" is-readonly="false" is-hidden="false" id="7ee76797-2eec-4504-a06b-7de9f43ecbdc">
-        <link type="contents" destinationId="0b881d31-86e5-406b-902f-a352e1a34a67"/>
+        <link type="contents" destinationId="b1bd466c-e05a-4463-8c6a-c308c946d83a"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -701,7 +701,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="Field mind::PACKAGE::modification-page-Package::components" short-name="components" is-readonly="false" is-hidden="false" id="8c4e6699-b326-4185-9634-eb06cfbb3002">
-        <link type="contents" destinationId="82a8369a-d9f2-4470-bd24-49d66aa9c170"/>
+        <link type="contents" destinationId="d09472a8-234d-4f5a-9b06-78de7d548ded"/>
         <link type="instance-of" destinationId="a1922398-35c7-4711-90e9-8ec54331c003"/>
         <link type="modified-attributes" destinationId="0acb5f5e-30d3-4597-82fe-3835b925acf2"/>
         <link type="modified-attributes" destinationId="bf93587e-e10e-4dcd-acb0-cddbb32589d9"/>
@@ -730,7 +730,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="display" is-readonly="false" is-hidden="false" id="aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc">
-        <link type="contents" destinationId="cf8d6eeb-365f-4edc-8077-9eba4118d08d"/>
+        <link type="contents" destinationId="4e7473a0-867d-4d9d-83ed-55054332647d"/>
         <link type="instance-of" destinationId="1c2a361d-5c31-4f66-88ff-fdbae6e27ec2"/>
         <link type="modified-attributes" destinationId="e5c86831-4f23-4b68-8b0a-458916b9818b"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -759,7 +759,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="ic" is-readonly="false" is-hidden="false" id="cf3a607d-895a-4fc2-aacb-58ef27d2ea53">
-        <link type="contents" destinationId="5ea9bf95-a7df-4d2b-9b3c-eabda0a50abf"/>
+        <link type="contents" destinationId="8873437d-dd2d-460a-b7fb-7df30dc388dd"/>
         <link type="instance-of" destinationId="08fcca26-7bb7-454e-bbd3-da34b8e12680"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
         <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
@@ -781,7 +781,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="mc" is-readonly="false" is-hidden="false" id="18792f2f-0c85-48bf-afcc-fdb6a8e8fb34">
-        <link type="contents" destinationId="aa0d887a-f51e-4e81-860c-052f7be2b1ef"/>
+        <link type="contents" destinationId="1e5045f4-d15a-4984-87f9-d7166ca3f7e4"/>
         <link type="instance-of" destinationId="8b02bffe-8011-45e3-b7bd-afbcec04a5cb"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
         <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
@@ -841,7 +841,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="d24808b8-494f-4f2b-beb9-1722b1fc4905">
-        <link type="contents" destinationId="d0b8f31c-cf99-492d-8702-576792bc2032"/>
+        <link type="contents" destinationId="cca2206e-a360-493f-bcdc-f2c01b056446"/>
         <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
         <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -863,7 +863,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Creation Page mind::PRIMITIVE::creation-page-Primitive" short-name="creation-page-Primitive" is-readonly="false" is-hidden="false" id="17ae237f-bd8d-43aa-bb96-360c4c8b5709">
-        <link type="contents" destinationId="9ee931b9-1462-45a8-9f40-335f70c63fc6"/>
+        <link type="contents" destinationId="cc9bd76c-9b2f-4481-87d9-0648caa22fae"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -894,7 +894,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="c1c58bf7-27a4-4bd6-9285-38f826f94eb0">
-        <link type="contents" destinationId="641d5002-251b-416e-924f-959ec1b84499"/>
+        <link type="contents" destinationId="843b8593-9d38-494d-92de-8fdf4868005b"/>
         <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
         <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -916,7 +916,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Modification Page mind::PRIMITIVE::modification-page-Primitive" short-name="modification-page-Primitive" is-readonly="false" is-hidden="false" id="47712abf-d651-4af6-94a6-c1bb9b499eee">
-        <link type="contents" destinationId="e375d72e-82b0-41d2-8ec0-cd9e5aed3721"/>
+        <link type="contents" destinationId="1f3ec07e-dc70-4897-96e3-4c9d382a9efb"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -986,7 +986,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="2d456c72-22d5-4bd3-b727-927ee2774575">
-        <link type="contents" destinationId="4a4efb38-0177-441b-ab1f-962b706fe5d5"/>
+        <link type="contents" destinationId="720302cf-8042-45da-a223-46386c0bce8e"/>
         <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
         <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -1008,7 +1008,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Creation Page mind::COMPOSITE::creation-page-Composite" short-name="creation-page-Composite" is-readonly="false" is-hidden="false" id="fb15099a-7e0d-4823-a984-3ec25ff410ab">
-        <link type="contents" destinationId="6bf0f73b-183f-4557-8179-032f9f453688"/>
+        <link type="contents" destinationId="57359105-026e-4327-8096-b6e2f084e01a"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -1039,7 +1039,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="6ccd4a82-fe68-4824-847a-56cf332a7abf">
-        <link type="contents" destinationId="bc3414a8-0c13-4667-8b6e-48549532b906"/>
+        <link type="contents" destinationId="23d27bb0-2658-4c42-8ee0-755cb9a14671"/>
         <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
         <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -1061,7 +1061,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Modification Page mind::COMPOSITE::modification-page-Composite" short-name="modification-page-Composite" is-readonly="false" is-hidden="false" id="d74c2e8f-7330-4d47-8e52-6a3937fe9355">
-        <link type="contents" destinationId="ea5fb8d5-5cee-4ad8-a86a-9f6db74d7087"/>
+        <link type="contents" destinationId="7ed77341-fd34-4b9c-a587-867e364fc697"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -1133,7 +1133,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="eb20777b-01cf-468f-a639-de629a6f25fd">
-        <link type="contents" destinationId="4fc760c8-7d2e-4dbe-a6fd-c5007e3b97ef"/>
+        <link type="contents" destinationId="ab307394-fe09-4c4c-9893-f05154ca667a"/>
         <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
         <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -1155,7 +1155,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Creation Page mind::COMPONENT::creation-page-Component" short-name="creation-page-Component" is-readonly="false" is-hidden="false" id="06d71458-3a77-49ec-bbc5-b1a1e1e3584e">
-        <link type="contents" destinationId="cf691004-f995-4805-90e3-6da57e2eefb7"/>
+        <link type="contents" destinationId="cb857803-dbec-4e9c-a65f-9d8be878ce8f"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -1186,7 +1186,7 @@
         <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
     </item>
     <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="54f84cfe-768d-480b-9dff-a5847fbe33a0">
-        <link type="contents" destinationId="489cf4ce-11c6-4d96-9e5f-e63512df3608"/>
+        <link type="contents" destinationId="355f4480-88b8-4c83-a50c-0c5204f289fe"/>
         <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
         <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
@@ -1208,7 +1208,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Modification Page mind::COMPONENT::modification-page-Component" short-name="modification-page-Component" is-readonly="false" is-hidden="false" id="0deba2f5-a151-46d3-91c1-1dd91148785e">
-        <link type="contents" destinationId="4a41f8b4-80cd-4b1e-ad04-2fdf55c8e31e"/>
+        <link type="contents" destinationId="c1f42342-71a6-4a93-b77b-8f85ec14c1fc"/>
         <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
         <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
         <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
@@ -1265,7 +1265,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Library-manager" short-name="Library-manager" is-readonly="false" is-hidden="false" id="5b62c429-b55c-4166-bbc1-248705528681">
-        <link type="contents" destinationId="3abfa295-18e4-4a71-b116-9e489aecf30b"/>
+        <link type="contents" destinationId="c1555379-db4f-4f4c-b5e8-2ebc4356ef1d"/>
         <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
         <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
         <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
@@ -1302,7 +1302,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Library-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="405a1281-18f6-439a-92f2-d3416ca943c8">
-        <link type="contents" destinationId="a877f284-e759-40bf-93b7-5e4840621184"/>
+        <link type="contents" destinationId="92c41a3f-5678-439f-9d85-c7d1b4cec356"/>
         <link type="instance-of" destinationId="2f77364d-7c51-4b6a-bcd9-35d99a6e7c74"/>
         <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
         <link type="modified-attributes" destinationId="c1ca5f69-3e83-4464-ae65-9cc0e7941e97"/>
@@ -1329,7 +1329,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Package-manager" short-name="Package-manager" is-readonly="false" is-hidden="false" id="0de5f7a1-0772-46f4-9b97-9c015111b6bb">
-        <link type="contents" destinationId="ba99b0c9-3c45-4af2-8252-6a900931f839"/>
+        <link type="contents" destinationId="2b224947-319b-4399-b906-e0210ff0abd6"/>
         <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
         <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
         <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
@@ -1366,7 +1366,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Package-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="59bfb2b0-6daf-449b-bd87-3c3596722b2e">
-        <link type="contents" destinationId="2665b4da-81c3-4bae-b1db-abf98d19504c"/>
+        <link type="contents" destinationId="d5be2e5f-af0f-4a58-94b7-89374a609728"/>
         <link type="instance-of" destinationId="ef8e57f7-18fa-402a-b8df-613a485b387d"/>
         <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
         <link type="modified-attributes" destinationId="c43be5c9-3bde-4bbd-9a43-af804b1fcac0"/>
@@ -1391,7 +1391,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Primitive-manager" short-name="Primitive-manager" is-readonly="false" is-hidden="false" id="b69b951a-5963-4c83-8dec-94f0f305ae85">
-        <link type="contents" destinationId="8ce5c5c7-2023-4d40-b8ea-dc65af997cce"/>
+        <link type="contents" destinationId="433a4ae4-cc55-4d50-b0d1-f55ffc270af1"/>
         <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
         <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
         <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
@@ -1428,7 +1428,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Primitive-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="204d8daf-e27f-4996-9d5a-2e415e075084">
-        <link type="contents" destinationId="1416b7a6-d65a-4e94-9361-f04b72695259"/>
+        <link type="contents" destinationId="5f7a2e3f-f05d-448a-a956-e8cc30fb9bf6"/>
         <link type="instance-of" destinationId="9b9e9c64-284a-4895-a1f6-98614b1b2a19"/>
         <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
         <link type="modified-attributes" destinationId="aa49cab4-109d-4f99-a4a8-7b7fb9ece939"/>
@@ -1455,7 +1455,7 @@
         <attributes-value tw-rev-specific="false" id="725605f2-63c1-4948-9db3-c25d2e9773dd" value="/" key="file-path"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Composite-manager" short-name="Composite-manager" is-readonly="false" is-hidden="false" id="474bc9e7-e019-4552-a466-c1c4d1681ccc">
-        <link type="contents" destinationId="848295d2-a12c-4870-832f-2e1e5db73967"/>
+        <link type="contents" destinationId="e671d400-2613-42e9-b21a-850619a0b6b7"/>
         <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
         <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
         <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
@@ -1492,7 +1492,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Composite-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="685a153a-70f1-4963-8d3b-1b07e27ab054">
-        <link type="contents" destinationId="3858d640-dce8-423e-b011-c1781ac117d2"/>
+        <link type="contents" destinationId="86e6c018-a7b1-4add-8207-f070901613f4"/>
         <link type="instance-of" destinationId="9b9e9c64-284a-4895-a1f6-98614b1b2a19"/>
         <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
         <link type="modified-attributes" destinationId="aa49cab4-109d-4f99-a4a8-7b7fb9ece939"/>
@@ -1519,7 +1519,7 @@
         <attributes-value tw-rev-specific="false" id="725605f2-63c1-4948-9db3-c25d2e9773dd" value="/" key="file-path"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Component-manager" short-name="Component-manager" is-readonly="false" is-hidden="false" id="dac51463-3928-412b-bb38-87475e95ceb1">
-        <link type="contents" destinationId="e9313108-cf21-42fe-9aa8-789388ab3673"/>
+        <link type="contents" destinationId="8acc8f8e-61a6-4d97-b4f4-bf6ec1184c8a"/>
         <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
         <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
         <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
@@ -1554,7 +1554,7 @@
         <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
     </item>
     <item unique-name="Model.Workspace.mind.mapping.Component-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="48e3803b-b764-4780-9d07-275397302d02">
-        <link type="contents" destinationId="20b6c3b9-2d48-4466-b80f-52c553887875"/>
+        <link type="contents" destinationId="aaaa12b0-07cb-44e3-8178-b4cd8b38cdd6"/>
         <link type="instance-of" destinationId="9b9e9c64-284a-4895-a1f6-98614b1b2a19"/>
         <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
         <link type="modified-attributes" destinationId="aa49cab4-109d-4f99-a4a8-7b7fb9ece939"/>
@@ -1603,7 +1603,7 @@
         <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
     </item>
     <item unique-name="Model.Workspace.mind.view-model.MindLibraries" short-name="MindLibraries" is-readonly="false" is-hidden="false" id="127dc362-40d8-4484-825b-38397e268c0a">
-        <link type="contents" destinationId="85734527-18b1-433f-8730-e5b3dea498f3"/>
+        <link type="contents" destinationId="61a91e39-ecc7-4603-9878-05d0f9965ac7"/>
         <link type="instance-of" destinationId="3ca0bb23-d4f7-4816-af03-5e926d93bdaf"/>
         <link type="modified-attributes" destinationId="20ca536e-6fa6-43b3-a435-4366d77127f5"/>
         <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
