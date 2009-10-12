@@ -1,14 +1,19 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Workspace Plug-in
-Bundle-SymbolicName: TEST.CU.Workspace.Workspace
+Bundle-SymbolicName: TEST.CU.Workspace.Workspace;singleton:=true
 Bundle-Version: 1.0.0
+Bundle-Activator: test.fede.workspace.domain.internal.TestActivator
 Require-Bundle: org.junit4,
  org.eclipse.core.runtime.compatibility,
  org.eclipse.help.ui,
- GraphicTests
+ GraphicTests,
+ Model.Workspace.sam.core;bundle-version="2.2.1"
 Import-Package: fede.workspace.tool.loadmodel.model.jaxb;version="1.0.0",
  fr.imag.adele.cadse.cadseg.generate,
+ fr.imag.adele.cadse.cadseg.managers.dataModel;version="2.2.1",
+ fr.imag.adele.cadse.cadseg.managers.ui;version="2.2.1",
+ fr.imag.adele.cadse.cadseg.operation;version="2.2.1",
  fr.imag.adele.cadse.core;version="1.0.0",
  fr.imag.adele.cadse.core.attribute;version="1.0.0",
  fr.imag.adele.cadse.core.build;version="1.0.0",
@@ -69,3 +74,4 @@ Import-Package: fede.workspace.tool.loadmodel.model.jaxb;version="1.0.0",
  org.eclipse.swtbot.swt.finder.waits,
  org.eclipse.swtbot.swt.finder.widgets,
  org.hamcrest;version="1.1.0"
+Bundle-ActivationPolicy: lazy

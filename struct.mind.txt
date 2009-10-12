@@ -1,0 +1,809 @@
+CadseDefinition mind<id='e55e9031-58b1-4ea8-961c-d8701f8d33f1' executed='false' commentary='' description='' name='mind' committedBy='' item-hidden='false' requireNewRev='true' id-definition='e55e9031-58b1-4ea8-961c-d8701f8d33f1' display-name='mind' revModified='true' vendor-name='' packagename='org.ow2.fractal.mind.cadse' imports='[org.eclipse.jdt.core, adl, org.eclipse.emf.ecore.resource, org.eclipse.emf.ecore.resource.impl, org.eclipse.emf.common.util , fr.imag.adele.cadse.core.delta, fr.imag.adele.cadse.core.transaction]' item-readonly='false' committedDate='0' qualified-name='Model.Workspace.mind' cadse-name='Cadse Model.Workspace.mind' TW-version='0' version-cadse='' >
+  --> ContentItem Content of item mind (ContentItem)
+  --> ItemType CadseDefinition
+  --> Link data-model
+  --> Link build
+  --> Link view-model
+  --> Link mapping
+  --> String packagename
+  --> String cadse-name
+  --> List imports
+  --> String vendor-name
+  --> String version-cadse
+  --> String commentary
+  --> String id-runtime
+  --> String qualified-name
+  --> String description
+  --> String name
+  --> String id-runtime
+  BuildModel build-model<display-name='build-model' revModified='true' id='a46bc266-7aee-405a-9b5f-5a96dc5152f0' committedDate='0' item-readonly='false' name='build-model' item-hidden='false' qualified-name='Model.Workspace.mind.build-model' TW-version='0' requireNewRev='true' >
+    --> ItemType BuildModel
+    --> Link parent
+    --> String display-name
+    --> String name
+    --> String qualified-name
+    --> Link parent
+    --> CadseDefinition mind
+  DataModel data-model<display-name='data-model' revModified='true' id='b23167de-5b61-4da9-81f9-2820471b228a' committedDate='0' item-readonly='false' committedBy='' name='data-model' item-hidden='false' qualified-name='DataModel mind::data-model' TW-version='0' requireNewRev='true' >
+    --> ItemType DataModel
+    --> Link types
+    --> Link parent
+    --> String qualified-name
+    --> String display-name
+    --> String name
+    --> Link parent
+    --> CadseDefinition mind
+    ItemType Library<is-meta-item-type='false' is-root-element='true' id-runtime='148dcee3-8512-49eb-abe7-9f8d25502778' id='8e5215d6-684a-490e-b7aa-639e266b130c' has-content='true' manager-class='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' name='Library' committedBy='' item-hidden='false' item-manager='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' requireNewRev='true' is-abstract='false' revModified='true' package-name='<no value>' item-readonly='false' committedDate='0' qualified-name='mind..Library' TW-version='0' >
+      --> ItemType ItemType
+      --> Link creation-dialog
+      --> Link modification-dialog
+      --> Boolean is-abstract
+      --> Boolean is-root-element
+      --> Boolean has-content
+      --> String id-runtime
+      --> Boolean is-meta-item-type
+      --> Link attributes
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> DataModel data-model
+      Link packages<TWEvol='twImmutable' cannot-be-undefined='true' kind='3' id='6143a650-18c1-48c6-a574-8e1bf24715bc' annotation='false' TWCoupled='false' name='packages' committedBy='' item-hidden='false' composition='false' requireNewRev='true' min='0' display-name='packages' max='-1' TWRevSpecific='true' TWDestEvol='immutable' TWCommitKind='conflict' revModified='true' TWUpdateKind='merge' aggregation='true' item-readonly='false' committedDate='0' must-be-initialized='true' require='false' qualified-name='packages' TW-version='0' part='true' >
+        --> ContentItem Content of item packages (ContentItem)
+        --> ItemType Link
+        --> Boolean must-be-initialized
+        --> Boolean aggregation
+        --> Boolean part
+        --> Boolean require
+        --> Boolean annotation
+        --> Boolean composition
+        --> Enum TWEvol
+        --> Boolean TWRevSpecific
+        --> Enum TWDestEvol
+        --> Boolean TWCoupled
+        --> Link destination
+        --> Link inverse-link
+        --> Enum TWCommitKind
+        --> Enum TWUpdateKind
+        --> String id-runtime
+        --> Link parent
+        --> Integer max
+        --> Integer min
+        --> String display-name
+        --> String name
+        --> String id-runtime
+        --> Link parent
+        --> ItemType Library
+        --> ItemType Package
+        --> ItemType Library
+      --> CadseDefinition mind
+      --> ItemType Item
+      CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='80afce42-764a-45c1-acc8-cc43762d26c3' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item creation dialog (ContentItem)
+        --> ItemType CreationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Library
+        Page creation-page-Library<id-runtime='93f8f2e7-a510-4580-933c-59c10b24fb2c' is-removed='false' id='1b37a2ef-8f3b-4b4f-af56-291b81b3b6a1' title='Create Library' description='' name='creation-page-Library' item-hidden='false' requireNewRev='true' display-name='creation-page-Library' revModified='true' committedDate='0' item-readonly='false' qualified-name='Creation Page mind::LIBRARY::creation-page-Library' TW-version='0' hspan='3' >
+          --> ContentItem Content of item creation-page-Library (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> Link fields
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> CreationDialog creation-dialog
+          Field packages<position='defaultpos' display-name='packages' revModified='true' label='packages' editable='true' id='69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7' item-readonly='false' committedDate='0' name='packages' item-hidden='false' qualified-name='packages' TW-version='0' requireNewRev='true' >
+            --> ContentItem Content of item packages (ContentItem)
+            --> ItemType Field
+            --> Link attribute
+            --> Link display
+            --> String label
+            --> Enum position
+            --> Link parent
+            --> String qualified-name
+            --> String display-name
+            --> String name
+            --> Link parent
+            --> Page creation-page-Library
+            --> Link packages
+            DList display<update-button='false' order-button='false' id='3860de24-79d6-47dd-9461-3f424ea2dcb0' show-filter='false' name='display' item-hidden='false' requireNewRev='true' display-name='display' editable-button='true' revModified='true' committedDate='0' item-readonly='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DList
+              --> Boolean editable-button
+              --> Link parent
+              --> String qualified-name
+              --> Link ic
+              --> Link mc
+              --> String display-name
+              --> String name
+              --> Link parent
+              --> Field packages
+              IC_LinkForBrowser_Combo_List ic<display-name='ic' revModified='true' select-message='Select a value.' id='818af808-8a0f-419f-ad5f-822cb35afcbe' committedDate='0' item-readonly='false' select-title='Select a value.' name='ic' item-hidden='false' qualified-name='ic' TW-version='0' requireNewRev='true' >
+                --> ContentItem Content of item ic (ContentItem)
+                --> ItemType IC_LinkForBrowser_Combo_List
+                --> Link parent
+                --> String display-name
+                --> String qualified-name
+                --> String name
+                --> Link parent
+                --> DList display
+              LinkModelController mc<display-name='Mode controller Link model controller' revModified='true' id='516afad8-7673-4c2f-beeb-dfe9f8c5a3bf' committedDate='0' item-readonly='false' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='true' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType LinkModelController
+                --> Link parent
+                --> String display-name
+                --> String qualified-name
+                --> String name
+                --> Link parent
+                --> DList display
+      ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='f75217eb-6676-41c2-b3f2-a07e47308291' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item modification dialog (ContentItem)
+        --> ItemType ModificationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Library
+        Page modification-page-Library<id-runtime='8b204dac-a210-4658-ae66-4813e4229a9e' is-removed='false' id='7ecb9a2a-036f-4433-94e4-f2e7efcd3555' title='Library' description='' name='modification-page-Library' item-hidden='false' requireNewRev='true' display-name='modification-page-Library' revModified='true' committedDate='0' item-readonly='false' qualified-name='Modification Page mind::LIBRARY::modification-page-Library' TW-version='0' hspan='3' >
+          --> ContentItem Content of item modification-page-Library (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> Link fields
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> ModificationDialog modification-dialog
+          Field packages<position='defaultpos' display-name='packages' revModified='true' label='packages' editable='true' id='e63b03e2-a0df-44ee-b6fe-cf9f348bcbb6' item-readonly='false' committedDate='0' name='packages' item-hidden='false' qualified-name='packages' TW-version='0' requireNewRev='true' >
+            --> ContentItem Content of item packages (ContentItem)
+            --> ItemType Field
+            --> Link attribute
+            --> Link display
+            --> String label
+            --> Enum position
+            --> Link parent
+            --> String qualified-name
+            --> String display-name
+            --> String name
+            --> Link parent
+            --> Page modification-page-Library
+            --> Link packages
+            DList display<update-button='false' order-button='false' id='9e943ba4-5bd8-4082-bfaf-b2a41d88df9b' show-filter='false' name='display' item-hidden='false' requireNewRev='true' display-name='display' editable-button='true' revModified='true' committedDate='0' item-readonly='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DList
+              --> Boolean editable-button
+              --> Link parent
+              --> String qualified-name
+              --> Link ic
+              --> Link mc
+              --> String display-name
+              --> String name
+              --> Link parent
+              --> Field packages
+              IC_LinkForBrowser_Combo_List ic<display-name='ic' revModified='true' select-message='Select a value.' id='6bed9141-e257-45cd-844a-9a398b8f6f39' committedDate='0' item-readonly='false' select-title='Select a value.' name='ic' item-hidden='false' qualified-name='ic' TW-version='0' requireNewRev='true' >
+                --> ContentItem Content of item ic (ContentItem)
+                --> ItemType IC_LinkForBrowser_Combo_List
+                --> Link parent
+                --> String display-name
+                --> String qualified-name
+                --> String name
+                --> Link parent
+                --> DList display
+              LinkModelController mc<display-name='Mode controller Link model controller' revModified='true' id='e958826e-47df-4a5c-95b7-3a721f5d3388' committedDate='0' item-readonly='false' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='true' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType LinkModelController
+                --> Link parent
+                --> String display-name
+                --> String qualified-name
+                --> String name
+                --> Link parent
+                --> DList display
+      --> ItemType Package
+    ItemType Package<is-meta-item-type='false' is-root-element='false' id-runtime='148dcee3-8512-49eb-abe7-9f8d25502778' id='acc0d820-7a7a-41c3-9316-035c869d2fbf' has-content='true' manager-class='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' name='Package' committedBy='' item-hidden='false' item-manager='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' requireNewRev='true' is-abstract='false' revModified='true' package-name='<no value>' item-readonly='false' committedDate='0' qualified-name='mind..Package' TW-version='0' >
+      --> ItemType ItemType
+      --> Link creation-dialog
+      --> Link modification-dialog
+      --> Boolean is-abstract
+      --> Boolean is-root-element
+      --> Boolean has-content
+      --> String id-runtime
+      --> Boolean is-meta-item-type
+      --> Link attributes
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> DataModel data-model
+      Link components<TWEvol='twImmutable' cannot-be-undefined='true' kind='3' id='bff02021-7afb-4d23-a496-26a6bdb70ded' annotation='false' TWCoupled='false' name='components' committedBy='' item-hidden='false' composition='false' requireNewRev='true' min='0' display-name='components' max='-1' TWRevSpecific='true' TWDestEvol='immutable' TWCommitKind='conflict' revModified='true' TWUpdateKind='merge' aggregation='true' item-readonly='false' committedDate='0' must-be-initialized='false' require='false' qualified-name='components' TW-version='0' part='true' >
+        --> ContentItem Content of item components (ContentItem)
+        --> ItemType Link
+        --> Boolean must-be-initialized
+        --> Boolean aggregation
+        --> Boolean part
+        --> Boolean require
+        --> Boolean annotation
+        --> Boolean composition
+        --> Enum TWEvol
+        --> Boolean TWRevSpecific
+        --> Enum TWDestEvol
+        --> Boolean TWCoupled
+        --> Link destination
+        --> Link inverse-link
+        --> Enum TWCommitKind
+        --> Enum TWUpdateKind
+        --> String id-runtime
+        --> Link parent
+        --> Integer max
+        --> Integer min
+        --> String display-name
+        --> String name
+        --> String id-runtime
+        --> Link parent
+        --> ItemType Package
+        --> ItemType Component
+        --> ItemType Package
+      --> CadseDefinition mind
+      --> ItemType Item
+      CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='f1f9436b-9859-48ea-a49b-b19ec05cf071' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item creation dialog (ContentItem)
+        --> ItemType CreationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Package
+        Page creation-page-Package<id-runtime='fcc5c5eb-1933-4bf8-b0ae-20435300fde2' is-removed='false' id='a6f1d559-aac4-4e17-ad50-45388e2564be' title='Create Package' description='' name='creation-page-Package' item-hidden='false' requireNewRev='true' display-name='creation-page-Package' revModified='true' committedDate='0' item-readonly='false' qualified-name='Creation Page mind::PACKAGE::creation-page-Package' TW-version='0' hspan='3' >
+          --> ContentItem Content of item creation-page-Package (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> CreationDialog creation-dialog
+      ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='fe16e021-bab4-41a5-990f-a65f552b2da0' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item modification dialog (ContentItem)
+        --> ItemType ModificationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Package
+        Page modification-page-Package<id-runtime='6a33c13e-7265-4430-ab98-71de3c540ae4' is-removed='false' id='7ee76797-2eec-4504-a06b-7de9f43ecbdc' title='Package' description='' name='modification-page-Package' item-hidden='false' requireNewRev='true' display-name='modification-page-Package' revModified='true' committedDate='0' item-readonly='false' qualified-name='Modification Page mind::PACKAGE::modification-page-Package' TW-version='0' hspan='3' >
+          --> ContentItem Content of item modification-page-Package (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> Link fields
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> ModificationDialog modification-dialog
+          Field components<position='defaultpos' display-name='components' revModified='true' label='components' editable='true' id='8c4e6699-b326-4185-9634-eb06cfbb3002' item-readonly='false' committedDate='0' name='components' item-hidden='false' qualified-name='components' TW-version='0' requireNewRev='true' >
+            --> ContentItem Content of item components (ContentItem)
+            --> ItemType Field
+            --> Link attribute
+            --> Link display
+            --> String label
+            --> Enum position
+            --> Link parent
+            --> String qualified-name
+            --> String display-name
+            --> String name
+            --> Link parent
+            --> Page modification-page-Package
+            --> Link components
+            DList display<update-button='false' order-button='false' id='aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc' show-filter='false' name='display' item-hidden='false' requireNewRev='true' display-name='display' editable-button='true' revModified='true' committedDate='0' item-readonly='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DList
+              --> Boolean editable-button
+              --> Link parent
+              --> String qualified-name
+              --> Link ic
+              --> Link mc
+              --> String display-name
+              --> String name
+              --> Link parent
+              --> Field components
+              IC_LinkForBrowser_Combo_List ic<display-name='ic' revModified='true' select-message='Select a value.' id='cf3a607d-895a-4fc2-aacb-58ef27d2ea53' committedDate='0' item-readonly='false' select-title='Select a value.' name='ic' item-hidden='false' qualified-name='ic' TW-version='0' requireNewRev='true' >
+                --> ContentItem Content of item ic (ContentItem)
+                --> ItemType IC_LinkForBrowser_Combo_List
+                --> Link parent
+                --> String display-name
+                --> String qualified-name
+                --> String name
+                --> Link parent
+                --> DList display
+              LinkModelController mc<display-name='Mode controller Link model controller' revModified='true' id='18792f2f-0c85-48bf-afcc-fdb6a8e8fb34' committedDate='0' item-readonly='false' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='true' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType LinkModelController
+                --> Link parent
+                --> String display-name
+                --> String qualified-name
+                --> String name
+                --> Link parent
+                --> DList display
+      --> ItemType Component
+    ItemType Primitive<is-meta-item-type='false' is-root-element='false' id-runtime='148dcee3-8512-49eb-abe7-9f8d25502778' id='65c43230-9912-428a-b2c4-39bfd2e38585' has-content='true' manager-class='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' name='Primitive' committedBy='' item-hidden='false' item-manager='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' requireNewRev='true' is-abstract='false' revModified='true' package-name='<no value>' item-readonly='false' committedDate='0' qualified-name='mind..Primitive' TW-version='0' >
+      --> ItemType ItemType
+      --> Link creation-dialog
+      --> Link modification-dialog
+      --> Boolean is-abstract
+      --> Boolean is-root-element
+      --> Boolean has-content
+      --> String id-runtime
+      --> Link attributes
+      --> Boolean is-meta-item-type
+      --> Link super-type
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> DataModel data-model
+      --> CadseDefinition mind
+      --> ItemType Component
+      CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='d24808b8-494f-4f2b-beb9-1722b1fc4905' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item creation dialog (ContentItem)
+        --> ItemType CreationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Primitive
+        Page creation-page-Primitive<id-runtime='e8e69df2-8f21-43f7-8ca8-d64aecc874a4' is-removed='false' id='17ae237f-bd8d-43aa-bb96-360c4c8b5709' title='Create Primitive' description='' name='creation-page-Primitive' item-hidden='false' requireNewRev='true' display-name='creation-page-Primitive' revModified='true' committedDate='0' item-readonly='false' qualified-name='Creation Page mind::PRIMITIVE::creation-page-Primitive' TW-version='0' hspan='3' >
+          --> ContentItem Content of item creation-page-Primitive (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> CreationDialog creation-dialog
+      ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='c1c58bf7-27a4-4bd6-9285-38f826f94eb0' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item modification dialog (ContentItem)
+        --> ItemType ModificationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Primitive
+        Page modification-page-Primitive<id-runtime='704b5d30-f764-4caa-a7da-97f883b548b8' is-removed='false' id='47712abf-d651-4af6-94a6-c1bb9b499eee' title='Primitive' description='' name='modification-page-Primitive' item-hidden='false' requireNewRev='true' display-name='modification-page-Primitive' revModified='true' committedDate='0' item-readonly='false' qualified-name='Modification Page mind::PRIMITIVE::modification-page-Primitive' TW-version='0' hspan='3' >
+          --> ContentItem Content of item modification-page-Primitive (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> ModificationDialog modification-dialog
+    ItemType Composite<is-meta-item-type='false' is-root-element='true' id-runtime='148dcee3-8512-49eb-abe7-9f8d25502778' id='6598a762-0790-4627-84a6-77751947c5a9' has-content='true' manager-class='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' name='Composite' committedBy='' item-hidden='false' item-manager='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' requireNewRev='true' is-abstract='false' revModified='true' package-name='<no value>' item-readonly='false' committedDate='0' qualified-name='mind..Composite' TW-version='0' >
+      --> ItemType ItemType
+      --> Link creation-dialog
+      --> Link modification-dialog
+      --> Boolean is-abstract
+      --> Boolean is-root-element
+      --> Boolean has-content
+      --> String id-runtime
+      --> Boolean is-meta-item-type
+      --> Link super-type
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> DataModel data-model
+      --> CadseDefinition mind
+      --> ItemType Component
+      CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='2d456c72-22d5-4bd3-b727-927ee2774575' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item creation dialog (ContentItem)
+        --> ItemType CreationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Composite
+        Page creation-page-Composite<id-runtime='14f097df-e9c3-4bcf-9e7f-c162f2a168a5' is-removed='false' id='fb15099a-7e0d-4823-a984-3ec25ff410ab' title='Create Composite' description='' name='creation-page-Composite' item-hidden='false' requireNewRev='true' display-name='creation-page-Composite' revModified='true' committedDate='0' item-readonly='false' qualified-name='Creation Page mind::COMPOSITE::creation-page-Composite' TW-version='0' hspan='3' >
+          --> ContentItem Content of item creation-page-Composite (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> CreationDialog creation-dialog
+      ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='6ccd4a82-fe68-4824-847a-56cf332a7abf' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item modification dialog (ContentItem)
+        --> ItemType ModificationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Composite
+        Page modification-page-Composite<id-runtime='071f4ded-4c11-47ae-b4d6-90a3e838da93' is-removed='false' id='d74c2e8f-7330-4d47-8e52-6a3937fe9355' title='Composite' description='' name='modification-page-Composite' item-hidden='false' requireNewRev='true' display-name='modification-page-Composite' revModified='true' committedDate='0' item-readonly='false' qualified-name='Modification Page mind::COMPOSITE::modification-page-Composite' TW-version='0' hspan='3' >
+          --> ContentItem Content of item modification-page-Composite (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> ModificationDialog modification-dialog
+    ItemType Component<is-meta-item-type='false' is-root-element='false' id-runtime='148dcee3-8512-49eb-abe7-9f8d25502778' id='1bea4dc5-627d-4af9-aed0-4819cb7fd391' has-content='true' manager-class='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' name='Component' committedBy='' item-hidden='false' item-manager='fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager' requireNewRev='true' is-abstract='true' revModified='true' package-name='<no value>' item-readonly='false' committedDate='0' qualified-name='mind..Component' TW-version='0' >
+      --> ItemType ItemType
+      --> Link creation-dialog
+      --> Link modification-dialog
+      --> Boolean is-abstract
+      --> Boolean is-root-element
+      --> Boolean has-content
+      --> String id-runtime
+      --> Boolean is-meta-item-type
+      --> Link attributes
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> DataModel data-model
+      --> CadseDefinition mind
+      --> ItemType Composite
+      --> ItemType Primitive
+      --> ItemType Item
+      CreationDialog creation-dialog<display-name='creation dialog' revModified='true' id='eb20777b-01cf-468f-a639-de629a6f25fd' committedDate='0' item-readonly='false' name='creation-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item creation dialog (ContentItem)
+        --> ItemType CreationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Component
+        Page creation-page-Component<id-runtime='cdace74b-73d9-49f1-96a6-4536c535e7ad' is-removed='false' id='06d71458-3a77-49ec-bbc5-b1a1e1e3584e' title='Create Component' description='' name='creation-page-Component' item-hidden='false' requireNewRev='true' display-name='creation-page-Component' revModified='true' committedDate='0' item-readonly='false' qualified-name='Creation Page mind::COMPONENT::creation-page-Component' TW-version='0' hspan='3' >
+          --> ContentItem Content of item creation-page-Component (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> CreationDialog creation-dialog
+      ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='54f84cfe-768d-480b-9dff-a5847fbe33a0' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
+        --> ContentItem Content of item modification dialog (ContentItem)
+        --> ItemType ModificationDialog
+        --> Link pages
+        --> Link parent
+        --> String display-name
+        --> String qualified-name
+        --> String name
+        --> Link parent
+        --> ItemType Component
+        Page modification-page-Component<id-runtime='7fddef0c-a181-4bc1-a583-755807abe6ad' is-removed='false' id='0deba2f5-a151-46d3-91c1-1dd91148785e' title='Component' description='' name='modification-page-Component' item-hidden='false' requireNewRev='true' display-name='modification-page-Component' revModified='true' committedDate='0' item-readonly='false' qualified-name='Modification Page mind::COMPONENT::modification-page-Component' TW-version='0' hspan='3' >
+          --> ContentItem Content of item modification-page-Component (ContentItem)
+          --> ItemType Page
+          --> Integer hspan
+          --> String title
+          --> Boolean is-removed
+          --> String description
+          --> String id-runtime
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> String id-runtime
+          --> Link parent
+          --> ModificationDialog modification-dialog
+  MappingModel mapping<display-name='mapping' revModified='true' id='be8635dc-b68a-4edb-86f6-85d46ffba02c' committedDate='0' item-readonly='false' committedBy='' name='mapping' item-hidden='false' qualified-name='Model.Workspace.mind.mapping' TW-version='0' requireNewRev='true' >
+    --> ItemType MappingModel
+    --> Link managers
+    --> Link parent
+    --> String qualified-name
+    --> String display-name
+    --> String name
+    --> Link parent
+    --> CadseDefinition mind
+    Manager Library-manager<display-name-template='${#name}' human-name='Component Library' id='5b62c429-b55c-4166-bbc1-248705528681' committedBy='' name='Library-manager' item-hidden='false' requireNewRev='true' icon='/Model.Workspace.mind/icons/lib.png' valid-pattern-id='' message-error-id='' display-name='Library-manager' revModified='true' long-name-template='${#parent.qualified-name}{.}${#name}' committedDate='0' item-readonly='false' qualified-name='Model.Workspace.mind.mapping.Library-manager' TW-version='0' >
+      --> ContentItem Content of item Library-manager (ContentItem)
+      --> ItemType Manager
+      --> String human-name
+      --> String long-name-template
+      --> String display-name-template
+      --> Link item-type
+      --> String valid-pattern-id
+      --> String message-error-id
+      --> String icon
+      --> Link content-model
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> MappingModel mapping
+      --> ItemType Library
+      JavaProjectContentModel content-item<display-name='content-item' has-source-folder='true' revModified='true' project-name='${#unique-name}' id='405a1281-18f6-439a-92f2-d3416ca943c8' committedDate='0' item-readonly='false' committedBy='' name='content-item' item-hidden='false' qualified-name='Model.Workspace.mind.mapping.Library-manager.content-item' TW-version='0' extends-class='false' requireNewRev='true' >
+        --> ContentItem Content of item content-item (ContentItem)
+        --> ItemType JavaProjectContentModel
+        --> Boolean extends-class
+        --> String project-name
+        --> Boolean has-source-folder
+        --> Link parent
+        --> String display-name
+        --> String name
+        --> String qualified-name
+        --> Link parent
+        --> Manager Library-manager
+    Manager Package-manager<display-name-template='${#name}' human-name='Package' id='0de5f7a1-0772-46f4-9b97-9c015111b6bb' committedBy='' name='Package-manager' item-hidden='false' requireNewRev='true' icon='/Model.Workspace.mind/icons/SourceFolderContentModel.gif' valid-pattern-id='' message-error-id='' display-name='Package-manager' revModified='true' long-name-template='${#parent-unique-name}.${#name}' committedDate='0' item-readonly='false' qualified-name='Model.Workspace.mind.mapping.Package-manager' TW-version='0' >
+      --> ContentItem Content of item Package-manager (ContentItem)
+      --> ItemType Manager
+      --> String human-name
+      --> String long-name-template
+      --> String display-name-template
+      --> Link item-type
+      --> String valid-pattern-id
+      --> String message-error-id
+      --> Link content-model
+      --> String icon
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> MappingModel mapping
+      --> ItemType Package
+      FolderContentModel content-item<display-name='content-item' revModified='true' id='59bfb2b0-6daf-449b-bd87-3c3596722b2e' committedDate='0' item-readonly='false' folder-path='${#parent-id}calculated see method org.ow2.fractal.mind.cadse.managers.PackageManager.FolderPathVariable.compute' committedBy='' name='content-item' item-hidden='false' qualified-name='Model.Workspace.mind.mapping.Package-manager.content-item' TW-version='0' extends-class='false' requireNewRev='true' >
+        --> ContentItem Content of item content-item (ContentItem)
+        --> ItemType FolderContentModel
+        --> Boolean extends-class
+        --> String folder-path
+        --> Link parent
+        --> String display-name
+        --> String name
+        --> String qualified-name
+        --> Link parent
+        --> Manager Package-manager
+    Manager Primitive-manager<display-name-template='${#name}' human-name='Primitive' id='b69b951a-5963-4c83-8dec-94f0f305ae85' committedBy='' name='Primitive-manager' item-hidden='false' requireNewRev='true' icon='/Model.Workspace.mind/icons/primitive.png' valid-pattern-id='' message-error-id='' display-name='Primitive-manager' revModified='true' long-name-template='${#parent-short-name}.${#short-name}' committedDate='0' item-readonly='false' qualified-name='Model.Workspace.mind.mapping.Primitive-manager' TW-version='0' >
+      --> ContentItem Content of item Primitive-manager (ContentItem)
+      --> ItemType Manager
+      --> String human-name
+      --> String long-name-template
+      --> String display-name-template
+      --> Link item-type
+      --> String valid-pattern-id
+      --> String message-error-id
+      --> Link content-model
+      --> String icon
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> MappingModel mapping
+      --> ItemType Primitive
+      FileContentModel content-item<display-name='content-item' file-name='${#short-name}.adl' revModified='true' id='204d8daf-e27f-4996-9d5a-2e415e075084' committedDate='0' item-readonly='false' committedBy='' name='content-item' item-hidden='false' qualified-name='Model.Workspace.mind.mapping.Primitive-manager.content-item' TW-version='0' extends-class='true' requireNewRev='true' file-path='/' >
+        --> ContentItem Content of item content-item (ContentItem)
+        --> ItemType FileContentModel
+        --> Boolean extends-class
+        --> String file-name
+        --> String file-path
+        --> Link parent
+        --> String display-name
+        --> String name
+        --> String qualified-name
+        --> Link parent
+        --> Manager Primitive-manager
+    Manager Composite-manager<display-name-template='${#name}' human-name='Composite' id='474bc9e7-e019-4552-a466-c1c4d1681ccc' committedBy='' name='Composite-manager' item-hidden='false' requireNewRev='true' icon='/Model.Workspace.mind/icons/composite.gif' valid-pattern-id='' message-error-id='' display-name='Composite-manager' revModified='true' long-name-template='${#parent-short-name}.${#short-name}' committedDate='0' item-readonly='false' qualified-name='Model.Workspace.mind.mapping.Composite-manager' TW-version='0' >
+      --> ContentItem Content of item Composite-manager (ContentItem)
+      --> ItemType Manager
+      --> String human-name
+      --> String long-name-template
+      --> String display-name-template
+      --> Link item-type
+      --> String valid-pattern-id
+      --> String message-error-id
+      --> Link content-model
+      --> String icon
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> MappingModel mapping
+      --> ItemType Composite
+      FileContentModel content-item<display-name='content-item' file-name='${#short-name}.adl' revModified='true' id='685a153a-70f1-4963-8d3b-1b07e27ab054' committedDate='0' item-readonly='false' committedBy='' name='content-item' item-hidden='false' qualified-name='Model.Workspace.mind.mapping.Composite-manager.content-item' TW-version='0' extends-class='true' requireNewRev='true' file-path='/' >
+        --> ContentItem Content of item content-item (ContentItem)
+        --> ItemType FileContentModel
+        --> Boolean extends-class
+        --> String file-name
+        --> String file-path
+        --> Link parent
+        --> String display-name
+        --> String name
+        --> String qualified-name
+        --> Link parent
+        --> Manager Composite-manager
+    Manager Component-manager<display-name-template='${#name}' human-name='Component' id='dac51463-3928-412b-bb38-87475e95ceb1' committedBy='' name='Component-manager' item-hidden='false' requireNewRev='true' valid-pattern-id='' message-error-id='' display-name='Component-manager' revModified='true' long-name-template='${#parent-short-name}.${#short-name}' committedDate='0' item-readonly='false' qualified-name='Model.Workspace.mind.mapping.Component-manager' TW-version='0' >
+      --> ContentItem Content of item Component-manager (ContentItem)
+      --> ItemType Manager
+      --> String human-name
+      --> String long-name-template
+      --> String display-name-template
+      --> Link item-type
+      --> String valid-pattern-id
+      --> String message-error-id
+      --> Link content-model
+      --> Link parent
+      --> String qualified-name
+      --> String display-name
+      --> String name
+      --> Link parent
+      --> MappingModel mapping
+      --> ItemType Component
+      FileContentModel content-item<display-name='content-item' file-name='${#short-name}.adl' revModified='true' id='48e3803b-b764-4780-9d07-275397302d02' committedDate='0' item-readonly='false' committedBy='' name='content-item' item-hidden='false' qualified-name='Model.Workspace.mind.mapping.Component-manager.content-item' TW-version='0' extends-class='true' requireNewRev='true' file-path='/' >
+        --> ContentItem Content of item content-item (ContentItem)
+        --> ItemType FileContentModel
+        --> Boolean extends-class
+        --> String file-name
+        --> String file-path
+        --> Link parent
+        --> String display-name
+        --> String name
+        --> String qualified-name
+        --> Link parent
+        --> Manager Component-manager
+  ViewModel view-model<display-name='view-model' revModified='true' id='4ff4c7e0-9542-4c7a-b850-4732cefa6a6b' committedDate='0' item-readonly='false' committedBy='' name='view-model' item-hidden='false' qualified-name='Model.Workspace.mind.view-model' TW-version='0' requireNewRev='true' >
+    --> ItemType ViewModel
+    --> Link views
+    --> Link parent
+    --> String display-name
+    --> String name
+    --> String qualified-name
+    --> Link parent
+    --> CadseDefinition mind
+    View MindLibraries<display-name='MindLibraries' revModified='true' id='127dc362-40d8-4484-825b-38397e268c0a' committedDate='0' item-readonly='false' name='MindLibraries' item-hidden='false' qualified-name='Model.Workspace.mind.view-model.MindLibraries' TW-version='0' requireNewRev='true' >
+      --> ContentItem Content of item MindLibraries (ContentItem)
+      --> ItemType View
+      --> Link view-item-types
+      --> Link parent
+      --> String display-name
+      --> String name
+      --> String qualified-name
+      --> Link parent
+      --> ViewModel view-model
+      ViewItemType Package<display-name='Package' is-root-element='false' revModified='true' id='73f41d2a-337e-46fd-80f3-d23e9a4d3043' committedDate='0' item-readonly='false' name='Package' item-hidden='false' qualified-name='Model.Workspace.mind.view-model.MindLibraries.Package' TW-version='0' requireNewRev='true' >
+        --> ItemType ViewItemType
+        --> Link item-type
+        --> Boolean is-root-element
+        --> Link view-link-types
+        --> Link parent
+        --> String qualified-name
+        --> String display-name
+        --> String name
+        --> Link parent
+        --> View MindLibraries
+        --> ItemType Package
+        ViewLinkType components<display-name='components' revModified='true' aggregation='true' can-create-item='true' id='d3a94681-9286-4869-a586-4fbad79e4e96' can-create-link='true' committedDate='0' item-readonly='false' name='components' item-hidden='false' qualified-name='Model.Workspace.mind.view-model.MindLibraries.Package.components' TW-version='0' requireNewRev='true' >
+          --> ItemType ViewLinkType
+          --> Link link-type
+          --> Boolean aggregation
+          --> Boolean can-create-item
+          --> Boolean can-create-link
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> Link parent
+          --> ViewItemType Package
+          --> Link components
+      ViewItemType Library<display-name='Library' is-root-element='true' revModified='true' id='1bd11d20-d6c1-4447-b109-a9c14a3c8ab6' committedDate='0' item-readonly='false' name='Library' item-hidden='false' qualified-name='Model.Workspace.mind.view-model.MindLibraries.Library' TW-version='0' requireNewRev='true' >
+        --> ItemType ViewItemType
+        --> Link item-type
+        --> Boolean is-root-element
+        --> Link view-link-types
+        --> Link parent
+        --> String qualified-name
+        --> String display-name
+        --> String name
+        --> Link parent
+        --> View MindLibraries
+        --> ItemType Library
+        ViewLinkType packages<display-name='packages' revModified='true' aggregation='true' can-create-item='true' id='f74eb664-8c39-4ffd-a1ec-45725ec8f5c7' can-create-link='true' committedDate='0' item-readonly='false' name='packages' item-hidden='false' qualified-name='Model.Workspace.mind.view-model.MindLibraries.Library.packages' TW-version='0' requireNewRev='true' >
+          --> ItemType ViewLinkType
+          --> Link link-type
+          --> Boolean aggregation
+          --> Boolean can-create-item
+          --> Boolean can-create-link
+          --> Link parent
+          --> String qualified-name
+          --> String display-name
+          --> String name
+          --> Link parent
+          --> ViewItemType Library
+          --> Link packages
+      ViewItemType Component<display-name='Component' is-root-element='false' revModified='true' id='b85c48f2-f624-4ae0-a8fd-ab15109f65fe' committedDate='0' item-readonly='false' name='Component' item-hidden='false' qualified-name='Model.Workspace.mind.view-model.MindLibraries.Component' TW-version='0' requireNewRev='true' >
+        --> ItemType ViewItemType
+        --> Link item-type
+        --> Boolean is-root-element
+        --> Link view-link-types
+        --> Link parent
+        --> String display-name
+        --> String name
+        --> String qualified-name
+        --> Link parent
+        --> View MindLibraries
+        --> ItemType Component

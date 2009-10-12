@@ -1,0 +1,1757 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:c-cadse version="0" name="Model.Workspace.mind" xmlns:ns2="http://fr.imag.adele/fede/workspace/model">
+    <item unique-name="Model.Workspace.mind" short-name="mind" is-readonly="false" is-hidden="false" id="e55e9031-58b1-4ea8-961c-d8701f8d33f1">
+        <link type="contents" destinationId="3db15120-e396-43f8-b334-f84e1457b704"/>
+        <link type="instance-of" destinationId="07461b19-b1c4-4f45-a86b-db96ca524030"/>
+        <link type="modified-attributes" destinationId="9f495f63-f260-4169-9006-6263e224fa15"/>
+        <link type="modified-attributes" destinationId="e52c6ea0-0612-4706-92c0-1d521e472bd1"/>
+        <link type="modified-attributes" destinationId="5aea3b2d-0e5b-4370-ba5a-88012b56c80e"/>
+        <link type="modified-attributes" destinationId="667f62da-cdbe-468f-be55-ee72e0eb3056"/>
+        <link type="modified-attributes" destinationId="0fab31b0-40eb-456c-bd57-cdc26789a838"/>
+        <link type="modified-attributes" destinationId="9b933366-767c-4e3c-947d-2dbb679aad51"/>
+        <link type="modified-attributes" destinationId="e46dcaa2-7925-4ab7-bfe9-e97e2142b0e2"/>
+        <link type="modified-attributes" destinationId="136b82d1-b642-4e54-82e9-1040618a5dc4"/>
+        <link type="modified-attributes" destinationId="6098d610-3df5-4de0-a741-a35483d29a82"/>
+        <link type="modified-attributes" destinationId="6b6d1d48-530f-402c-adbb-e8a1d97ebe98"/>
+        <link type="modified-attributes" destinationId="fe586565-ec11-4d90-a232-9ab76c7c8a3b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="5f32f81c-0eee-4074-adf5-8f36f0d63b79"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="fe586565-ec11-4d90-a232-9ab76c7c8a3b"/>
+        <link type="build" destinationId="a46bc266-7aee-405a-9b5f-5a96dc5152f0"/>
+        <link type="data-model" destinationId="b23167de-5b61-4da9-81f9-2820471b228a"/>
+        <link type="mapping" destinationId="be8635dc-b68a-4edb-86f6-85d46ffba02c"/>
+        <link type="view-model" destinationId="4ff4c7e0-9542-4c7a-b850-4732cefa6a6b"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="e55e9031-58b1-4ea8-961c-d8701f8d33f1" key="id"/>
+        <attributes-value tw-rev-specific="false" id="c4b7f492-b0b3-4b11-a2f3-f95a4ed7d2d2" value="false" key="executed"/>
+        <attributes-value tw-rev-specific="false" id="6b6d1d48-530f-402c-adbb-e8a1d97ebe98" value="" key="commentary"/>
+        <attributes-value tw-rev-specific="false" id="5f32f81c-0eee-4074-adf5-8f36f0d63b79" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="mind" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="ae379672-4190-4294-8654-fb3cf19f13a9" value="e55e9031-58b1-4ea8-961c-d8701f8d33f1" key="id-definition"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="mind" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="136b82d1-b642-4e54-82e9-1040618a5dc4" value="" key="vendor-name"/>
+        <attributes-value tw-rev-specific="false" id="0fab31b0-40eb-456c-bd57-cdc26789a838" value="org.ow2.fractal.mind.cadse" key="packagename"/>
+        <attributes-value tw-rev-specific="false" id="e46dcaa2-7925-4ab7-bfe9-e97e2142b0e2" value="[org.eclipse.jdt.core, adl, org.eclipse.emf.ecore.resource, org.eclipse.emf.ecore.resource.impl, org.eclipse.emf.common.util , fr.imag.adele.cadse.core.delta, fr.imag.adele.cadse.core.transaction]" key="imports"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="9b933366-767c-4e3c-947d-2dbb679aad51" value="Cadse Model.Workspace.mind" key="cadse-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="6098d610-3df5-4de0-a741-a35483d29a82" value="" key="version-cadse"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.build-model" short-name="build-model" is-readonly="false" is-hidden="false" id="a46bc266-7aee-405a-9b5f-5a96dc5152f0">
+        <link type="instance-of" destinationId="4fb5450d-76a8-4fb8-a647-18b8907ce568"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="build-model" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="a46bc266-7aee-405a-9b5f-5a96dc5152f0" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="build-model" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.build-model" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="DataModel mind::data-model" short-name="data-model" is-readonly="false" is-hidden="false" id="b23167de-5b61-4da9-81f9-2820471b228a">
+        <link type="instance-of" destinationId="07e3ac34-f382-4816-9050-6494d5cda54d"/>
+        <link type="modified-attributes" destinationId="8876aeb0-633a-4d95-b403-12d8a2a35c6b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="types" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <link type="types" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="types" destinationId="65c43230-9912-428a-b2c4-39bfd2e38585"/>
+        <link type="types" destinationId="6598a762-0790-4627-84a6-77751947c5a9"/>
+        <link type="types" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="data-model" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="b23167de-5b61-4da9-81f9-2820471b228a" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="data-model" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="DataModel mind::data-model" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="mind..Library" short-name="Library" is-readonly="false" is-hidden="false" id="8e5215d6-684a-490e-b7aa-639e266b130c">
+        <link type="instance-of" destinationId="43808065-4f70-4290-adba-cca999431ba1"/>
+        <link type="modified-attributes" destinationId="826f31ee-8444-4da3-abd5-ad3cdc950f9e"/>
+        <link type="modified-attributes" destinationId="adbfdd92-caf3-42d9-8ac7-93946f962767"/>
+        <link type="modified-attributes" destinationId="4c6e2813-ec75-4924-9f13-f7cf2d5d237c"/>
+        <link type="modified-attributes" destinationId="195c6dd5-e410-4f12-92c1-23d16c81342d"/>
+        <link type="modified-attributes" destinationId="48d12dfc-e32c-4746-a566-8690d7a6ce35"/>
+        <link type="modified-attributes" destinationId="9891387e-6c27-4f71-aaae-59373664f449"/>
+        <link type="modified-attributes" destinationId="79c83dbd-426a-4080-bae0-a3d1c30fb012"/>
+        <link type="modified-attributes" destinationId="93f0f6f8-bd19-4ab9-935d-70690907000e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="b23167de-5b61-4da9-81f9-2820471b228a"/>
+        <link type="attributes" destinationId="6143a650-18c1-48c6-a574-8e1bf24715bc"/>
+        <link type="cadse-runtime" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="super-type" destinationId="148dcee3-8512-49eb-abe7-9f8d25502778"/>
+        <link type="creation-dialog" destinationId="80afce42-764a-45c1-acc8-cc43762d26c3"/>
+        <link type="modification-dialog" destinationId="f75217eb-6676-41c2-b3f2-a07e47308291"/>
+        <link type="link-type" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <attributes-value tw-rev-specific="false" id="79c83dbd-426a-4080-bae0-a3d1c30fb012" value="false" key="is-meta-item-type"/>
+        <attributes-value tw-rev-specific="false" id="195c6dd5-e410-4f12-92c1-23d16c81342d" value="true" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="9891387e-6c27-4f71-aaae-59373664f449" value="148dcee3-8512-49eb-abe7-9f8d25502778" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="8e5215d6-684a-490e-b7aa-639e266b130c" key="id"/>
+        <attributes-value tw-rev-specific="false" id="48d12dfc-e32c-4746-a566-8690d7a6ce35" value="true" key="has-content"/>
+        <attributes-value tw-rev-specific="false" id="584955ce-5c4f-44ea-9e99-f8035ef6b1ea" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="manager-class"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Library" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c158ac87-ce15-46cb-95fc-33830bef3f53" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="item-manager"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="4c6e2813-ec75-4924-9f13-f7cf2d5d237c" value="false" key="is-abstract"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="a3434800-1759-4710-b124-c03ba1dc9165" value="&lt;no value&gt;" key="package-name"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mind..Library" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="packages" is-readonly="false" is-hidden="false" id="6143a650-18c1-48c6-a574-8e1bf24715bc">
+        <link type="contents" destinationId="808abe7d-4929-49db-af6a-c2accfd3716f"/>
+        <link type="instance-of" destinationId="ac03a3ca-23d6-4c8d-ba5c-c84cb42ff9ea"/>
+        <link type="modified-attributes" destinationId="a76dc735-0d84-463f-b6d7-0ba34e7649fc"/>
+        <link type="modified-attributes" destinationId="dee98c9b-ef77-4844-b9ac-8598684e5072"/>
+        <link type="modified-attributes" destinationId="4f63a396-120f-43d5-bdec-3813ddb60241"/>
+        <link type="modified-attributes" destinationId="a4d1fcc7-d517-4af8-923d-2f175e2bf98e"/>
+        <link type="modified-attributes" destinationId="2e89f2e0-e8f9-4b1c-a989-d5a5bacc2059"/>
+        <link type="modified-attributes" destinationId="8f730054-7133-4158-9c0f-563d41ea8933"/>
+        <link type="modified-attributes" destinationId="a503fea4-8d66-4084-8704-ed545c7ade82"/>
+        <link type="modified-attributes" destinationId="cf3f31f5-7b25-423e-b59b-e3005b54c9a8"/>
+        <link type="modified-attributes" destinationId="7a1d2487-609a-44a9-8939-fe3f4d019f1f"/>
+        <link type="modified-attributes" destinationId="c7dbbb8d-a711-4d78-b291-fdd161ade288"/>
+        <link type="modified-attributes" destinationId="1129cc23-6daa-40e2-a6cc-df8551813ba3"/>
+        <link type="modified-attributes" destinationId="e25140b3-9a3b-4588-be04-4e1cbaf1f81d"/>
+        <link type="modified-attributes" destinationId="4c251c4b-c9cd-45b8-9502-ae74db5953e3"/>
+        <link type="modified-attributes" destinationId="0b647418-94bd-41c2-9803-9543564017e0"/>
+        <link type="modified-attributes" destinationId="f5e94a1a-8e41-4852-b189-906c5734d628"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="7ee6f1d5-8ba6-479a-bc20-5a826e6595c2"/>
+        <link type="modified-attributes" destinationId="10a0ed58-de83-437e-a05c-878dd4c37b4f"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f5e94a1a-8e41-4852-b189-906c5734d628"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <link type="destination" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="source" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <attributes-value tw-rev-specific="false" id="a503fea4-8d66-4084-8704-ed545c7ade82" value="twImmutable" key="TWEvol"/>
+        <attributes-value tw-rev-specific="false" id="d07e68e8-7b69-4eeb-90e4-c8816daf38cf" value="true" key="cannot-be-undefined"/>
+        <attributes-value tw-rev-specific="false" id="904b87fb-da10-462c-bb2b-4e4737652e42" value="3" key="kind"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="6143a650-18c1-48c6-a574-8e1bf24715bc" key="id"/>
+        <attributes-value tw-rev-specific="false" id="2e89f2e0-e8f9-4b1c-a989-d5a5bacc2059" value="false" key="annotation"/>
+        <attributes-value tw-rev-specific="false" id="c7dbbb8d-a711-4d78-b291-fdd161ade288" value="false" key="TWCoupled"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="packages" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="8f730054-7133-4158-9c0f-563d41ea8933" value="false" key="composition"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="10a0ed58-de83-437e-a05c-878dd4c37b4f" value="0" key="min"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="packages" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="7ee6f1d5-8ba6-479a-bc20-5a826e6595c2" value="-1" key="max"/>
+        <attributes-value tw-rev-specific="false" id="cf3f31f5-7b25-423e-b59b-e3005b54c9a8" value="true" key="TWRevSpecific"/>
+        <attributes-value tw-rev-specific="false" id="7a1d2487-609a-44a9-8939-fe3f4d019f1f" value="immutable" key="TWDestEvol"/>
+        <attributes-value tw-rev-specific="false" id="4c251c4b-c9cd-45b8-9502-ae74db5953e3" value="conflict" key="TWCommitKind"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="0b647418-94bd-41c2-9803-9543564017e0" value="merge" key="TWUpdateKind"/>
+        <attributes-value tw-rev-specific="false" id="dee98c9b-ef77-4844-b9ac-8598684e5072" value="true" key="aggregation"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="a76dc735-0d84-463f-b6d7-0ba34e7649fc" value="true" key="must-be-initialized"/>
+        <attributes-value tw-rev-specific="false" id="a4d1fcc7-d517-4af8-923d-2f175e2bf98e" value="false" key="require"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="packages" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="4f63a396-120f-43d5-bdec-3813ddb60241" value="true" key="part"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="80afce42-764a-45c1-acc8-cc43762d26c3">
+        <link type="contents" destinationId="6cff54cc-0656-4b88-9d6a-c730e12f2e49"/>
+        <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
+        <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <link type="pages" destinationId="1b37a2ef-8f3b-4b4f-af56-291b81b3b6a1"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="80afce42-764a-45c1-acc8-cc43762d26c3" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Creation Page mind::LIBRARY::creation-page-Library" short-name="creation-page-Library" is-readonly="false" is-hidden="false" id="1b37a2ef-8f3b-4b4f-af56-291b81b3b6a1">
+        <link type="contents" destinationId="6610979c-9b02-4bd6-924e-05ed23a9635a"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="d580b6f0-4f94-4966-a9ec-bc1bee454efb"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="80afce42-764a-45c1-acc8-cc43762d26c3"/>
+        <link type="fields" destinationId="69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="93f8f2e7-a510-4580-933c-59c10b24fb2c" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="1b37a2ef-8f3b-4b4f-af56-291b81b3b6a1" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Create Library" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-page-Library" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation-page-Library" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Creation Page mind::LIBRARY::creation-page-Library" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="Field mind::LIBRARY::creation-page-Library::packages" short-name="packages" is-readonly="false" is-hidden="false" id="69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7">
+        <link type="contents" destinationId="f5c61b3d-cae1-4aff-95de-9bbc731f5bb2"/>
+        <link type="instance-of" destinationId="a1922398-35c7-4711-90e9-8ec54331c003"/>
+        <link type="modified-attributes" destinationId="0acb5f5e-30d3-4597-82fe-3835b925acf2"/>
+        <link type="modified-attributes" destinationId="bf93587e-e10e-4dcd-acb0-cddbb32589d9"/>
+        <link type="modified-attributes" destinationId="3cc3fa25-7b0e-4742-b04d-118e6526b0c7"/>
+        <link type="modified-attributes" destinationId="9d81a553-3450-4124-8c22-db1fba145964"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="1b37a2ef-8f3b-4b4f-af56-291b81b3b6a1"/>
+        <link type="attribute" destinationId="6143a650-18c1-48c6-a574-8e1bf24715bc"/>
+        <link type="display" destinationId="3860de24-79d6-47dd-9461-3f424ea2dcb0"/>
+        <attributes-value tw-rev-specific="false" id="9d81a553-3450-4124-8c22-db1fba145964" value="defaultpos" key="position"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="packages" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="3cc3fa25-7b0e-4742-b04d-118e6526b0c7" value="packages" key="label"/>
+        <attributes-value tw-rev-specific="false" id="1481510e-59e2-49ca-b2e8-031fee0a5feb" value="true" key="editable"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7" key="id"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="packages" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="packages" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="display" is-readonly="false" is-hidden="false" id="3860de24-79d6-47dd-9461-3f424ea2dcb0">
+        <link type="contents" destinationId="fe06ca76-c108-489d-ac99-77384c34c84b"/>
+        <link type="instance-of" destinationId="1c2a361d-5c31-4f66-88ff-fdbae6e27ec2"/>
+        <link type="modified-attributes" destinationId="e5c86831-4f23-4b68-8b0a-458916b9818b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="2f2dc21d-0cb8-41dc-a68c-5a6c09aac9b5"/>
+        <link type="modified-attributes" destinationId="df6d8bcd-43a9-4a3a-a1f8-bb106d1a25bd"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7"/>
+        <link type="ic" destinationId="818af808-8a0f-419f-ad5f-822cb35afcbe"/>
+        <link type="mc" destinationId="516afad8-7673-4c2f-beeb-dfe9f8c5a3bf"/>
+        <attributes-value tw-rev-specific="false" id="5e061621-8973-4418-94e0-bb4334e50433" value="false" key="update-button"/>
+        <attributes-value tw-rev-specific="false" id="10efdd32-94af-4c0a-941a-c6fc55550ab3" value="false" key="order-button"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="3860de24-79d6-47dd-9461-3f424ea2dcb0" key="id"/>
+        <attributes-value tw-rev-specific="false" id="ca69e644-02ae-4c54-a0c4-1eac0ccdffd0" value="false" key="show-filter"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="display" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="display" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="e5c86831-4f23-4b68-8b0a-458916b9818b" value="true" key="editable-button"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="display" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="ic" is-readonly="false" is-hidden="false" id="818af808-8a0f-419f-ad5f-822cb35afcbe">
+        <link type="contents" destinationId="4becbd89-3db3-4243-890e-b261d6a60364"/>
+        <link type="instance-of" destinationId="08fcca26-7bb7-454e-bbd3-da34b8e12680"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="3860de24-79d6-47dd-9461-3f424ea2dcb0"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="ic" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="cff774c1-36bb-4ac7-bd85-16e52ff2b02d" value="Select a value." key="select-message"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="818af808-8a0f-419f-ad5f-822cb35afcbe" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="252cb524-0de2-4192-98d7-fe75e1f994a9" value="Select a value." key="select-title"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="ic" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="ic" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="mc" is-readonly="false" is-hidden="false" id="516afad8-7673-4c2f-beeb-dfe9f8c5a3bf">
+        <link type="contents" destinationId="c45c3da7-c78c-48a2-a502-5f1aea1c2f53"/>
+        <link type="instance-of" destinationId="8b02bffe-8011-45e3-b7bd-afbcec04a5cb"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="3860de24-79d6-47dd-9461-3f424ea2dcb0"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Mode controller Link model controller" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="516afad8-7673-4c2f-beeb-dfe9f8c5a3bf" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="mc" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mc" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="f75217eb-6676-41c2-b3f2-a07e47308291">
+        <link type="contents" destinationId="5e094d37-fae4-4803-8fc3-07e6d3b31497"/>
+        <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
+        <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <link type="pages" destinationId="7ecb9a2a-036f-4433-94e4-f2e7efcd3555"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="f75217eb-6676-41c2-b3f2-a07e47308291" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Modification Page mind::LIBRARY::modification-page-Library" short-name="modification-page-Library" is-readonly="false" is-hidden="false" id="7ecb9a2a-036f-4433-94e4-f2e7efcd3555">
+        <link type="contents" destinationId="3bfbfc28-e091-418e-8fd2-8ee32b777b39"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="d580b6f0-4f94-4966-a9ec-bc1bee454efb"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="f75217eb-6676-41c2-b3f2-a07e47308291"/>
+        <link type="fields" destinationId="e63b03e2-a0df-44ee-b6fe-cf9f348bcbb6"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="8b204dac-a210-4658-ae66-4813e4229a9e" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="7ecb9a2a-036f-4433-94e4-f2e7efcd3555" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Library" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-page-Library" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification-page-Library" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Modification Page mind::LIBRARY::modification-page-Library" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="Field mind::LIBRARY::modification-page-Library::packages" short-name="packages" is-readonly="false" is-hidden="false" id="e63b03e2-a0df-44ee-b6fe-cf9f348bcbb6">
+        <link type="contents" destinationId="634f8224-b5e4-486b-9e13-5d25102fc0d5"/>
+        <link type="instance-of" destinationId="a1922398-35c7-4711-90e9-8ec54331c003"/>
+        <link type="modified-attributes" destinationId="0acb5f5e-30d3-4597-82fe-3835b925acf2"/>
+        <link type="modified-attributes" destinationId="bf93587e-e10e-4dcd-acb0-cddbb32589d9"/>
+        <link type="modified-attributes" destinationId="3cc3fa25-7b0e-4742-b04d-118e6526b0c7"/>
+        <link type="modified-attributes" destinationId="9d81a553-3450-4124-8c22-db1fba145964"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="7ecb9a2a-036f-4433-94e4-f2e7efcd3555"/>
+        <link type="attribute" destinationId="6143a650-18c1-48c6-a574-8e1bf24715bc"/>
+        <link type="display" destinationId="9e943ba4-5bd8-4082-bfaf-b2a41d88df9b"/>
+        <attributes-value tw-rev-specific="false" id="9d81a553-3450-4124-8c22-db1fba145964" value="defaultpos" key="position"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="packages" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="3cc3fa25-7b0e-4742-b04d-118e6526b0c7" value="packages" key="label"/>
+        <attributes-value tw-rev-specific="false" id="1481510e-59e2-49ca-b2e8-031fee0a5feb" value="true" key="editable"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="e63b03e2-a0df-44ee-b6fe-cf9f348bcbb6" key="id"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="packages" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="packages" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="display" is-readonly="false" is-hidden="false" id="9e943ba4-5bd8-4082-bfaf-b2a41d88df9b">
+        <link type="contents" destinationId="8317469f-bedb-491d-b124-4ff36c03b0f4"/>
+        <link type="instance-of" destinationId="1c2a361d-5c31-4f66-88ff-fdbae6e27ec2"/>
+        <link type="modified-attributes" destinationId="e5c86831-4f23-4b68-8b0a-458916b9818b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="2f2dc21d-0cb8-41dc-a68c-5a6c09aac9b5"/>
+        <link type="modified-attributes" destinationId="df6d8bcd-43a9-4a3a-a1f8-bb106d1a25bd"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="e63b03e2-a0df-44ee-b6fe-cf9f348bcbb6"/>
+        <link type="ic" destinationId="6bed9141-e257-45cd-844a-9a398b8f6f39"/>
+        <link type="mc" destinationId="e958826e-47df-4a5c-95b7-3a721f5d3388"/>
+        <attributes-value tw-rev-specific="false" id="5e061621-8973-4418-94e0-bb4334e50433" value="false" key="update-button"/>
+        <attributes-value tw-rev-specific="false" id="10efdd32-94af-4c0a-941a-c6fc55550ab3" value="false" key="order-button"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="9e943ba4-5bd8-4082-bfaf-b2a41d88df9b" key="id"/>
+        <attributes-value tw-rev-specific="false" id="ca69e644-02ae-4c54-a0c4-1eac0ccdffd0" value="false" key="show-filter"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="display" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="display" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="e5c86831-4f23-4b68-8b0a-458916b9818b" value="true" key="editable-button"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="display" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="ic" is-readonly="false" is-hidden="false" id="6bed9141-e257-45cd-844a-9a398b8f6f39">
+        <link type="contents" destinationId="9b61659a-df19-4127-bc62-1469991b7416"/>
+        <link type="instance-of" destinationId="08fcca26-7bb7-454e-bbd3-da34b8e12680"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="9e943ba4-5bd8-4082-bfaf-b2a41d88df9b"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="ic" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="cff774c1-36bb-4ac7-bd85-16e52ff2b02d" value="Select a value." key="select-message"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="6bed9141-e257-45cd-844a-9a398b8f6f39" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="252cb524-0de2-4192-98d7-fe75e1f994a9" value="Select a value." key="select-title"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="ic" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="ic" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="mc" is-readonly="false" is-hidden="false" id="e958826e-47df-4a5c-95b7-3a721f5d3388">
+        <link type="contents" destinationId="6f7aa374-898c-4c08-abd8-232550f9d514"/>
+        <link type="instance-of" destinationId="8b02bffe-8011-45e3-b7bd-afbcec04a5cb"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="9e943ba4-5bd8-4082-bfaf-b2a41d88df9b"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Mode controller Link model controller" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="e958826e-47df-4a5c-95b7-3a721f5d3388" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="mc" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mc" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="mind..Package" short-name="Package" is-readonly="false" is-hidden="false" id="acc0d820-7a7a-41c3-9316-035c869d2fbf">
+        <link type="instance-of" destinationId="43808065-4f70-4290-adba-cca999431ba1"/>
+        <link type="modified-attributes" destinationId="826f31ee-8444-4da3-abd5-ad3cdc950f9e"/>
+        <link type="modified-attributes" destinationId="adbfdd92-caf3-42d9-8ac7-93946f962767"/>
+        <link type="modified-attributes" destinationId="4c6e2813-ec75-4924-9f13-f7cf2d5d237c"/>
+        <link type="modified-attributes" destinationId="195c6dd5-e410-4f12-92c1-23d16c81342d"/>
+        <link type="modified-attributes" destinationId="48d12dfc-e32c-4746-a566-8690d7a6ce35"/>
+        <link type="modified-attributes" destinationId="9891387e-6c27-4f71-aaae-59373664f449"/>
+        <link type="modified-attributes" destinationId="79c83dbd-426a-4080-bae0-a3d1c30fb012"/>
+        <link type="modified-attributes" destinationId="93f0f6f8-bd19-4ab9-935d-70690907000e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="b23167de-5b61-4da9-81f9-2820471b228a"/>
+        <link type="attributes" destinationId="bff02021-7afb-4d23-a496-26a6bdb70ded"/>
+        <link type="cadse-runtime" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="super-type" destinationId="148dcee3-8512-49eb-abe7-9f8d25502778"/>
+        <link type="creation-dialog" destinationId="f1f9436b-9859-48ea-a49b-b19ec05cf071"/>
+        <link type="modification-dialog" destinationId="fe16e021-bab4-41a5-990f-a65f552b2da0"/>
+        <link type="link-type" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <attributes-value tw-rev-specific="false" id="79c83dbd-426a-4080-bae0-a3d1c30fb012" value="false" key="is-meta-item-type"/>
+        <attributes-value tw-rev-specific="false" id="195c6dd5-e410-4f12-92c1-23d16c81342d" value="false" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="9891387e-6c27-4f71-aaae-59373664f449" value="148dcee3-8512-49eb-abe7-9f8d25502778" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="acc0d820-7a7a-41c3-9316-035c869d2fbf" key="id"/>
+        <attributes-value tw-rev-specific="false" id="48d12dfc-e32c-4746-a566-8690d7a6ce35" value="true" key="has-content"/>
+        <attributes-value tw-rev-specific="false" id="584955ce-5c4f-44ea-9e99-f8035ef6b1ea" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="manager-class"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Package" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c158ac87-ce15-46cb-95fc-33830bef3f53" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="item-manager"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="4c6e2813-ec75-4924-9f13-f7cf2d5d237c" value="false" key="is-abstract"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="a3434800-1759-4710-b124-c03ba1dc9165" value="&lt;no value&gt;" key="package-name"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mind..Package" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="components" is-readonly="false" is-hidden="false" id="bff02021-7afb-4d23-a496-26a6bdb70ded">
+        <link type="contents" destinationId="e2d188b6-9246-49e2-9052-b569f66a63a8"/>
+        <link type="instance-of" destinationId="ac03a3ca-23d6-4c8d-ba5c-c84cb42ff9ea"/>
+        <link type="modified-attributes" destinationId="a76dc735-0d84-463f-b6d7-0ba34e7649fc"/>
+        <link type="modified-attributes" destinationId="dee98c9b-ef77-4844-b9ac-8598684e5072"/>
+        <link type="modified-attributes" destinationId="4f63a396-120f-43d5-bdec-3813ddb60241"/>
+        <link type="modified-attributes" destinationId="a4d1fcc7-d517-4af8-923d-2f175e2bf98e"/>
+        <link type="modified-attributes" destinationId="2e89f2e0-e8f9-4b1c-a989-d5a5bacc2059"/>
+        <link type="modified-attributes" destinationId="8f730054-7133-4158-9c0f-563d41ea8933"/>
+        <link type="modified-attributes" destinationId="a503fea4-8d66-4084-8704-ed545c7ade82"/>
+        <link type="modified-attributes" destinationId="cf3f31f5-7b25-423e-b59b-e3005b54c9a8"/>
+        <link type="modified-attributes" destinationId="7a1d2487-609a-44a9-8939-fe3f4d019f1f"/>
+        <link type="modified-attributes" destinationId="c7dbbb8d-a711-4d78-b291-fdd161ade288"/>
+        <link type="modified-attributes" destinationId="1129cc23-6daa-40e2-a6cc-df8551813ba3"/>
+        <link type="modified-attributes" destinationId="e25140b3-9a3b-4588-be04-4e1cbaf1f81d"/>
+        <link type="modified-attributes" destinationId="4c251c4b-c9cd-45b8-9502-ae74db5953e3"/>
+        <link type="modified-attributes" destinationId="0b647418-94bd-41c2-9803-9543564017e0"/>
+        <link type="modified-attributes" destinationId="f5e94a1a-8e41-4852-b189-906c5734d628"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="7ee6f1d5-8ba6-479a-bc20-5a826e6595c2"/>
+        <link type="modified-attributes" destinationId="10a0ed58-de83-437e-a05c-878dd4c37b4f"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f5e94a1a-8e41-4852-b189-906c5734d628"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="destination" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <link type="source" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <attributes-value tw-rev-specific="false" id="a503fea4-8d66-4084-8704-ed545c7ade82" value="twImmutable" key="TWEvol"/>
+        <attributes-value tw-rev-specific="false" id="d07e68e8-7b69-4eeb-90e4-c8816daf38cf" value="true" key="cannot-be-undefined"/>
+        <attributes-value tw-rev-specific="false" id="904b87fb-da10-462c-bb2b-4e4737652e42" value="3" key="kind"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="bff02021-7afb-4d23-a496-26a6bdb70ded" key="id"/>
+        <attributes-value tw-rev-specific="false" id="2e89f2e0-e8f9-4b1c-a989-d5a5bacc2059" value="false" key="annotation"/>
+        <attributes-value tw-rev-specific="false" id="c7dbbb8d-a711-4d78-b291-fdd161ade288" value="false" key="TWCoupled"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="components" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="8f730054-7133-4158-9c0f-563d41ea8933" value="false" key="composition"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="10a0ed58-de83-437e-a05c-878dd4c37b4f" value="0" key="min"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="components" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="7ee6f1d5-8ba6-479a-bc20-5a826e6595c2" value="-1" key="max"/>
+        <attributes-value tw-rev-specific="false" id="cf3f31f5-7b25-423e-b59b-e3005b54c9a8" value="true" key="TWRevSpecific"/>
+        <attributes-value tw-rev-specific="false" id="7a1d2487-609a-44a9-8939-fe3f4d019f1f" value="immutable" key="TWDestEvol"/>
+        <attributes-value tw-rev-specific="false" id="4c251c4b-c9cd-45b8-9502-ae74db5953e3" value="conflict" key="TWCommitKind"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="0b647418-94bd-41c2-9803-9543564017e0" value="merge" key="TWUpdateKind"/>
+        <attributes-value tw-rev-specific="false" id="dee98c9b-ef77-4844-b9ac-8598684e5072" value="true" key="aggregation"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="a76dc735-0d84-463f-b6d7-0ba34e7649fc" value="false" key="must-be-initialized"/>
+        <attributes-value tw-rev-specific="false" id="a4d1fcc7-d517-4af8-923d-2f175e2bf98e" value="false" key="require"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="components" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="4f63a396-120f-43d5-bdec-3813ddb60241" value="true" key="part"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="f1f9436b-9859-48ea-a49b-b19ec05cf071">
+        <link type="contents" destinationId="907b8cf6-e5c6-4a02-8a0d-769dfef2a00d"/>
+        <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
+        <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="pages" destinationId="a6f1d559-aac4-4e17-ad50-45388e2564be"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="f1f9436b-9859-48ea-a49b-b19ec05cf071" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Creation Page mind::PACKAGE::creation-page-Package" short-name="creation-page-Package" is-readonly="false" is-hidden="false" id="a6f1d559-aac4-4e17-ad50-45388e2564be">
+        <link type="contents" destinationId="b36b9206-5b04-4874-935d-e2c393e2b8dc"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="f1f9436b-9859-48ea-a49b-b19ec05cf071"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="fcc5c5eb-1933-4bf8-b0ae-20435300fde2" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="a6f1d559-aac4-4e17-ad50-45388e2564be" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Create Package" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-page-Package" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation-page-Package" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Creation Page mind::PACKAGE::creation-page-Package" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="fe16e021-bab4-41a5-990f-a65f552b2da0">
+        <link type="contents" destinationId="0ae20e93-a088-4c3d-b223-59303cc930ff"/>
+        <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
+        <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="pages" destinationId="7ee76797-2eec-4504-a06b-7de9f43ecbdc"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="fe16e021-bab4-41a5-990f-a65f552b2da0" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Modification Page mind::PACKAGE::modification-page-Package" short-name="modification-page-Package" is-readonly="false" is-hidden="false" id="7ee76797-2eec-4504-a06b-7de9f43ecbdc">
+        <link type="contents" destinationId="0b881d31-86e5-406b-902f-a352e1a34a67"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="d580b6f0-4f94-4966-a9ec-bc1bee454efb"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="fe16e021-bab4-41a5-990f-a65f552b2da0"/>
+        <link type="fields" destinationId="8c4e6699-b326-4185-9634-eb06cfbb3002"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="6a33c13e-7265-4430-ab98-71de3c540ae4" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="7ee76797-2eec-4504-a06b-7de9f43ecbdc" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Package" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-page-Package" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification-page-Package" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Modification Page mind::PACKAGE::modification-page-Package" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="Field mind::PACKAGE::modification-page-Package::components" short-name="components" is-readonly="false" is-hidden="false" id="8c4e6699-b326-4185-9634-eb06cfbb3002">
+        <link type="contents" destinationId="82a8369a-d9f2-4470-bd24-49d66aa9c170"/>
+        <link type="instance-of" destinationId="a1922398-35c7-4711-90e9-8ec54331c003"/>
+        <link type="modified-attributes" destinationId="0acb5f5e-30d3-4597-82fe-3835b925acf2"/>
+        <link type="modified-attributes" destinationId="bf93587e-e10e-4dcd-acb0-cddbb32589d9"/>
+        <link type="modified-attributes" destinationId="3cc3fa25-7b0e-4742-b04d-118e6526b0c7"/>
+        <link type="modified-attributes" destinationId="9d81a553-3450-4124-8c22-db1fba145964"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="7ee76797-2eec-4504-a06b-7de9f43ecbdc"/>
+        <link type="attribute" destinationId="bff02021-7afb-4d23-a496-26a6bdb70ded"/>
+        <link type="display" destinationId="aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc"/>
+        <attributes-value tw-rev-specific="false" id="9d81a553-3450-4124-8c22-db1fba145964" value="defaultpos" key="position"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="components" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="3cc3fa25-7b0e-4742-b04d-118e6526b0c7" value="components" key="label"/>
+        <attributes-value tw-rev-specific="false" id="1481510e-59e2-49ca-b2e8-031fee0a5feb" value="true" key="editable"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="8c4e6699-b326-4185-9634-eb06cfbb3002" key="id"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="components" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="components" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="display" is-readonly="false" is-hidden="false" id="aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc">
+        <link type="contents" destinationId="cf8d6eeb-365f-4edc-8077-9eba4118d08d"/>
+        <link type="instance-of" destinationId="1c2a361d-5c31-4f66-88ff-fdbae6e27ec2"/>
+        <link type="modified-attributes" destinationId="e5c86831-4f23-4b68-8b0a-458916b9818b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="2f2dc21d-0cb8-41dc-a68c-5a6c09aac9b5"/>
+        <link type="modified-attributes" destinationId="df6d8bcd-43a9-4a3a-a1f8-bb106d1a25bd"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="8c4e6699-b326-4185-9634-eb06cfbb3002"/>
+        <link type="ic" destinationId="cf3a607d-895a-4fc2-aacb-58ef27d2ea53"/>
+        <link type="mc" destinationId="18792f2f-0c85-48bf-afcc-fdb6a8e8fb34"/>
+        <attributes-value tw-rev-specific="false" id="5e061621-8973-4418-94e0-bb4334e50433" value="false" key="update-button"/>
+        <attributes-value tw-rev-specific="false" id="10efdd32-94af-4c0a-941a-c6fc55550ab3" value="false" key="order-button"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc" key="id"/>
+        <attributes-value tw-rev-specific="false" id="ca69e644-02ae-4c54-a0c4-1eac0ccdffd0" value="false" key="show-filter"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="display" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="display" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="e5c86831-4f23-4b68-8b0a-458916b9818b" value="true" key="editable-button"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="display" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="ic" is-readonly="false" is-hidden="false" id="cf3a607d-895a-4fc2-aacb-58ef27d2ea53">
+        <link type="contents" destinationId="5ea9bf95-a7df-4d2b-9b3c-eabda0a50abf"/>
+        <link type="instance-of" destinationId="08fcca26-7bb7-454e-bbd3-da34b8e12680"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="ic" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="cff774c1-36bb-4ac7-bd85-16e52ff2b02d" value="Select a value." key="select-message"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="cf3a607d-895a-4fc2-aacb-58ef27d2ea53" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="252cb524-0de2-4192-98d7-fe75e1f994a9" value="Select a value." key="select-title"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="ic" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="ic" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="mc" is-readonly="false" is-hidden="false" id="18792f2f-0c85-48bf-afcc-fdb6a8e8fb34">
+        <link type="contents" destinationId="aa0d887a-f51e-4e81-860c-052f7be2b1ef"/>
+        <link type="instance-of" destinationId="8b02bffe-8011-45e3-b7bd-afbcec04a5cb"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="aa4375cf-3f1e-4d59-acf8-5fbd4ccde0cc"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Mode controller Link model controller" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="18792f2f-0c85-48bf-afcc-fdb6a8e8fb34" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="mc" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mc" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="mind..Primitive" short-name="Primitive" is-readonly="false" is-hidden="false" id="65c43230-9912-428a-b2c4-39bfd2e38585">
+        <link type="instance-of" destinationId="43808065-4f70-4290-adba-cca999431ba1"/>
+        <link type="modified-attributes" destinationId="826f31ee-8444-4da3-abd5-ad3cdc950f9e"/>
+        <link type="modified-attributes" destinationId="adbfdd92-caf3-42d9-8ac7-93946f962767"/>
+        <link type="modified-attributes" destinationId="4c6e2813-ec75-4924-9f13-f7cf2d5d237c"/>
+        <link type="modified-attributes" destinationId="195c6dd5-e410-4f12-92c1-23d16c81342d"/>
+        <link type="modified-attributes" destinationId="48d12dfc-e32c-4746-a566-8690d7a6ce35"/>
+        <link type="modified-attributes" destinationId="9891387e-6c27-4f71-aaae-59373664f449"/>
+        <link type="modified-attributes" destinationId="93f0f6f8-bd19-4ab9-935d-70690907000e"/>
+        <link type="modified-attributes" destinationId="79c83dbd-426a-4080-bae0-a3d1c30fb012"/>
+        <link type="modified-attributes" destinationId="ad55a28c-7654-4e0e-96a7-5ca04acee9d6"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="b23167de-5b61-4da9-81f9-2820471b228a"/>
+        <link type="cadse-runtime" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="super-type" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <link type="creation-dialog" destinationId="d24808b8-494f-4f2b-beb9-1722b1fc4905"/>
+        <link type="modification-dialog" destinationId="c1c58bf7-27a4-4bd6-9285-38f826f94eb0"/>
+        <attributes-value tw-rev-specific="false" id="79c83dbd-426a-4080-bae0-a3d1c30fb012" value="false" key="is-meta-item-type"/>
+        <attributes-value tw-rev-specific="false" id="195c6dd5-e410-4f12-92c1-23d16c81342d" value="false" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="9891387e-6c27-4f71-aaae-59373664f449" value="148dcee3-8512-49eb-abe7-9f8d25502778" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="65c43230-9912-428a-b2c4-39bfd2e38585" key="id"/>
+        <attributes-value tw-rev-specific="false" id="48d12dfc-e32c-4746-a566-8690d7a6ce35" value="true" key="has-content"/>
+        <attributes-value tw-rev-specific="false" id="584955ce-5c4f-44ea-9e99-f8035ef6b1ea" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="manager-class"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Primitive" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c158ac87-ce15-46cb-95fc-33830bef3f53" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="item-manager"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="4c6e2813-ec75-4924-9f13-f7cf2d5d237c" value="false" key="is-abstract"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="a3434800-1759-4710-b124-c03ba1dc9165" value="&lt;no value&gt;" key="package-name"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mind..Primitive" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="d24808b8-494f-4f2b-beb9-1722b1fc4905">
+        <link type="contents" destinationId="d0b8f31c-cf99-492d-8702-576792bc2032"/>
+        <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
+        <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="65c43230-9912-428a-b2c4-39bfd2e38585"/>
+        <link type="pages" destinationId="17ae237f-bd8d-43aa-bb96-360c4c8b5709"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="d24808b8-494f-4f2b-beb9-1722b1fc4905" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Creation Page mind::PRIMITIVE::creation-page-Primitive" short-name="creation-page-Primitive" is-readonly="false" is-hidden="false" id="17ae237f-bd8d-43aa-bb96-360c4c8b5709">
+        <link type="contents" destinationId="9ee931b9-1462-45a8-9f40-335f70c63fc6"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="d24808b8-494f-4f2b-beb9-1722b1fc4905"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="e8e69df2-8f21-43f7-8ca8-d64aecc874a4" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="17ae237f-bd8d-43aa-bb96-360c4c8b5709" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Create Primitive" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-page-Primitive" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation-page-Primitive" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Creation Page mind::PRIMITIVE::creation-page-Primitive" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="c1c58bf7-27a4-4bd6-9285-38f826f94eb0">
+        <link type="contents" destinationId="641d5002-251b-416e-924f-959ec1b84499"/>
+        <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
+        <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="65c43230-9912-428a-b2c4-39bfd2e38585"/>
+        <link type="pages" destinationId="47712abf-d651-4af6-94a6-c1bb9b499eee"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="c1c58bf7-27a4-4bd6-9285-38f826f94eb0" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Modification Page mind::PRIMITIVE::modification-page-Primitive" short-name="modification-page-Primitive" is-readonly="false" is-hidden="false" id="47712abf-d651-4af6-94a6-c1bb9b499eee">
+        <link type="contents" destinationId="e375d72e-82b0-41d2-8ec0-cd9e5aed3721"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="c1c58bf7-27a4-4bd6-9285-38f826f94eb0"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="704b5d30-f764-4caa-a7da-97f883b548b8" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="47712abf-d651-4af6-94a6-c1bb9b499eee" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Primitive" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-page-Primitive" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification-page-Primitive" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Modification Page mind::PRIMITIVE::modification-page-Primitive" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="mind..Composite" short-name="Composite" is-readonly="false" is-hidden="false" id="6598a762-0790-4627-84a6-77751947c5a9">
+        <link type="instance-of" destinationId="43808065-4f70-4290-adba-cca999431ba1"/>
+        <link type="modified-attributes" destinationId="826f31ee-8444-4da3-abd5-ad3cdc950f9e"/>
+        <link type="modified-attributes" destinationId="adbfdd92-caf3-42d9-8ac7-93946f962767"/>
+        <link type="modified-attributes" destinationId="4c6e2813-ec75-4924-9f13-f7cf2d5d237c"/>
+        <link type="modified-attributes" destinationId="195c6dd5-e410-4f12-92c1-23d16c81342d"/>
+        <link type="modified-attributes" destinationId="48d12dfc-e32c-4746-a566-8690d7a6ce35"/>
+        <link type="modified-attributes" destinationId="9891387e-6c27-4f71-aaae-59373664f449"/>
+        <link type="modified-attributes" destinationId="79c83dbd-426a-4080-bae0-a3d1c30fb012"/>
+        <link type="modified-attributes" destinationId="ad55a28c-7654-4e0e-96a7-5ca04acee9d6"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="b23167de-5b61-4da9-81f9-2820471b228a"/>
+        <link type="cadse-runtime" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="super-type" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <link type="creation-dialog" destinationId="2d456c72-22d5-4bd3-b727-927ee2774575"/>
+        <link type="modification-dialog" destinationId="6ccd4a82-fe68-4824-847a-56cf332a7abf"/>
+        <attributes-value tw-rev-specific="false" id="79c83dbd-426a-4080-bae0-a3d1c30fb012" value="false" key="is-meta-item-type"/>
+        <attributes-value tw-rev-specific="false" id="195c6dd5-e410-4f12-92c1-23d16c81342d" value="true" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="9891387e-6c27-4f71-aaae-59373664f449" value="148dcee3-8512-49eb-abe7-9f8d25502778" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="6598a762-0790-4627-84a6-77751947c5a9" key="id"/>
+        <attributes-value tw-rev-specific="false" id="48d12dfc-e32c-4746-a566-8690d7a6ce35" value="true" key="has-content"/>
+        <attributes-value tw-rev-specific="false" id="584955ce-5c4f-44ea-9e99-f8035ef6b1ea" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="manager-class"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Composite" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c158ac87-ce15-46cb-95fc-33830bef3f53" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="item-manager"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="4c6e2813-ec75-4924-9f13-f7cf2d5d237c" value="false" key="is-abstract"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="a3434800-1759-4710-b124-c03ba1dc9165" value="&lt;no value&gt;" key="package-name"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mind..Composite" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="2d456c72-22d5-4bd3-b727-927ee2774575">
+        <link type="contents" destinationId="4a4efb38-0177-441b-ab1f-962b706fe5d5"/>
+        <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
+        <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="6598a762-0790-4627-84a6-77751947c5a9"/>
+        <link type="pages" destinationId="fb15099a-7e0d-4823-a984-3ec25ff410ab"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="2d456c72-22d5-4bd3-b727-927ee2774575" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Creation Page mind::COMPOSITE::creation-page-Composite" short-name="creation-page-Composite" is-readonly="false" is-hidden="false" id="fb15099a-7e0d-4823-a984-3ec25ff410ab">
+        <link type="contents" destinationId="6bf0f73b-183f-4557-8179-032f9f453688"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="2d456c72-22d5-4bd3-b727-927ee2774575"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="14f097df-e9c3-4bcf-9e7f-c162f2a168a5" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="fb15099a-7e0d-4823-a984-3ec25ff410ab" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Create Composite" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-page-Composite" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation-page-Composite" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Creation Page mind::COMPOSITE::creation-page-Composite" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="6ccd4a82-fe68-4824-847a-56cf332a7abf">
+        <link type="contents" destinationId="bc3414a8-0c13-4667-8b6e-48549532b906"/>
+        <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
+        <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="6598a762-0790-4627-84a6-77751947c5a9"/>
+        <link type="pages" destinationId="d74c2e8f-7330-4d47-8e52-6a3937fe9355"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="6ccd4a82-fe68-4824-847a-56cf332a7abf" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Modification Page mind::COMPOSITE::modification-page-Composite" short-name="modification-page-Composite" is-readonly="false" is-hidden="false" id="d74c2e8f-7330-4d47-8e52-6a3937fe9355">
+        <link type="contents" destinationId="ea5fb8d5-5cee-4ad8-a86a-9f6db74d7087"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="6ccd4a82-fe68-4824-847a-56cf332a7abf"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="071f4ded-4c11-47ae-b4d6-90a3e838da93" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="d74c2e8f-7330-4d47-8e52-6a3937fe9355" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Composite" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-page-Composite" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification-page-Composite" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Modification Page mind::COMPOSITE::modification-page-Composite" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="mind..Component" short-name="Component" is-readonly="false" is-hidden="false" id="1bea4dc5-627d-4af9-aed0-4819cb7fd391">
+        <link type="instance-of" destinationId="43808065-4f70-4290-adba-cca999431ba1"/>
+        <link type="modified-attributes" destinationId="826f31ee-8444-4da3-abd5-ad3cdc950f9e"/>
+        <link type="modified-attributes" destinationId="adbfdd92-caf3-42d9-8ac7-93946f962767"/>
+        <link type="modified-attributes" destinationId="4c6e2813-ec75-4924-9f13-f7cf2d5d237c"/>
+        <link type="modified-attributes" destinationId="195c6dd5-e410-4f12-92c1-23d16c81342d"/>
+        <link type="modified-attributes" destinationId="48d12dfc-e32c-4746-a566-8690d7a6ce35"/>
+        <link type="modified-attributes" destinationId="9891387e-6c27-4f71-aaae-59373664f449"/>
+        <link type="modified-attributes" destinationId="79c83dbd-426a-4080-bae0-a3d1c30fb012"/>
+        <link type="modified-attributes" destinationId="93f0f6f8-bd19-4ab9-935d-70690907000e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="b23167de-5b61-4da9-81f9-2820471b228a"/>
+        <link type="cadse-runtime" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="sub-types" destinationId="6598a762-0790-4627-84a6-77751947c5a9"/>
+        <link type="sub-types" destinationId="65c43230-9912-428a-b2c4-39bfd2e38585"/>
+        <link type="super-type" destinationId="148dcee3-8512-49eb-abe7-9f8d25502778"/>
+        <link type="creation-dialog" destinationId="eb20777b-01cf-468f-a639-de629a6f25fd"/>
+        <link type="modification-dialog" destinationId="54f84cfe-768d-480b-9dff-a5847fbe33a0"/>
+        <attributes-value tw-rev-specific="false" id="79c83dbd-426a-4080-bae0-a3d1c30fb012" value="false" key="is-meta-item-type"/>
+        <attributes-value tw-rev-specific="false" id="195c6dd5-e410-4f12-92c1-23d16c81342d" value="false" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="9891387e-6c27-4f71-aaae-59373664f449" value="148dcee3-8512-49eb-abe7-9f8d25502778" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="1bea4dc5-627d-4af9-aed0-4819cb7fd391" key="id"/>
+        <attributes-value tw-rev-specific="false" id="48d12dfc-e32c-4746-a566-8690d7a6ce35" value="true" key="has-content"/>
+        <attributes-value tw-rev-specific="false" id="584955ce-5c4f-44ea-9e99-f8035ef6b1ea" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="manager-class"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Component" key="name"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c158ac87-ce15-46cb-95fc-33830bef3f53" value="fr.imag.adele.cadse.cadseg.managers.dataModel.ItemManager" key="item-manager"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="4c6e2813-ec75-4924-9f13-f7cf2d5d237c" value="true" key="is-abstract"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="a3434800-1759-4710-b124-c03ba1dc9165" value="&lt;no value&gt;" key="package-name"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="mind..Component" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="creation-dialog" is-readonly="false" is-hidden="false" id="eb20777b-01cf-468f-a639-de629a6f25fd">
+        <link type="contents" destinationId="4fc760c8-7d2e-4dbe-a6fd-c5007e3b97ef"/>
+        <link type="instance-of" destinationId="599cd2f8-d9c8-4cb7-885e-a88a04b809ba"/>
+        <link type="modified-attributes" destinationId="4dcfbdba-2ae0-4a86-a88c-c5827664620e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <link type="pages" destinationId="06d71458-3a77-49ec-bbc5-b1a1e1e3584e"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="eb20777b-01cf-468f-a639-de629a6f25fd" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Creation Page mind::COMPONENT::creation-page-Component" short-name="creation-page-Component" is-readonly="false" is-hidden="false" id="06d71458-3a77-49ec-bbc5-b1a1e1e3584e">
+        <link type="contents" destinationId="cf691004-f995-4805-90e3-6da57e2eefb7"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="eb20777b-01cf-468f-a639-de629a6f25fd"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="cdace74b-73d9-49f1-96a6-4536c535e7ad" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="06d71458-3a77-49ec-bbc5-b1a1e1e3584e" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Create Component" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="creation-page-Component" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="creation-page-Component" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Creation Page mind::COMPONENT::creation-page-Component" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="&lt;no value&gt;" short-name="modification-dialog" is-readonly="false" is-hidden="false" id="54f84cfe-768d-480b-9dff-a5847fbe33a0">
+        <link type="contents" destinationId="489cf4ce-11c6-4d96-9e5f-e63512df3608"/>
+        <link type="instance-of" destinationId="c21fc39d-2dce-4821-bfc0-853890763c55"/>
+        <link type="modified-attributes" destinationId="7f26c388-d2b4-4688-bc11-3a390c57b54c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <link type="pages" destinationId="0deba2f5-a151-46d3-91c1-1dd91148785e"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification dialog" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="54f84cfe-768d-480b-9dff-a5847fbe33a0" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-dialog" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="&lt;no value&gt;" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Modification Page mind::COMPONENT::modification-page-Component" short-name="modification-page-Component" is-readonly="false" is-hidden="false" id="0deba2f5-a151-46d3-91c1-1dd91148785e">
+        <link type="contents" destinationId="4a41f8b4-80cd-4b1e-ad04-2fdf55c8e31e"/>
+        <link type="instance-of" destinationId="b1b807a6-835f-457c-9bf5-d8dd5b0f34c2"/>
+        <link type="modified-attributes" destinationId="592db631-bc57-4a68-8306-b49fe34ffa9a"/>
+        <link type="modified-attributes" destinationId="d3da5486-fa01-4b28-82fb-90b22a58b5c0"/>
+        <link type="modified-attributes" destinationId="ec570635-3511-4354-a11b-22a177f62b57"/>
+        <link type="modified-attributes" destinationId="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="f39cac53-146b-4345-a603-008a74ca0c7b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="54f84cfe-768d-480b-9dff-a5847fbe33a0"/>
+        <attributes-value tw-rev-specific="false" id="f39cac53-146b-4345-a603-008a74ca0c7b" value="7fddef0c-a181-4bc1-a583-755807abe6ad" key="id-runtime"/>
+        <attributes-value tw-rev-specific="false" id="ec570635-3511-4354-a11b-22a177f62b57" value="false" key="is-removed"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="0deba2f5-a151-46d3-91c1-1dd91148785e" key="id"/>
+        <attributes-value tw-rev-specific="false" id="d3da5486-fa01-4b28-82fb-90b22a58b5c0" value="Component" key="title"/>
+        <attributes-value tw-rev-specific="false" id="7e4d6742-571f-4ea2-971e-d47a7bdc1fbf" value="" key="description"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="modification-page-Component" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="modification-page-Component" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Modification Page mind::COMPONENT::modification-page-Component" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="592db631-bc57-4a68-8306-b49fe34ffa9a" value="3" key="hspan"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping" short-name="mapping" is-readonly="false" is-hidden="false" id="be8635dc-b68a-4edb-86f6-85d46ffba02c">
+        <link type="instance-of" destinationId="4bdcd072-573b-4e8d-848c-df543f455cbe"/>
+        <link type="modified-attributes" destinationId="23bd6f0f-c83a-40d9-9327-72641dd2a86e"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="managers" destinationId="5b62c429-b55c-4166-bbc1-248705528681"/>
+        <link type="managers" destinationId="0de5f7a1-0772-46f4-9b97-9c015111b6bb"/>
+        <link type="managers" destinationId="b69b951a-5963-4c83-8dec-94f0f305ae85"/>
+        <link type="managers" destinationId="474bc9e7-e019-4552-a466-c1c4d1681ccc"/>
+        <link type="managers" destinationId="dac51463-3928-412b-bb38-87475e95ceb1"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="mapping" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="be8635dc-b68a-4edb-86f6-85d46ffba02c" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="mapping" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Library-manager" short-name="Library-manager" is-readonly="false" is-hidden="false" id="5b62c429-b55c-4166-bbc1-248705528681">
+        <link type="contents" destinationId="3abfa295-18e4-4a71-b116-9e489aecf30b"/>
+        <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
+        <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
+        <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
+        <link type="modified-attributes" destinationId="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b"/>
+        <link type="modified-attributes" destinationId="b29077d2-d4fb-45da-b488-4acae3aa4a59"/>
+        <link type="modified-attributes" destinationId="a0ab9415-6915-4a51-a474-f3e10a51dcea"/>
+        <link type="modified-attributes" destinationId="423f967c-3ee9-48e8-a702-282b4d725440"/>
+        <link type="modified-attributes" destinationId="1607f2e9-37b5-4154-a080-a8c15c41b5cd"/>
+        <link type="modified-attributes" destinationId="954589fd-7567-4475-8b22-bf11c9205e4b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="be8635dc-b68a-4edb-86f6-85d46ffba02c"/>
+        <link type="item-type" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <link type="content-model" destinationId="405a1281-18f6-439a-92f2-d3416ca943c8"/>
+        <attributes-value tw-rev-specific="false" id="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b" value="${#name}" key="display-name-template"/>
+        <attributes-value tw-rev-specific="false" id="cdc80d32-5d85-4538-b322-1ca76ca4f2b6" value="Component Library" key="human-name"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="5b62c429-b55c-4166-bbc1-248705528681" key="id"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Library-manager" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="1607f2e9-37b5-4154-a080-a8c15c41b5cd" value="/Model.Workspace.mind/icons/lib.png" key="icon"/>
+        <attributes-value tw-rev-specific="false" id="a0ab9415-6915-4a51-a474-f3e10a51dcea" value="" key="valid-pattern-id"/>
+        <attributes-value tw-rev-specific="false" id="423f967c-3ee9-48e8-a702-282b4d725440" value="" key="message-error-id"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Library-manager" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="c8b5ed10-f491-4224-9572-48c293887eb0" value="${#parent.qualified-name}{.}${#name}" key="long-name-template"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Library-manager" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Library-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="405a1281-18f6-439a-92f2-d3416ca943c8">
+        <link type="contents" destinationId="a877f284-e759-40bf-93b7-5e4840621184"/>
+        <link type="instance-of" destinationId="2f77364d-7c51-4b6a-bcd9-35d99a6e7c74"/>
+        <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
+        <link type="modified-attributes" destinationId="c1ca5f69-3e83-4464-ae65-9cc0e7941e97"/>
+        <link type="modified-attributes" destinationId="8d2e520b-285b-44ab-acaa-179e88e7ed21"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="5b62c429-b55c-4166-bbc1-248705528681"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="content-item" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="8d2e520b-285b-44ab-acaa-179e88e7ed21" value="true" key="has-source-folder"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="c1ca5f69-3e83-4464-ae65-9cc0e7941e97" value="${#unique-name}" key="project-name"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="405a1281-18f6-439a-92f2-d3416ca943c8" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="content-item" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Library-manager.content-item" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="277a1cf2-ff5a-4835-a2b8-b13ec987e8de" value="false" key="extends-class"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Package-manager" short-name="Package-manager" is-readonly="false" is-hidden="false" id="0de5f7a1-0772-46f4-9b97-9c015111b6bb">
+        <link type="contents" destinationId="ba99b0c9-3c45-4af2-8252-6a900931f839"/>
+        <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
+        <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
+        <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
+        <link type="modified-attributes" destinationId="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b"/>
+        <link type="modified-attributes" destinationId="b29077d2-d4fb-45da-b488-4acae3aa4a59"/>
+        <link type="modified-attributes" destinationId="a0ab9415-6915-4a51-a474-f3e10a51dcea"/>
+        <link type="modified-attributes" destinationId="423f967c-3ee9-48e8-a702-282b4d725440"/>
+        <link type="modified-attributes" destinationId="954589fd-7567-4475-8b22-bf11c9205e4b"/>
+        <link type="modified-attributes" destinationId="1607f2e9-37b5-4154-a080-a8c15c41b5cd"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="be8635dc-b68a-4edb-86f6-85d46ffba02c"/>
+        <link type="item-type" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="content-model" destinationId="59bfb2b0-6daf-449b-bd87-3c3596722b2e"/>
+        <attributes-value tw-rev-specific="false" id="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b" value="${#name}" key="display-name-template"/>
+        <attributes-value tw-rev-specific="false" id="cdc80d32-5d85-4538-b322-1ca76ca4f2b6" value="Package" key="human-name"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="0de5f7a1-0772-46f4-9b97-9c015111b6bb" key="id"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Package-manager" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="1607f2e9-37b5-4154-a080-a8c15c41b5cd" value="/Model.Workspace.mind/icons/SourceFolderContentModel.gif" key="icon"/>
+        <attributes-value tw-rev-specific="false" id="a0ab9415-6915-4a51-a474-f3e10a51dcea" value="" key="valid-pattern-id"/>
+        <attributes-value tw-rev-specific="false" id="423f967c-3ee9-48e8-a702-282b4d725440" value="" key="message-error-id"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Package-manager" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="c8b5ed10-f491-4224-9572-48c293887eb0" value="${#parent-unique-name}.${#name}" key="long-name-template"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Package-manager" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Package-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="59bfb2b0-6daf-449b-bd87-3c3596722b2e">
+        <link type="contents" destinationId="2665b4da-81c3-4bae-b1db-abf98d19504c"/>
+        <link type="instance-of" destinationId="ef8e57f7-18fa-402a-b8df-613a485b387d"/>
+        <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
+        <link type="modified-attributes" destinationId="c43be5c9-3bde-4bbd-9a43-af804b1fcac0"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="0de5f7a1-0772-46f4-9b97-9c015111b6bb"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="content-item" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="59bfb2b0-6daf-449b-bd87-3c3596722b2e" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c43be5c9-3bde-4bbd-9a43-af804b1fcac0" value="${#parent-id}calculated see method org.ow2.fractal.mind.cadse.managers.PackageManager.FolderPathVariable.compute" key="folder-path"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="content-item" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Package-manager.content-item" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="277a1cf2-ff5a-4835-a2b8-b13ec987e8de" value="false" key="extends-class"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Primitive-manager" short-name="Primitive-manager" is-readonly="false" is-hidden="false" id="b69b951a-5963-4c83-8dec-94f0f305ae85">
+        <link type="contents" destinationId="8ce5c5c7-2023-4d40-b8ea-dc65af997cce"/>
+        <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
+        <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
+        <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
+        <link type="modified-attributes" destinationId="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b"/>
+        <link type="modified-attributes" destinationId="b29077d2-d4fb-45da-b488-4acae3aa4a59"/>
+        <link type="modified-attributes" destinationId="a0ab9415-6915-4a51-a474-f3e10a51dcea"/>
+        <link type="modified-attributes" destinationId="423f967c-3ee9-48e8-a702-282b4d725440"/>
+        <link type="modified-attributes" destinationId="954589fd-7567-4475-8b22-bf11c9205e4b"/>
+        <link type="modified-attributes" destinationId="1607f2e9-37b5-4154-a080-a8c15c41b5cd"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="be8635dc-b68a-4edb-86f6-85d46ffba02c"/>
+        <link type="item-type" destinationId="65c43230-9912-428a-b2c4-39bfd2e38585"/>
+        <link type="content-model" destinationId="204d8daf-e27f-4996-9d5a-2e415e075084"/>
+        <attributes-value tw-rev-specific="false" id="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b" value="${#name}" key="display-name-template"/>
+        <attributes-value tw-rev-specific="false" id="cdc80d32-5d85-4538-b322-1ca76ca4f2b6" value="Primitive" key="human-name"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="b69b951a-5963-4c83-8dec-94f0f305ae85" key="id"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Primitive-manager" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="1607f2e9-37b5-4154-a080-a8c15c41b5cd" value="/Model.Workspace.mind/icons/primitive.png" key="icon"/>
+        <attributes-value tw-rev-specific="false" id="a0ab9415-6915-4a51-a474-f3e10a51dcea" value="" key="valid-pattern-id"/>
+        <attributes-value tw-rev-specific="false" id="423f967c-3ee9-48e8-a702-282b4d725440" value="" key="message-error-id"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Primitive-manager" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="c8b5ed10-f491-4224-9572-48c293887eb0" value="${#parent-short-name}.${#short-name}" key="long-name-template"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Primitive-manager" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Primitive-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="204d8daf-e27f-4996-9d5a-2e415e075084">
+        <link type="contents" destinationId="1416b7a6-d65a-4e94-9361-f04b72695259"/>
+        <link type="instance-of" destinationId="9b9e9c64-284a-4895-a1f6-98614b1b2a19"/>
+        <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
+        <link type="modified-attributes" destinationId="aa49cab4-109d-4f99-a4a8-7b7fb9ece939"/>
+        <link type="modified-attributes" destinationId="725605f2-63c1-4948-9db3-c25d2e9773dd"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="b69b951a-5963-4c83-8dec-94f0f305ae85"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="content-item" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="aa49cab4-109d-4f99-a4a8-7b7fb9ece939" value="${#short-name}.adl" key="file-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="204d8daf-e27f-4996-9d5a-2e415e075084" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="content-item" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Primitive-manager.content-item" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="277a1cf2-ff5a-4835-a2b8-b13ec987e8de" value="true" key="extends-class"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="725605f2-63c1-4948-9db3-c25d2e9773dd" value="/" key="file-path"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Composite-manager" short-name="Composite-manager" is-readonly="false" is-hidden="false" id="474bc9e7-e019-4552-a466-c1c4d1681ccc">
+        <link type="contents" destinationId="848295d2-a12c-4870-832f-2e1e5db73967"/>
+        <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
+        <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
+        <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
+        <link type="modified-attributes" destinationId="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b"/>
+        <link type="modified-attributes" destinationId="b29077d2-d4fb-45da-b488-4acae3aa4a59"/>
+        <link type="modified-attributes" destinationId="a0ab9415-6915-4a51-a474-f3e10a51dcea"/>
+        <link type="modified-attributes" destinationId="423f967c-3ee9-48e8-a702-282b4d725440"/>
+        <link type="modified-attributes" destinationId="954589fd-7567-4475-8b22-bf11c9205e4b"/>
+        <link type="modified-attributes" destinationId="1607f2e9-37b5-4154-a080-a8c15c41b5cd"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="be8635dc-b68a-4edb-86f6-85d46ffba02c"/>
+        <link type="item-type" destinationId="6598a762-0790-4627-84a6-77751947c5a9"/>
+        <link type="content-model" destinationId="685a153a-70f1-4963-8d3b-1b07e27ab054"/>
+        <attributes-value tw-rev-specific="false" id="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b" value="${#name}" key="display-name-template"/>
+        <attributes-value tw-rev-specific="false" id="cdc80d32-5d85-4538-b322-1ca76ca4f2b6" value="Composite" key="human-name"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="474bc9e7-e019-4552-a466-c1c4d1681ccc" key="id"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Composite-manager" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="1607f2e9-37b5-4154-a080-a8c15c41b5cd" value="/Model.Workspace.mind/icons/composite.gif" key="icon"/>
+        <attributes-value tw-rev-specific="false" id="a0ab9415-6915-4a51-a474-f3e10a51dcea" value="" key="valid-pattern-id"/>
+        <attributes-value tw-rev-specific="false" id="423f967c-3ee9-48e8-a702-282b4d725440" value="" key="message-error-id"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Composite-manager" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="c8b5ed10-f491-4224-9572-48c293887eb0" value="${#parent-short-name}.${#short-name}" key="long-name-template"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Composite-manager" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Composite-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="685a153a-70f1-4963-8d3b-1b07e27ab054">
+        <link type="contents" destinationId="3858d640-dce8-423e-b011-c1781ac117d2"/>
+        <link type="instance-of" destinationId="9b9e9c64-284a-4895-a1f6-98614b1b2a19"/>
+        <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
+        <link type="modified-attributes" destinationId="aa49cab4-109d-4f99-a4a8-7b7fb9ece939"/>
+        <link type="modified-attributes" destinationId="725605f2-63c1-4948-9db3-c25d2e9773dd"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="474bc9e7-e019-4552-a466-c1c4d1681ccc"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="content-item" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="aa49cab4-109d-4f99-a4a8-7b7fb9ece939" value="${#short-name}.adl" key="file-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="685a153a-70f1-4963-8d3b-1b07e27ab054" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="content-item" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Composite-manager.content-item" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="277a1cf2-ff5a-4835-a2b8-b13ec987e8de" value="true" key="extends-class"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="725605f2-63c1-4948-9db3-c25d2e9773dd" value="/" key="file-path"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Component-manager" short-name="Component-manager" is-readonly="false" is-hidden="false" id="dac51463-3928-412b-bb38-87475e95ceb1">
+        <link type="contents" destinationId="e9313108-cf21-42fe-9aa8-789388ab3673"/>
+        <link type="instance-of" destinationId="bd8049fc-bcf9-4f5e-ad94-ee6c898a6722"/>
+        <link type="modified-attributes" destinationId="cdc80d32-5d85-4538-b322-1ca76ca4f2b6"/>
+        <link type="modified-attributes" destinationId="c8b5ed10-f491-4224-9572-48c293887eb0"/>
+        <link type="modified-attributes" destinationId="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b"/>
+        <link type="modified-attributes" destinationId="b29077d2-d4fb-45da-b488-4acae3aa4a59"/>
+        <link type="modified-attributes" destinationId="a0ab9415-6915-4a51-a474-f3e10a51dcea"/>
+        <link type="modified-attributes" destinationId="423f967c-3ee9-48e8-a702-282b4d725440"/>
+        <link type="modified-attributes" destinationId="954589fd-7567-4475-8b22-bf11c9205e4b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="be8635dc-b68a-4edb-86f6-85d46ffba02c"/>
+        <link type="item-type" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <link type="content-model" destinationId="48e3803b-b764-4780-9d07-275397302d02"/>
+        <attributes-value tw-rev-specific="false" id="9a7a5a95-5cc4-41c9-abc9-78e57e3deb9b" value="${#name}" key="display-name-template"/>
+        <attributes-value tw-rev-specific="false" id="cdc80d32-5d85-4538-b322-1ca76ca4f2b6" value="Component" key="human-name"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="dac51463-3928-412b-bb38-87475e95ceb1" key="id"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Component-manager" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="a0ab9415-6915-4a51-a474-f3e10a51dcea" value="" key="valid-pattern-id"/>
+        <attributes-value tw-rev-specific="false" id="423f967c-3ee9-48e8-a702-282b4d725440" value="" key="message-error-id"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Component-manager" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="c8b5ed10-f491-4224-9572-48c293887eb0" value="${#parent-short-name}.${#short-name}" key="long-name-template"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Component-manager" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.mapping.Component-manager.content-item" short-name="content-item" is-readonly="false" is-hidden="false" id="48e3803b-b764-4780-9d07-275397302d02">
+        <link type="contents" destinationId="20b6c3b9-2d48-4466-b80f-52c553887875"/>
+        <link type="instance-of" destinationId="9b9e9c64-284a-4895-a1f6-98614b1b2a19"/>
+        <link type="modified-attributes" destinationId="277a1cf2-ff5a-4835-a2b8-b13ec987e8de"/>
+        <link type="modified-attributes" destinationId="aa49cab4-109d-4f99-a4a8-7b7fb9ece939"/>
+        <link type="modified-attributes" destinationId="725605f2-63c1-4948-9db3-c25d2e9773dd"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="dac51463-3928-412b-bb38-87475e95ceb1"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="content-item" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="aa49cab4-109d-4f99-a4a8-7b7fb9ece939" value="${#short-name}.adl" key="file-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="48e3803b-b764-4780-9d07-275397302d02" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="content-item" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.mapping.Component-manager.content-item" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="277a1cf2-ff5a-4835-a2b8-b13ec987e8de" value="true" key="extends-class"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+        <attributes-value tw-rev-specific="false" id="725605f2-63c1-4948-9db3-c25d2e9773dd" value="/" key="file-path"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model" short-name="view-model" is-readonly="false" is-hidden="false" id="4ff4c7e0-9542-4c7a-b850-4732cefa6a6b">
+        <link type="instance-of" destinationId="ba68cae0-c148-4efb-86c2-48101fb6e28e"/>
+        <link type="modified-attributes" destinationId="467378a6-3ed7-472e-a763-5915ab25bc65"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="e55e9031-58b1-4ea8-961c-d8701f8d33f1"/>
+        <link type="views" destinationId="127dc362-40d8-4484-825b-38397e268c0a"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="view-model" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="4ff4c7e0-9542-4c7a-b850-4732cefa6a6b" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="0dda36c0-fcf7-4011-a09c-78c44a5dcec4" value="" key="committedBy"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="view-model" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model.MindLibraries" short-name="MindLibraries" is-readonly="false" is-hidden="false" id="127dc362-40d8-4484-825b-38397e268c0a">
+        <link type="contents" destinationId="85734527-18b1-433f-8730-e5b3dea498f3"/>
+        <link type="instance-of" destinationId="3ca0bb23-d4f7-4816-af03-5e926d93bdaf"/>
+        <link type="modified-attributes" destinationId="20ca536e-6fa6-43b3-a435-4366d77127f5"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="4ff4c7e0-9542-4c7a-b850-4732cefa6a6b"/>
+        <link type="view-item-types" destinationId="73f41d2a-337e-46fd-80f3-d23e9a4d3043"/>
+        <link type="view-item-types" destinationId="1bd11d20-d6c1-4447-b109-a9c14a3c8ab6"/>
+        <link type="view-item-types" destinationId="b85c48f2-f624-4ae0-a8fd-ab15109f65fe"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="MindLibraries" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="127dc362-40d8-4484-825b-38397e268c0a" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="MindLibraries" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model.MindLibraries" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model.MindLibraries.Package" short-name="Package" is-readonly="false" is-hidden="false" id="73f41d2a-337e-46fd-80f3-d23e9a4d3043">
+        <link type="instance-of" destinationId="b2332082-a3f2-4920-a350-ccb1ad5d56b9"/>
+        <link type="modified-attributes" destinationId="b10d0d67-5b62-40dd-b233-7ebd7cab13be"/>
+        <link type="modified-attributes" destinationId="a44e9d8e-e407-4af4-8140-d43e51c79763"/>
+        <link type="modified-attributes" destinationId="0aee9076-cce6-425c-8d02-857d1607d97a"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="127dc362-40d8-4484-825b-38397e268c0a"/>
+        <link type="item-type" destinationId="acc0d820-7a7a-41c3-9316-035c869d2fbf"/>
+        <link type="view-link-types" destinationId="d3a94681-9286-4869-a586-4fbad79e4e96"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Package" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="a44e9d8e-e407-4af4-8140-d43e51c79763" value="false" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="73f41d2a-337e-46fd-80f3-d23e9a4d3043" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Package" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model.MindLibraries.Package" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model.MindLibraries.Package.components" short-name="components" is-readonly="false" is-hidden="false" id="d3a94681-9286-4869-a586-4fbad79e4e96">
+        <link type="instance-of" destinationId="848d1718-4322-4a5c-91bf-579d04eb9b41"/>
+        <link type="modified-attributes" destinationId="b9da3f92-3bea-4ff1-bb2e-5be57d1d886d"/>
+        <link type="modified-attributes" destinationId="6aac3672-94ec-464e-be65-1953c5af2805"/>
+        <link type="modified-attributes" destinationId="a3d6dcf6-6450-4aee-a32d-eb75b39e8a9c"/>
+        <link type="modified-attributes" destinationId="8a6115d6-7b05-4578-ba74-92d32254eb1c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="73f41d2a-337e-46fd-80f3-d23e9a4d3043"/>
+        <link type="link-type" destinationId="bff02021-7afb-4d23-a496-26a6bdb70ded"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="components" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="6aac3672-94ec-464e-be65-1953c5af2805" value="true" key="aggregation"/>
+        <attributes-value tw-rev-specific="false" id="a3d6dcf6-6450-4aee-a32d-eb75b39e8a9c" value="true" key="can-create-item"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="d3a94681-9286-4869-a586-4fbad79e4e96" key="id"/>
+        <attributes-value tw-rev-specific="false" id="8a6115d6-7b05-4578-ba74-92d32254eb1c" value="true" key="can-create-link"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="components" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model.MindLibraries.Package.components" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model.MindLibraries.Library" short-name="Library" is-readonly="false" is-hidden="false" id="1bd11d20-d6c1-4447-b109-a9c14a3c8ab6">
+        <link type="instance-of" destinationId="b2332082-a3f2-4920-a350-ccb1ad5d56b9"/>
+        <link type="modified-attributes" destinationId="b10d0d67-5b62-40dd-b233-7ebd7cab13be"/>
+        <link type="modified-attributes" destinationId="a44e9d8e-e407-4af4-8140-d43e51c79763"/>
+        <link type="modified-attributes" destinationId="0aee9076-cce6-425c-8d02-857d1607d97a"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="127dc362-40d8-4484-825b-38397e268c0a"/>
+        <link type="item-type" destinationId="8e5215d6-684a-490e-b7aa-639e266b130c"/>
+        <link type="view-link-types" destinationId="f74eb664-8c39-4ffd-a1ec-45725ec8f5c7"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Library" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="a44e9d8e-e407-4af4-8140-d43e51c79763" value="true" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="1bd11d20-d6c1-4447-b109-a9c14a3c8ab6" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Library" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model.MindLibraries.Library" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model.MindLibraries.Library.packages" short-name="packages" is-readonly="false" is-hidden="false" id="f74eb664-8c39-4ffd-a1ec-45725ec8f5c7">
+        <link type="instance-of" destinationId="848d1718-4322-4a5c-91bf-579d04eb9b41"/>
+        <link type="modified-attributes" destinationId="b9da3f92-3bea-4ff1-bb2e-5be57d1d886d"/>
+        <link type="modified-attributes" destinationId="6aac3672-94ec-464e-be65-1953c5af2805"/>
+        <link type="modified-attributes" destinationId="a3d6dcf6-6450-4aee-a32d-eb75b39e8a9c"/>
+        <link type="modified-attributes" destinationId="8a6115d6-7b05-4578-ba74-92d32254eb1c"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="1bd11d20-d6c1-4447-b109-a9c14a3c8ab6"/>
+        <link type="link-type" destinationId="6143a650-18c1-48c6-a574-8e1bf24715bc"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="packages" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="6aac3672-94ec-464e-be65-1953c5af2805" value="true" key="aggregation"/>
+        <attributes-value tw-rev-specific="false" id="a3d6dcf6-6450-4aee-a32d-eb75b39e8a9c" value="true" key="can-create-item"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="f74eb664-8c39-4ffd-a1ec-45725ec8f5c7" key="id"/>
+        <attributes-value tw-rev-specific="false" id="8a6115d6-7b05-4578-ba74-92d32254eb1c" value="true" key="can-create-link"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="packages" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model.MindLibraries.Library.packages" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+    <item unique-name="Model.Workspace.mind.view-model.MindLibraries.Component" short-name="Component" is-readonly="false" is-hidden="false" id="b85c48f2-f624-4ae0-a8fd-ab15109f65fe">
+        <link type="instance-of" destinationId="b2332082-a3f2-4920-a350-ccb1ad5d56b9"/>
+        <link type="modified-attributes" destinationId="b10d0d67-5b62-40dd-b233-7ebd7cab13be"/>
+        <link type="modified-attributes" destinationId="a44e9d8e-e407-4af4-8140-d43e51c79763"/>
+        <link type="modified-attributes" destinationId="0aee9076-cce6-425c-8d02-857d1607d97a"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="modified-attributes" destinationId="19e28d40-fd2b-4f20-a05a-10f85281bdfb"/>
+        <link type="modified-attributes" destinationId="ae262046-3821-4b01-b6ce-0e533692a40b"/>
+        <link type="modified-attributes" destinationId="c84eb0f9-305d-440a-a295-32ffa683e797"/>
+        <link type="modified-attributes" destinationId="802e4449-eb95-4ebc-b804-6256babb5cb0"/>
+        <link type="parent" destinationId="127dc362-40d8-4484-825b-38397e268c0a"/>
+        <link type="item-type" destinationId="1bea4dc5-627d-4af9-aed0-4819cb7fd391"/>
+        <attributes-value tw-rev-specific="false" id="19e28d40-fd2b-4f20-a05a-10f85281bdfb" value="Component" key="display-name"/>
+        <attributes-value tw-rev-specific="false" id="a44e9d8e-e407-4af4-8140-d43e51c79763" value="false" key="is-root-element"/>
+        <attributes-value tw-rev-specific="false" id="d674931c-a818-41b3-8dda-62cce15c4ef5" value="true" key="revModified"/>
+        <attributes-value tw-rev-specific="false" id="f6a0e56a-d0c2-43f1-a3e0-02e50f7b905b" value="b85c48f2-f624-4ae0-a8fd-ab15109f65fe" key="id"/>
+        <attributes-value tw-rev-specific="false" id="bf1e2cee-0b3c-4e0f-9ca2-0187120d4670" value="0" key="committedDate"/>
+        <attributes-value tw-rev-specific="false" id="f8dd1f73-f672-4277-b68b-c56d9aebc504" value="false" key="item-readonly"/>
+        <attributes-value tw-rev-specific="false" id="ae262046-3821-4b01-b6ce-0e533692a40b" value="Component" key="name"/>
+        <attributes-value tw-rev-specific="false" id="b2a2bf63-0c55-4e33-84c7-6eb222ba8dd2" value="false" key="item-hidden"/>
+        <attributes-value tw-rev-specific="false" id="c84eb0f9-305d-440a-a295-32ffa683e797" value="Model.Workspace.mind.view-model.MindLibraries.Component" key="qualified-name"/>
+        <attributes-value tw-rev-specific="false" id="4edf0fd3-7f01-4369-aa3d-160dbb146253" value="0" key="TW-version"/>
+        <attributes-value tw-rev-specific="false" id="20e185b9-5f65-4def-9e22-6df614090aa5" value="true" key="requireNewRev"/>
+    </item>
+</ns2:c-cadse>

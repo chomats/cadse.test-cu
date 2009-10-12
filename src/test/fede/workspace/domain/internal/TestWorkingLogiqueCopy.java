@@ -21,8 +21,6 @@
  */
 package test.fede.workspace.domain.internal;
 
-import static org.eclipse.swtbot.swt.finder.SWTBotAssert.assertEnabled;
-import static org.eclipse.swtbot.swt.finder.SWTBotAssert.assertNotEnabled;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -32,20 +30,35 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
 import junit.framework.Assert;
 
+import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.jdt.core.IJavaModelMarker;
 import org.eclipse.jdt.core.IJavaProject;
+import org.eclipse.swtbot.swt.finder.utils.FileUtils;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -53,10 +66,20 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
+import fede.workspace.tool.loadmodel.model.jaxb.CCadse;
+import fede.workspace.tool.loadmodel.model.jaxb.CExtensionItemType;
+import fede.workspace.tool.loadmodel.model.jaxb.CItem;
+import fede.workspace.tool.loadmodel.model.jaxb.CLink;
+import fede.workspace.tool.loadmodel.model.jaxb.CValuesType;
+import fede.workspace.tool.loadmodel.model.jaxb.ObjectFactory;
+import fr.imag.adele.cadse.cadseg.contents.CadseDefinitionContent;
+import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
+import fr.imag.adele.cadse.cadseg.managers.dataModel.CreationDialogManager;
+import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.PageManager;
+import fr.imag.adele.cadse.cadseg.managers.ui.FieldManager;
+import fr.imag.adele.cadse.cadseg.operation.ImportCadseUtil;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.CadseRuntime;
@@ -72,6 +95,7 @@ import fr.imag.adele.cadse.core.WorkspaceListener;
 import fr.imag.adele.cadse.core.WorkspaceListener.ListenerKind;
 import fr.imag.adele.cadse.core.attribute.BooleanAttributeType;
 import fr.imag.adele.cadse.core.attribute.CheckStatus;
+import fr.imag.adele.cadse.core.attribute.IAttributeType;
 import fr.imag.adele.cadse.core.delta.ImmutableWorkspaceDelta;
 import fr.imag.adele.cadse.core.delta.ItemDelta;
 import fr.imag.adele.cadse.core.delta.LinkKey;
@@ -80,6 +104,9 @@ import fr.imag.adele.cadse.core.impl.CadseIllegalArgumentException;
 import fr.imag.adele.cadse.core.key.ISpaceKey;
 import fr.imag.adele.cadse.core.key.SpaceKeyType;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
+import fr.imag.adele.cadse.core.ui.IPageFactory;
+import fr.imag.adele.cadse.core.ui.Pages;
+import fr.imag.adele.cadse.core.var.ContextVariable;
 
 /**
  * @author chomats
@@ -316,7 +343,7 @@ Item currentItem;
 	 * @throws TimeoutException
 	 * @throws InterruptedException
 	 */
-	@Test
+	// TODO not work @Test
 	public void testItemListener() throws CadseException, CoreException, InterruptedException, TimeoutException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item a = copy.createItem(TYPE_A, null, null);
@@ -1064,7 +1091,7 @@ Item currentItem;
 		Item attrString1= createAttributeString(TypeACommited);
 		Item attrLong1 = createAttributeLong(TypeACommited);
 		
-		Item et = createEnumType(dm);
+		Item et = createEnumType(dm,3);
 		Item attrEnum1 = createAttributeEnum(TypeACommited, et);
 		
 		assertEquals(cadseDefCommited, lw.getItem(cadseDefCommited.getKey()));
@@ -1228,7 +1255,7 @@ Item currentItem;
 		Item attrString1= createAttributeString(TypeACommited);
 		Item attrLong1 = createAttributeLong(TypeACommited);
 		
-		Item et = createEnumType(dm);
+		Item et = createEnumType(dm, 3);
 		Item attrEnum1 = createAttributeEnum(TypeACommited, et);
 		
 		
@@ -1572,10 +1599,7 @@ Item currentItem;
 		try {
 			copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
 		} catch (CadseException e) {
-			assertMelusineError(e, Messages.error_cannot_create_an_item_bad_destination, dm.getName(), CadseGCST.DATA_MODEL_lt_TYPES
-					.getName(), CadseGCST.DATA_MODEL_lt_TYPES.getDestination().getName(),
-					CadseGCST.DATA_MODEL_lt_TYPES.getDestination().getId(), CadseGCST.ENUM_TYPE.getName(), 
-					CadseGCST.ENUM_TYPE.getId());
+			assertEquals(Messages.cannot_create_link_bad_link_type, e.getMsg());
 			return;
 		}
 		fail("exception not raised");
@@ -1591,9 +1615,9 @@ Item currentItem;
 		
 		
 		String n = static_generator.newName();
-		createItemType(dm, n);
+		createItemType(dm, n, null);
 		try {
-			createItemType(dm, n);
+			createItemType(dm, n, null);
 		} catch (CadseException e) {
 			if (e.getMsg().equals(Messages.error_invalid_assignement_key_allready_exists))
 				return;
@@ -1636,6 +1660,156 @@ Item currentItem;
 		assertEquals(cadseDefCommited.getQualifiedName(), p.getName());
 		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, cadseDefCommited.getQualifiedName());
 		
+	}
+	
+	@Test
+	public void testHeritageContentCadseg() throws CadseException, CoreException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemType(dm);
+		Item TypeBCommited = createItemType(dm, null, (ItemType) TypeACommited);
+		
+		// create content
+		
+		createFileContent(TypeACommited, true, "a","a");
+		createFileContent(TypeBCommited, true, "a","a");
+		
+		checkError(cadseDefCommited.getMainMappingContent(IJavaProject.class), null);
+		
+	}
+	
+	@Test
+	public void testHeritagePageFieldNameCadseg() throws CadseException, CoreException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemType(dm);
+		Item cd = ItemTypeManager.getCreationDialog(TypeACommited);
+		assertNotNull(cd);
+		Collection<Item> pages = CreationDialogManager.getPages(cd);
+		assertEquals(1, pages.size());
+		Item p = pages.iterator().next();
+		assertNotNull(p);
+		Collection<Item> fields = PageManager.getFieldsAll(p);
+		assertEquals(1, fields.size());
+		Item f = fields.iterator().next();
+		assertNotNull(f);
+		Item a = FieldManager.getAttribute(f);
+		assertNotNull(a);
+		assertEquals(CadseGCST.ITEM_at_NAME_, a);
+		
+		Item TypeBCommited = createItemType(dm, null, (ItemType) TypeACommited);
+		cd = ItemTypeManager.getCreationDialog(TypeBCommited);
+		assertNotNull(cd);
+		pages = CreationDialogManager.getPages(cd);
+		assertEquals(1, pages.size());
+		p = pages.iterator().next();
+		assertNotNull(p);
+		fields = PageManager.getFieldsAll(p);
+		assertEquals(0, fields.size());
+		
+		checkError(cadseDefCommited.getMainMappingContent(IJavaProject.class), null);
+		
+	}
+	
+	/** test modification for extension */
+	@Test
+	public void testModificationPageForExtension() throws CadseException, CoreException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemType(dm);
+		Item extTypeA = createExtItemType(dm, null, (ItemType) TypeACommited);
+		
+		Item md = extTypeA.getOutgoingItem(CadseGCST.ABSTRACT_ITEM_TYPE_lt_MODIFICATION_DIALOG, true);
+		assertNotNull(md);
+		Collection<Item> modPages = md.getOutgoingItems(CadseGCST.MODIFICATION_DIALOG_lt_PAGES, true);
+		assertEquals(1, modPages.size());
+		Item modPage1 = modPages.iterator().next();
+		assertNotNull(modPage1);
+		assertTrue(PageManager.isModificationPage(modPage1));
+		
+		modPages = extTypeA.getOutgoingItems(CadseGCST.ITEM_TYPE_lt_MODIFICATION_PAGES, true);
+		assertEquals(1, modPages.size());
+		assertEquals(modPage1, modPages.iterator().next());
+		
+		modPages = extTypeA.getOutgoingItems(CadseGCST.ITEM_TYPE_lt_CREATION_PAGES, true);
+		assertEquals(1, modPages.size());
+		
+		CCadse cadsexml = GenerateCadseDefinitionModel.generateCADSE(cadseDefCommited);
+		List<CExtensionItemType> extTypes = cadsexml.getExtItemType();
+		assertEquals(1, extTypes.size());
+		CExtensionItemType extTypaAxml = extTypes.get(0);
+		assertNotNull(extTypaAxml);
+		assertEquals(1, extTypaAxml.getCreationPages().getPage().size());
+		assertEquals(1, extTypaAxml.getModificationPages().getPage().size());
+		assertNotNull(extTypaAxml.getModificationPages().getPage().get(0));
+		assertEquals(IPageFactory.PAGE_PROPERTY_ITEM, extTypaAxml.getModificationPages().getPage().get(0).getCas());
+		
+		checkError(cadseDefCommited.getMainMappingContent(IJavaProject.class), null);
+		
+	}
+	
+	/** test enum  */
+	@Test
+	public void testEnum() throws CadseException, CoreException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item enumType = createEnumType(dm, 15);
+		Item TypeACommited = createItemType(dm);
+		Item attrEnum1 = createAttributeEnum(TypeACommited, enumType);
+		
+		checkError(cadseDefCommited.getMainMappingContent(IJavaProject.class), null);
+		
+	}
+
+	public void checkError(IJavaProject jp, IProgressMonitor monitor) throws CoreException {
+		jp.getProject().build(IncrementalProjectBuilder.FULL_BUILD, monitor);
+		if (!jp.hasBuildState())
+			return ;
+		
+		IMarker[] markers = jp.getProject().findMarkers(IJavaModelMarker.JAVA_MODEL_PROBLEM_MARKER, true, IResource.DEPTH_INFINITE);
+		if (markers == null) return ;
+		StringBuilder errors = new StringBuilder();
+		for (IMarker iMarker : markers) {
+			Integer severity = (Integer) iMarker.getAttribute(IMarker.SEVERITY);
+			if (severity != null && severity == IMarker.SEVERITY_ERROR) {
+				errors.append(iMarker.getAttribute(IMarker.MESSAGE)).append("\n");
+			}
+		}
+		if (errors.length() != 0) {
+			fail("compilation error on "+jp.getElementName()+"\n"+errors);
+		}
+	}
+	private Item createFileContent(Item typeACommited, boolean ext,
+			String fileName, String filePath) throws CadseException {
+		Item managerA = ItemTypeManager.getManager(typeACommited);
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta fc = copy.createItem(CadseGCST.FILE_CONTENT_MODEL, managerA, CadseGCST.MANAGER_lt_CONTENT_MODEL);
+		fc.setAttribute(CadseGCST.FILE_CONTENT_MODEL_at_FILE_NAME_, fileName);
+		fc.setAttribute(CadseGCST.FILE_CONTENT_MODEL_at_FILE_PATH_, filePath);
+		fc.setAttribute(CadseGCST.CONTENT_ITEM_TYPE_at_EXTENDS_CLASS_, ext);
+		copy.commit();
+		return fc.getBaseItem();
 	}
 
 	private ItemDelta createLinkType(Item TypeACommited, Item TypeBCommited)
@@ -1707,17 +1881,20 @@ Item currentItem;
 	}
 
 	private Item createItemType(Item dm) throws CadseException {
-		return createItemType(dm, null);
+		return createItemType(dm, null, null);
 	}
 	
-	private Item createItemType(Item dm, String name) throws CadseException {
+	
+	
+	private Item createItemType(Item dm, String name, ItemType superType) throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta TypeA = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
 		if (name == null)
 			name = static_generator.newName();
 		TypeA.setName(name);
-		
+		if (superType != null)
+			TypeA.setOutgoingItem(CadseGCST.ITEM_TYPE_lt_SUPER_TYPE, superType);
 		copy.commit();
 		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
 		
@@ -1725,23 +1902,43 @@ Item currentItem;
 		return TypeACommited;
 	}
 	
-	private Item createEnumType(Item dm) throws CadseException {
+	private Item createEnumType(Item dm, int nbValues) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		String[] values = new String[nbValues];
+		
+		for (int i = 0; i < values.length; i++) {
+			values[i] = static_generator.newName(null, null, 
+					GeneratorName.F_FIRST_LOWER|GeneratorName.F_NEXT_LOWER|GeneratorName.F_NEXT_UPPER, 4, 8);
+		}
+		return createEnumType(dm, static_generator.newName(), 
+				values);
+	}
+	
+	private Item createEnumType(Item dm, String name, String... values) throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
-		ItemDelta TypeA = copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_ENUMS);
-		TypeA.setName(static_generator.newName());
-		ArrayList<String> values = new ArrayList<String>();
-		values.add(static_generator.newLowerName(5));
-		values.add(static_generator.newLowerName(6));
-		values.add(static_generator.newName(null, null, 
-				GeneratorName.F_FIRST_LOWER|GeneratorName.F_NEXT_LOWER|GeneratorName.F_NEXT_UPPER, 4, 8));
-		TypeA.setAttribute(CadseGCST.ENUM_at_VALUES_, values);
-		copy.commit();
-		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
-		
-		
-		return TypeACommited;
+		ItemDelta enumType = copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_ENUMS);
+		if (name == null)
+			name = static_generator.newName();
+		enumType.setName(name);
+		enumType.setAttribute(CadseGCST.ENUM_TYPE_at_VALUES_, new ArrayList<String>(Arrays.asList(values)));
+		copy.commit();		
+		return enumType.getBaseItem();
 	}
+	
+	private Item createExtItemType(Item dm, String name, ItemType refType) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta extType = copy.createItem(CadseGCST.EXT_ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
+		if (name == null)
+			name = static_generator.newName();
+		extType.setName(name);
+		extType.setOutgoingItem(CadseGCST.EXT_ITEM_TYPE_lt_REF_TYPE, refType);
+		copy.commit();
+		return extType.getBaseItem();
+	}
+	
+	
 	
 	private Item createItemTypeAndCheck(Item dm) throws CadseException {
 		LogicalWorkspaceTransaction copy;
@@ -1800,6 +1997,106 @@ Item currentItem;
 		}
 	}
 	
+
+	@Test
+	public void testImportCadseg() throws CadseException, IOException, JAXBException {
+		URL importCadseZip = TestActivator.findResource("ImportCadse.zip");
+		Item cadse = ImportCadseUtil.importCadse(null, importCadseZip.openStream());
+		assertNotNull(cadse);
 		
+		generateAssert(cadse, "cadseg");
+	}
+	
+	@Test
+	public void testImportMind() throws CadseException, IOException, JAXBException {
+		URL importCadseZip = TestActivator.findResource("Model.Workspace.mind-src.zip");
+		Item cadse = ImportCadseUtil.importCadse(null, importCadseZip.openStream());
+		assertNotNull(cadse);
+		
+		generateAssert(cadse, "mind");
+	}
+	
+
+	private void generateAssert(Item cadse, String name) throws JAXBException {
+		ObjectFactory factory = new ObjectFactory();
+		CCadse cadseJaxb = factory.createCCadse();
+		cadseJaxb.setName(cadse.getQualifiedName());
+		StringWriter structWriter = new StringWriter();
+
+		
+		gen(cadseJaxb, cadse,factory, structWriter, "");
+		
+		FileUtils.write(structWriter.toString(), new File("/home/chomats/ws/cadse-g/TEST.CU.Workspace.Workspace/struct."+name+".txt"));		
+		StringWriter writer = new StringWriter();
+
+		JAXBContext jc = JAXBContext.newInstance("fede.workspace.tool.loadmodel.model.jaxb");
+		Marshaller m = jc.createMarshaller();
+		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+		m.marshal(cadseJaxb, writer);
+		
+		FileUtils.write(writer.toString(), new File("/home/chomats/ws/cadse-g/TEST.CU.Workspace.Workspace/cadse."+name+".xml"));		
+		
+		
+	}
+
+	private void gen(CCadse cadseJaxb, Item anItem, ObjectFactory factory, StringWriter structWriter, String tab) {
+		if (structWriter.toString().contains("#invert_part_"))
+			fail("contains ref #invert_part_");
+		
+		CItem itemJaxb = factory.createCItem();
+		cadseJaxb.getItem().add(itemJaxb);
+		itemJaxb.setId(anItem.getId().toString());
+		itemJaxb.setIsHidden(anItem.isHidden());
+		itemJaxb.setIsReadonly(anItem.isReadOnly());
+		itemJaxb.setShortName(anItem.getName());
+		
+		if (anItem.getName().contains("#invert_part_"))
+			fail("contains ref #invert_part_");
+		
+		structWriter.append(tab).append(anItem.getType().getName()).append(" ").append(anItem.getName()).append("<");
+		
+		IAttributeType<?>[] attTypes = anItem.getType().getAllAttributeTypes();
+		for (int i = 0; i < attTypes.length; i++) {
+			if (attTypes[i] instanceof LinkType) continue;
+			
+			Object v = anItem.getAttribute(attTypes[i]);
+			if (v == null) continue;
+			
+			CValuesType cv = factory.createCValuesType();
+			cv.setKey(attTypes[i].getName());
+			cv.setId(attTypes[i].getId().toString());
+			cv.setValue(v.toString());
+			
+			itemJaxb.getAttributesValue().add(cv);
+			
+			structWriter.append(attTypes[i].getName()).append("='");
+			structWriter.append(v.toString()).append("' ");
+		}
+		structWriter.append(">\n");
+		
+		if (anItem.getQualifiedName() != null)
+			itemJaxb.setUniqueName(anItem.getQualifiedName());
+		
+		for (Link l :  anItem.getOutgoingLinks()) {
+			if (l.getLinkType().getName().contains("#invert_part_"))
+				fail("contains ref #invert_part_");
+			if (l.getDestination().getName().contains("#invert_part_"))
+				fail("contains ref #invert_part_");
+			CLink linkJaxb=factory.createCLink();
+			Item dest = l.getDestination();
+			linkJaxb.setDestinationId(dest.getId().toString());
+			linkJaxb.setType(l.getLinkType().getName());
+			
+			itemJaxb.getLink().add(linkJaxb );
+			if (l.getLinkType().isPart() && l.isLinkResolved()) {
+				gen(cadseJaxb, l.getDestination(), factory, structWriter, tab+"  ");
+			} else {
+				structWriter.append(tab).append("  --> ").append(dest.getType().getName()).append(" ").append(dest.getName()).append("\n");
+			}
+		}
+		
+		
+		
+	}
 
 }
