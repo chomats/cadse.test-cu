@@ -61,6 +61,7 @@ import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransactionListener;
 import fede.workspace.role.initmodel.ErrorWhenLoadedModel;
 import fr.imag.adele.fede.workspace.as.initmodel.IInitModel;
 import fr.imag.adele.fede.workspace.si.initmodel.InitModel;
+import fr.imag.adele.melusine.as.findmodel.CheckModel;
 import fr.imag.adele.melusine.as.findmodel.IFindModel;
 import fr.imag.adele.melusine.as.findmodel.ModelEntry;
 
@@ -315,6 +316,12 @@ public class TestSenario {
 			if (f != null) {
 				return new TestFileModelEntry(domainName, qualifiedModelName, f);
 			}
+			return null;
+		}
+
+		@Override
+		public ModelEntry[] findModelEntries(String domainName, CheckModel check) {
+			// TODO Auto-generated method stub
 			return null;
 		}
 	}

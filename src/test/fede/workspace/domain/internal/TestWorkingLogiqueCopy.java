@@ -45,6 +45,7 @@ import junit.framework.Assert;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.jdt.core.IJavaProject;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -69,6 +70,8 @@ import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Messages;
 import fr.imag.adele.cadse.core.WorkspaceListener;
 import fr.imag.adele.cadse.core.WorkspaceListener.ListenerKind;
+import fr.imag.adele.cadse.core.attribute.BooleanAttributeType;
+import fr.imag.adele.cadse.core.attribute.CheckStatus;
 import fr.imag.adele.cadse.core.delta.ImmutableWorkspaceDelta;
 import fr.imag.adele.cadse.core.delta.ItemDelta;
 import fr.imag.adele.cadse.core.delta.LinkKey;
@@ -373,6 +376,79 @@ Item currentItem;
 		assertOutgoingLinksItem(senario.getLogicalWorkspace().getItem(a.getId()));
 		assertNotNull(senario.getLogicalWorkspace().getItem(c.getId()));
 		assertNotNull(a.getOutgoingLink(LT_A_TO_C, c.getId()));
+	}
+	
+	
+	/**
+	 * Create a --> c (link of type part)
+	 * try to delete parent --> fail
+	 * try to set paren to null  --> fail
+	 * try to change parent --> sucess
+	 * 
+	 * 	@Test
+	 * @throws CadseException
+	 * @throws CoreException
+	 */
+	@Test
+	public void testCreateAndDeleteItemPart() throws CadseException, CoreException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item a = copy.createItem(TYPE_A, null, null);
+		copy.commit();
+		
+		assertNotNull(senario.getLogicalWorkspace().getItem(a.getId()));
+		assertOutgoingLinksItem(senario.getLogicalWorkspace().getItem(a.getId()));
+		
+		a = a.getBaseItem();
+		
+		copy = senario.getLogicalWorkspace().createTransaction();
+		Item c = copy.createItem(TYPE_C, a, LT_A_TO_C);
+		assertEquals(a, c.getPartParent());
+		copy.commit();
+		assertNotNull(senario.getLogicalWorkspace().getItem(c.getId()));
+		assertNotNull(a.getOutgoingLink(LT_A_TO_C, c.getId()));
+		c = c.getBaseItem();
+		
+		
+		assertEquals(a, c.getOutgoingItem(CadseGCST.ITEM_lt_PARENT, true));
+		assertEquals(a, c.getPartParent());
+		
+		
+		ItemDelta cDelta;
+		while(true) {
+			try {
+				copy = senario.getLogicalWorkspace().createTransaction();
+				cDelta = copy.getItem(c);
+				cDelta.getOutgoingLink(CadseGCST.ITEM_lt_PARENT).delete();
+				copy.commit();
+				break;
+			} catch (CadseException e) {
+				if (e.getMsg().equals(Messages.parent_must_be_set))
+					break;
+			}
+			fail("delete link parent not fail !!!");
+		}
+		
+		assertEquals(a, c.getOutgoingItem(CadseGCST.ITEM_lt_PARENT, true));
+		assertEquals(a, c.getPartParent());
+		assertNotNull(a.getOutgoingLink(LT_A_TO_C, c.getId()));
+		
+		copy = senario.getLogicalWorkspace().createTransaction();
+		Item a2 = copy.createItem(TYPE_A, null, null);
+		copy.commit();
+		
+		a2 = a2.getBaseItem();
+		
+		copy = senario.getLogicalWorkspace().createTransaction();
+		cDelta = copy.getItem(c);
+		cDelta.setParent(a2, LT_A_TO_C);
+		assertEquals(a2, cDelta.getPartParent());
+		copy.commit();
+		
+		
+		assertEquals(a2, c.getOutgoingItem(CadseGCST.ITEM_lt_PARENT, true));
+		assertEquals(a2, c.getPartParent());
+		assertNull(a.getOutgoingLink(LT_A_TO_C, c.getId()));		
+		assertNotNull(a2.getOutgoingLink(LT_A_TO_C, c.getId()));
 	}
 
 	/**
@@ -1039,6 +1115,125 @@ Item currentItem;
 		assertNotNull(md);
 		
 	}
+	
+	@Test
+	public void testCheckAttribute() throws CadseException {
+
+		// create a cadse def with item-type, link-type, page, attribute (bool, string, integer)
+		String nameCadse = static_generator.newName();
+		LogicalWorkspace lw = senario.getLogicalWorkspace();
+		
+		assertNull(lw.getItem(CadseGCST.CADSE_DEFINITION.getSpaceKeyType().computeKey(nameCadse, null)));
+		Item cadseDefCommited = createCadseDefinition(nameCadse);
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+nameCadse, cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemTypeAndCheck(dm);
+		checkType(lw, cadseDefCommited, TypeACommited);
+		
+		Item TypeBCommited = createItemType(dm);
+		checkType(lw, cadseDefCommited, TypeBCommited);
+		ItemDelta LinkA_TypeA = createLinkType(TypeACommited, TypeBCommited);
+		
+		checkIncomingLinks(TypeACommited);
+		checkIncomingLinks(TypeBCommited);
+		checkIncomingLinks(LinkA_TypeA.getBaseItem());
+		checkIncomingLinks(dm);
+		
+		Item attrBool_s = createAttributeBool(TypeACommited);
+		assertTrue(attrBool_s instanceof BooleanAttributeType);
+		CheckStatus ret = ((BooleanAttributeType) attrBool_s).check(null, null);
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, "true");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, "false");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, "true");
+		assertEquals(false, ((BooleanAttributeType) attrBool_s).getDefaultValue());
+		ret = ((BooleanAttributeType) attrBool_s).check(null, "trufe");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, 120.0);
+		assertNotNull(ret);
+		assertEquals(ret.getMessage(), fr.imag.adele.cadse.core.impl.attribute.Messages.must_be_a_boolean);
+		
+		Item attrBool_s_dv_true = createAttributeBool(TypeACommited, "true", null);
+		assertTrue(attrBool_s_dv_true instanceof BooleanAttributeType);
+		ret = ((BooleanAttributeType) attrBool_s_dv_true).check(null, null);
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_dv_true).check(null, "true");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_dv_true).check(null, "false");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_dv_true).check(null, "true");
+		assertEquals(true, ((BooleanAttributeType) attrBool_s_dv_true).getDefaultValue());
+		ret = ((BooleanAttributeType) attrBool_s_dv_true).check(null, "trufe");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, 120.0);
+		assertNotNull(ret);
+		assertEquals(ret.getMessage(), fr.imag.adele.cadse.core.impl.attribute.Messages.must_be_a_boolean);
+		
+		Item attrBool_s_dv_false = createAttributeBool(TypeACommited, "false", null);
+		assertTrue(attrBool_s_dv_false instanceof BooleanAttributeType);
+		ret = ((BooleanAttributeType) attrBool_s_dv_false).check(null, null);
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_dv_false).check(null, "true");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_dv_false).check(null, "false");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_dv_false).check(null, "true");
+		assertEquals(false, ((BooleanAttributeType) attrBool_s_dv_false).getDefaultValue());
+		ret = ((BooleanAttributeType) attrBool_s_dv_false).check(null, "trufe");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, 120.0);
+		assertNotNull(ret);
+		assertEquals(ret.getMessage(), fr.imag.adele.cadse.core.impl.attribute.Messages.must_be_a_boolean);
+		
+		Item attrBool_s_cundef = createAttributeBool(TypeACommited, null, true);
+		assertTrue(attrBool_s_cundef instanceof BooleanAttributeType);
+		ret = ((BooleanAttributeType) attrBool_s_cundef).check(null, null);
+		assertNotNull(ret);
+		assertEquals(ret.getMessage(), fr.imag.adele.cadse.core.impl.attribute.Messages.cannot_be_undefined);
+		
+		ret = ((BooleanAttributeType) attrBool_s_cundef).check(null, "true");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_cundef).check(null, "false");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_cundef).check(null, "true");
+		assertEquals(false, ((BooleanAttributeType) attrBool_s_cundef).getDefaultValue());
+		ret = ((BooleanAttributeType) attrBool_s_cundef).check(null, "trufe");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, 120.0);
+		assertNotNull(ret);
+		assertEquals(ret.getMessage(), fr.imag.adele.cadse.core.impl.attribute.Messages.must_be_a_boolean);
+		
+		Item attrBool_s_notcundef = createAttributeBool(TypeACommited, null, false);
+		assertTrue(attrBool_s_notcundef instanceof BooleanAttributeType);
+		ret = ((BooleanAttributeType) attrBool_s_notcundef).check(null, null);
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_notcundef).check(null, "true");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_notcundef).check(null, "false");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s_notcundef).check(null, "true");
+		assertEquals(false, ((BooleanAttributeType) attrBool_s_notcundef).getDefaultValue());
+		ret = ((BooleanAttributeType) attrBool_s_notcundef).check(null, "trufe");
+		assertNull(ret);
+		ret = ((BooleanAttributeType) attrBool_s).check(null, 120.0);
+		assertNotNull(ret);
+		assertEquals(ret.getMessage(), fr.imag.adele.cadse.core.impl.attribute.Messages.must_be_a_boolean);
+		
+		Item attrInt1 = createAttributeInt(TypeACommited);
+		Item attrString1= createAttributeString(TypeACommited);
+		Item attrLong1 = createAttributeLong(TypeACommited);
+		
+		Item et = createEnumType(dm);
+		Item attrEnum1 = createAttributeEnum(TypeACommited, et);
+		
+		
+		
+	}
 
 	private void checkType(LogicalWorkspace lw, Item cadseDefCommited,
 			Item TypeACommited) {
@@ -1331,6 +1526,42 @@ Item currentItem;
 	}
 	
 	@Test
+	public void testCreateCadsegName() throws CadseException {
+		
+		String newName = static_generator.newName();
+		Item cadseDefCommited = createCadseDefinition(newName);
+		assertEquals(newName, cadseDefCommited.getName());
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, cadseDefCommited.getQualifiedName());
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, cadseDefCommited.getQualifiedName(true));
+		
+		IProject p = cadseDefCommited.getMainMappingContent(IProject.class);
+		assertNotNull(p);
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, p.getName());
+		IProject pbad = p.getWorkspace().getRoot().getProject(newName);
+		assertFalse("Project "+pbad+" exists !!!",pbad.exists());
+		
+		IJavaProject jp = org.eclipse.jdt.core.JavaCore.create(p);
+		assertNotNull(jp);
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+newName, jp.getElementName());
+		
+		newName = static_generator.newPackageName(5);
+		cadseDefCommited = createCadseDefinition(newName);
+		assertEquals(newName, cadseDefCommited.getName());
+		assertEquals(newName, cadseDefCommited.getQualifiedName());
+		assertEquals(newName, cadseDefCommited.getQualifiedName(true));
+		
+		p = cadseDefCommited.getMainMappingContent(IProject.class);
+		assertNotNull(p);
+		assertEquals(newName, p.getName());
+		pbad = p.getWorkspace().getRoot().getProject(CadseRuntime.CADSE_NAME_SUFFIX+newName);
+		assertFalse("Project "+pbad+" exists !!!",pbad.exists());
+		
+		jp = org.eclipse.jdt.core.JavaCore.create(p);
+		assertNotNull(jp);
+		assertEquals(newName, jp.getElementName());
+	}
+	
+	@Test
 	public void testFailBadParent() throws CadseException {
 		
 		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
@@ -1419,12 +1650,21 @@ Item currentItem;
 	}
 	
 	private Item createAttributeBool(Item TypeACommited) throws CadseException {
+		return createAttributeBool(TypeACommited, null, null);
+	}
+	
+	private Item createAttributeBool(Item TypeACommited, String dv, Boolean cannotbeundefined) throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta attrBool = copy.createItem(CadseGCST.BOOLEAN, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
 		attrBool.setName(static_generator.newName());
+		if (cannotbeundefined != null)
+			attrBool.setAttribute(CadseGCST.ATTRIBUTE_at_CANNOT_BE_UNDEFINED_, cannotbeundefined);
+		if (dv != null)
+			attrBool.setAttribute(CadseGCST.ATTRIBUTE_at_DEFAULT_VALUE_, dv);
+		
 		copy.commit();
-		return attrBool;
+		return attrBool.getBaseItem();
 	}
 	
 	private Item createAttributeInt(Item TypeACommited) throws CadseException {
@@ -1433,7 +1673,7 @@ Item currentItem;
 		ItemDelta attrBool = copy.createItem(CadseGCST.INTEGER, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
 		attrBool.setName(static_generator.newName());
 		copy.commit();
-		return attrBool;
+		return attrBool.getBaseItem();
 	}
 	
 	private Item createAttributeString(Item TypeACommited) throws CadseException {
@@ -1442,7 +1682,7 @@ Item currentItem;
 		ItemDelta attrBool = copy.createItem(CadseGCST.STRING, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
 		attrBool.setName(static_generator.newName());
 		copy.commit();
-		return attrBool;
+		return attrBool.getBaseItem();
 	}
 	
 	private Item createAttributeLong(Item TypeACommited) throws CadseException {
@@ -1451,7 +1691,7 @@ Item currentItem;
 		ItemDelta attrLong = copy.createItem(CadseGCST.LONG, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
 		attrLong.setName(static_generator.newName());
 		copy.commit();
-		return attrLong;
+		return attrLong.getBaseItem();
 	}
 	
 	private Item createAttributeEnum(Item TypeACommited, Item et) throws CadseException {
@@ -1463,7 +1703,7 @@ Item currentItem;
 		List<String> v = et.getAttribute(CadseGCST.ENUM_TYPE_at_VALUES_);
 		attrLong.setAttribute(CadseGCST.ATTRIBUTE_at_DEFAULT_VALUE_, v.get(0));
 		copy.commit();
-		return attrLong;
+		return attrLong.getBaseItem();
 	}
 
 	private Item createItemType(Item dm) throws CadseException {

@@ -109,7 +109,6 @@ public class TestWorkspaceLogique {
 		Item metaItemType = wl.getItem(CadseDomain.ITEMTYPE_ID);
 		assertNotNull(metaItemType);
 		assertTrue(metaItemType instanceof ItemType);
-		fail("Not yet implemented");
 	}
 
 	/**
