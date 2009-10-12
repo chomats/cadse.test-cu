@@ -22,9 +22,11 @@
 package test.fede.workspace.domain.internal;
 
 import static org.eclipse.swtbot.swt.finder.SWTBotAssert.assertEnabled;
+import static org.eclipse.swtbot.swt.finder.SWTBotAssert.assertNotEnabled;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -72,6 +74,7 @@ import fr.imag.adele.cadse.core.delta.ItemDelta;
 import fr.imag.adele.cadse.core.delta.LinkKey;
 import fr.imag.adele.cadse.core.delta.LinkDelta;
 import fr.imag.adele.cadse.core.impl.CadseIllegalArgumentException;
+import fr.imag.adele.cadse.core.key.ISpaceKey;
 import fr.imag.adele.cadse.core.key.SpaceKeyType;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 
@@ -934,12 +937,15 @@ Item currentItem;
 		copy.commit();
 		newaC = newa.getBaseItem();
 
+		
 		//rename
+		ISpaceKey key = newaC.getKey();
 		copy = senario.getLogicalWorkspace().createTransaction();
 		a1 = copy.getItem(newaC.getId(), false);
 		assertNotNull(a1);
 		String k2 = senario.generator.newName();
 		a1.setName(k2);
+		assertNotSame(key, a1.getKey());
 		assertNull(senario.getLogicalWorkspace().getItem(a1.getKey()));
 		assertTrue(!copy.containsSpaceKey(newa.getKey()));
 		assertTrue(!copy.containsSpaceKey(spaceKeytype.computeKey(k1, null)));
@@ -1333,14 +1339,35 @@ Item currentItem;
 		
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		try {
-			copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_ENUMS);
+			copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
 		} catch (CadseException e) {
-			assertMelusineError(e, Messages.error_cannot_create_an_item_bad_destination, dm.getName(), CadseGCST.DATA_MODEL_lt_ENUMS
-					.getName(), CadseGCST.DATA_MODEL_lt_ENUMS.getDestination().getName(),
-					CadseGCST.DATA_MODEL_lt_ENUMS.getDestination().getId(), CadseGCST.ENUM_TYPE.getName(), 
+			assertMelusineError(e, Messages.error_cannot_create_an_item_bad_destination, dm.getName(), CadseGCST.DATA_MODEL_lt_TYPES
+					.getName(), CadseGCST.DATA_MODEL_lt_TYPES.getDestination().getName(),
+					CadseGCST.DATA_MODEL_lt_TYPES.getDestination().getId(), CadseGCST.ENUM_TYPE.getName(), 
 					CadseGCST.ENUM_TYPE.getId());
 			return;
+		}
+		fail("exception not raised");
+			
+	}
+	
+	@Test
+	public void testFailDuplicateItemType() throws CadseException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+		
+		
+		String n = static_generator.newName();
+		createItemType(dm, n);
+		try {
+			createItemType(dm, n);
+		} catch (CadseException e) {
+			if (e.getMsg().equals(Messages.error_invalid_assignement_key_allready_exists))
+				return;
 		}	
+		fail("exception not raised");
 			
 	}
 	@Test
@@ -1440,10 +1467,16 @@ Item currentItem;
 	}
 
 	private Item createItemType(Item dm) throws CadseException {
+		return createItemType(dm, null);
+	}
+	
+	private Item createItemType(Item dm, String name) throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta TypeA = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
-		TypeA.setName(static_generator.newName());
+		if (name == null)
+			name = static_generator.newName();
+		TypeA.setName(name);
 		
 		copy.commit();
 		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
