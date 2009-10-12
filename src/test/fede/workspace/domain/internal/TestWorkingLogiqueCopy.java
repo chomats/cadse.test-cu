@@ -23,6 +23,7 @@ package test.fede.workspace.domain.internal;
 
 import static org.eclipse.swtbot.swt.finder.SWTBotAssert.assertEnabled;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
@@ -52,6 +53,7 @@ import org.osgi.framework.Bundle;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
+import fr.imag.adele.cadse.cadseg.managers.dataModel.PageManager;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.CadseRuntime;
@@ -61,6 +63,7 @@ import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.Link;
 import fr.imag.adele.cadse.core.LinkType;
+import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Messages;
 import fr.imag.adele.cadse.core.WorkspaceListener;
 import fr.imag.adele.cadse.core.WorkspaceListener.ListenerKind;
@@ -895,6 +898,8 @@ Item currentItem;
 		newa.setName(k1);
 		assertTrue(copy.containsSpaceKey(newa.getKey()));
 		assertTrue(copy.containsSpaceKey(spaceKeytype.computeKey(k1, null)));
+		assertFalse(copy.existsItem(newa));
+		assertTrue(newa.exists());
 		assertEquals(newa, copy.getItem(newa.getKey()));	
 		assertNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
 		copy.commit();
@@ -948,8 +953,105 @@ Item currentItem;
 		copy.commit();
 		assertNull(senario.getLogicalWorkspace().getItem(newa.getKey()));
 		assertEquals(newaC, senario.getLogicalWorkspace().getItem(a1.getKey()));	
+		
+		// create a cadse def with item-type, link-type, page, attribute (bool, string, integer)
+		String nameCadse = static_generator.newName();
+		LogicalWorkspace lw = senario.getLogicalWorkspace();
+		
+		assertNull(lw.getItem(CadseGCST.CADSE_DEFINITION.getSpaceKeyType().computeKey(nameCadse, null)));
+		Item cadseDefCommited = createCadseDefinition(nameCadse);
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+nameCadse, cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemTypeAndCheck(dm);
+		checkType(lw, cadseDefCommited, TypeACommited);
+		
+		Item TypeBCommited = createItemType(dm);
+		checkType(lw, cadseDefCommited, TypeBCommited);
+		ItemDelta LinkA_TypeA = createLinkType(TypeACommited, TypeBCommited);
+		
+		checkIncomingLinks(TypeACommited);
+		checkIncomingLinks(TypeBCommited);
+		checkIncomingLinks(LinkA_TypeA.getBaseItem());
+		checkIncomingLinks(dm);
+		
+		Item attrBool1 = createAttributeBool(TypeACommited);
+		Item attrInt1 = createAttributeInt(TypeACommited);
+		Item attrString1= createAttributeString(TypeACommited);
+		Item attrLong1 = createAttributeLong(TypeACommited);
+		
+		Item et = createEnumType(dm);
+		Item attrEnum1 = createAttributeEnum(TypeACommited, et);
+		
+		assertEquals(cadseDefCommited, lw.getItem(cadseDefCommited.getKey()));
+		assertEquals(cadseDefCommited, lw.getItem(CadseGCST.CADSE_DEFINITION.getSpaceKeyType().computeKey(cadseDefCommited.getName(), null)));
+		assertEquals(dm, lw.getItem(dm.getKey()));
+		assertEquals(dm, lw.getItem(CadseGCST.DATA_MODEL.getSpaceKeyType().computeKey(dm.getName(), cadseDefCommited)));
+		
+		assertEquals(TypeACommited, lw.getItem(TypeACommited.getKey()));
+		assertEquals(TypeACommited, lw.getItem(CadseGCST.ITEM_TYPE.getSpaceKeyType().computeKey(TypeACommited.getName(), cadseDefCommited)));
+
+		assertEquals(TypeBCommited, lw.getItem(TypeBCommited.getKey()));
+		assertEquals(TypeBCommited, lw.getItem(CadseGCST.ITEM_TYPE.getSpaceKeyType().computeKey(TypeBCommited.getName(), cadseDefCommited)));
+		
+		assertEquals(attrBool1, lw.getItem(attrBool1.getKey()));
+		assertEquals(attrBool1, lw.getItem(CadseGCST.ATTRIBUTE.getSpaceKeyType().computeKey(attrBool1.getName(), TypeACommited)));
+		
+		assertEquals(attrInt1, lw.getItem(attrInt1.getKey()));
+		assertEquals(attrInt1, lw.getItem(CadseGCST.ATTRIBUTE.getSpaceKeyType().computeKey(attrInt1.getName(), TypeACommited)));
+		
+		assertEquals(attrString1, lw.getItem(attrString1.getKey()));
+		assertEquals(attrString1, lw.getItem(CadseGCST.ATTRIBUTE.getSpaceKeyType().computeKey(attrString1.getName(), TypeACommited)));
+		
+		assertEquals(attrLong1, lw.getItem(attrLong1.getKey()));
+		assertEquals(attrLong1, lw.getItem(CadseGCST.ATTRIBUTE.getSpaceKeyType().computeKey(attrLong1.getName(), TypeACommited)));
+	
+		ItemType it = (ItemType) TypeACommited;
+		
+		assertEquals(attrBool1, it.getAttributeType(attrBool1.getName()));
+		assertEquals(attrInt1, it.getAttributeType(attrInt1.getName()));
+		assertEquals(attrString1, it.getAttributeType(attrString1.getName()));
+		
+		assertNotNull(it.getFirstCreatedPage());
+		assertNotNull(it.getFirstModificationPage());
+		
+		List<Link> pages = it.getOutgoingLinks(CadseGCST.ITEM_TYPE_lt_CREATION_PAGES);
+		assertEquals(1, pages.size());
+		assertEquals(it.getFirstCreatedPage(), pages.get(0).getDestination());
+		
+		pages = it.getOutgoingLinks(CadseGCST.ITEM_TYPE_lt_MODIFICATION_PAGES);
+		assertEquals(1, pages.size());
+		assertEquals(it.getFirstModificationPage(), pages.get(0).getDestination());
+		
+		
+		Item cd  = it.getOutgoingItem(CadseGCST.ABSTRACT_ITEM_TYPE_lt_CREATION_DIALOG, true);
+		Item md  = it.getOutgoingItem(CadseGCST.ABSTRACT_ITEM_TYPE_lt_MODIFICATION_DIALOG, true);
+		
+		assertNotNull(cd);
+		assertNotNull(md);
+		
+	}
+
+	private void checkType(LogicalWorkspace lw, Item cadseDefCommited,
+			Item TypeACommited) {
+		assertEquals(true, TypeACommited.getAttribute(CadseGCST.ITEM_TYPE_at_IS_ROOT_ELEMENT_));
+		assertEquals(true, TypeACommited.getAttribute(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_));
+		assertEquals(false, TypeACommited.getAttribute(CadseGCST.ITEM_TYPE_at_IS_ABSTRACT_));
+		assertEquals(cadseDefCommited, TypeACommited.getOutgoingItem(CadseGCST.ITEM_TYPE_lt_CADSE_RUNTIME, true));
+		
+		Item managerTypeA = TypeACommited.getIncomingItem(CadseGCST.MANAGER_lt_ITEM_TYPE);
+		assertNotNull(managerTypeA);
+		assertEquals("${#parent.qualified-name}{.}${#name}", managerTypeA.getAttribute(CadseGCST.MANAGER_at_LONG_NAME_TEMPLATE_));
+		assertEquals("${#name}", managerTypeA.getAttribute(CadseGCST.MANAGER_at_DISPLAY_NAME_TEMPLATE_));
+		assertEquals(TypeACommited.getName()+"-manager", managerTypeA.getName());
+		checkIncomingLinks(managerTypeA);
+		assertEquals(managerTypeA, lw.getItem(managerTypeA.getQualifiedName()));
 	}
 	
+	
+
 	@Test
 	public void testgetOutgoingLinkMax1_notfound() throws CadseException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
@@ -1206,7 +1308,7 @@ Item currentItem;
 	@Test
 	public void testCreateCadsegLink() throws CadseException {
 		
-		Item cadseDefCommited = createCadseDefinition();
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
 		
 		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
 
@@ -1223,9 +1325,28 @@ Item currentItem;
 	}
 	
 	@Test
+	public void testFailBadParent() throws CadseException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		try {
+			copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_ENUMS);
+		} catch (CadseException e) {
+			assertMelusineError(e, Messages.error_cannot_create_an_item_bad_destination, dm.getName(), CadseGCST.DATA_MODEL_lt_ENUMS
+					.getName(), CadseGCST.DATA_MODEL_lt_ENUMS.getDestination().getName(),
+					CadseGCST.DATA_MODEL_lt_ENUMS.getDestination().getId(), CadseGCST.ENUM_TYPE.getName(), 
+					CadseGCST.ENUM_TYPE.getId());
+			return;
+		}	
+			
+	}
+	@Test
 	public void testRenameCadseg() throws CadseException {
 		
-		Item cadseDefCommited = createCadseDefinition();
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
 		
 		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
 
@@ -1269,24 +1390,117 @@ Item currentItem;
 		copy.commit();
 		return LinkA_TypeA;
 	}
+	
+	private Item createAttributeBool(Item TypeACommited) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta attrBool = copy.createItem(CadseGCST.BOOLEAN, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		attrBool.setName(static_generator.newName());
+		copy.commit();
+		return attrBool;
+	}
+	
+	private Item createAttributeInt(Item TypeACommited) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta attrBool = copy.createItem(CadseGCST.INTEGER, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		attrBool.setName(static_generator.newName());
+		copy.commit();
+		return attrBool;
+	}
+	
+	private Item createAttributeString(Item TypeACommited) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta attrBool = copy.createItem(CadseGCST.STRING, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		attrBool.setName(static_generator.newName());
+		copy.commit();
+		return attrBool;
+	}
+	
+	private Item createAttributeLong(Item TypeACommited) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta attrLong = copy.createItem(CadseGCST.LONG, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		attrLong.setName(static_generator.newName());
+		copy.commit();
+		return attrLong;
+	}
+	
+	private Item createAttributeEnum(Item TypeACommited, Item et) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta attrLong = copy.createItem(CadseGCST.ENUM, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		attrLong.setName(static_generator.newName());
+		attrLong.setOutgoingItem(CadseGCST.ENUM_lt_ENUM_TYPE, et);
+		List<String> v = et.getAttribute(CadseGCST.ENUM_TYPE_at_VALUES_);
+		attrLong.setAttribute(CadseGCST.ATTRIBUTE_at_DEFAULT_VALUE_, v.get(0));
+		copy.commit();
+		return attrLong;
+	}
 
 	private Item createItemType(Item dm) throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta TypeA = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
 		TypeA.setName(static_generator.newName());
+		
 		copy.commit();
 		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
 		
+		
 		return TypeACommited;
 	}
+	
+	private Item createEnumType(Item dm) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta TypeA = copy.createItem(CadseGCST.ENUM_TYPE, dm, CadseGCST.DATA_MODEL_lt_ENUMS);
+		TypeA.setName(static_generator.newName());
+		ArrayList<String> values = new ArrayList<String>();
+		values.add(static_generator.newLowerName(5));
+		values.add(static_generator.newLowerName(6));
+		values.add(static_generator.newName(null, null, 
+				GeneratorName.F_FIRST_LOWER|GeneratorName.F_NEXT_LOWER|GeneratorName.F_NEXT_UPPER, 4, 8));
+		TypeA.setAttribute(CadseGCST.ENUM_at_VALUES_, values);
+		copy.commit();
+		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
+		
+		
+		return TypeACommited;
+	}
+	
+	private Item createItemTypeAndCheck(Item dm) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta deltaTypeA = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
+		deltaTypeA.setName(static_generator.newName());
+		
+		assertEquals(true, deltaTypeA.getAttribute(CadseGCST.ITEM_TYPE_at_IS_ROOT_ELEMENT_));
+		assertEquals(true, deltaTypeA.getAttribute(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_));
+		assertEquals(false, deltaTypeA.getAttribute(CadseGCST.ITEM_TYPE_at_IS_ABSTRACT_));
+		assertEquals(dm.getPartParent(), deltaTypeA.getOutgoingItem(CadseGCST.ITEM_TYPE_lt_CADSE_RUNTIME, true));
+		
+		Item managerTypeA = deltaTypeA.getIncomingItem(CadseGCST.MANAGER_lt_ITEM_TYPE);
+		assertNotNull(managerTypeA);
+		assertEquals("${#parent.qualified-name}{.}${#name}", managerTypeA.getAttribute(CadseGCST.MANAGER_at_LONG_NAME_TEMPLATE_));
+		assertEquals("${#name}", managerTypeA.getAttribute(CadseGCST.MANAGER_at_DISPLAY_NAME_TEMPLATE_));
+		assertEquals(deltaTypeA.getName()+"-manager", managerTypeA.getName());
+		checkIncomingLinks(managerTypeA);
+		assertEquals(managerTypeA, copy.getItem(managerTypeA.getQualifiedName()));
+	
+		copy.commit();
+		Item ret = senario.getLogicalWorkspace().getItem(deltaTypeA.getId());
+		
+		return ret;
+	}
 
-	private Item createCadseDefinition()
+	private Item createCadseDefinition(String name)
 			throws CadseException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta cadseDef = copy.createItem(CadseGCST.CADSE_DEFINITION, null, null);
 		assertNotNull(cadseDef);
-		cadseDef.setName(static_generator.newName());
+		cadseDef.setName(name);
 		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_, static_generator.newPackageName(3));
 		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_COMMENTARY_, static_generator.newName());
 		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_VENDOR_NAME_, static_generator.newName());
