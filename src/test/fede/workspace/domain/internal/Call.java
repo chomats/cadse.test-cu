@@ -178,7 +178,7 @@ public class Call {
 		return source;
 	}
 
-	public ItemDelta getOperItem() {
+	public ItemDelta getItemDelta() {
 		return _operItem;
 	}
 

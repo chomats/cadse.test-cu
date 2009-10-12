@@ -362,17 +362,7 @@ public class TestSenario {
 			super();
 		}
 
-		@Override
-		public void createdItem(Item item) throws CadseException {
-			Call call = new Call(CallType.createdItem, item, null, null);
-			registerCall(call);
-		}
-
-		@Override
-		public void deletedItem(Item item) throws CadseException {
-			Call call = new Call(CallType.deletedItem, item, null, null);
-			registerCall(call);
-		}
+		
 
 		private void registerCall(Call call) throws CadseException {
 			registerMainCall(call);
@@ -385,11 +375,11 @@ public class TestSenario {
 
 		@Override
 		public String getDisplayName(Item item) {
-			return item.getShortName() + " of type " + item.getShortName();
+			return item.getName() + " of type " + item.getName();
 		}
 		
 		@Override
-		public String computeUniqueName(Item item, String shortid, Item parent,
+		public String computeQualifiedName(Item item, String shortid, Item parent,
 				LinkType lt) {
 			return shortid;
 		}
@@ -422,6 +412,11 @@ public class TestSenario {
 		try {
 			Bundle b = Platform.getBundle("fr.imag.adele.cadse.si.workspace.view");
 			b.start();
+			b = Platform.getBundle("fr.imag.adele.ipojo.autostart");
+			b.start();
+			b = Platform.getBundle("org.apache.felix.ipojo");
+			b.start();
+			
 			while (true) {
 				wl = CadseCore.getLogicalWorkspace();
 				if (wl != null && wl.getState() == WSModelState.RUN)
@@ -467,13 +462,13 @@ public class TestSenario {
 
 	private CadseRuntime getCadseRuntimeTest() {
 		if (_cadseRuntimeTest == null) {
-			_cadseRuntimeTest = wl.createCadseRuntime("test", CompactUUID.randomUUID(), CompactUUID.randomUUID());
+			_cadseRuntimeTest = wl.createCadseRuntime(CadseRuntime.CADSE_NAME_SUFFIX+"test", CompactUUID.randomUUID(), CompactUUID.randomUUID());
 		}
 		return _cadseRuntimeTest;
 	}
 
-	public LinkType createLinkType(ItemType source, int kind, int min, int max, String selection, ItemType destination) {
-		String id = source.getShortName() + "_to_" + destination.getShortName() + "_" + generator.newName();
+	public LinkType createLinkType(ItemType source, int kind, int min, int max, String selection, ItemType destination) throws CadseException {
+		String id = source.getName() + "_to_" + destination.getName() + "_" + generator.newName();
 		LinkType ret = source.createLinkType(CompactUUID.randomUUID(), 1, id, kind, min, max, selection, destination);
 		ret.setManager(new TestSenario.LinkManagerTest());
 		add(ret);
@@ -485,7 +480,7 @@ public class TestSenario {
 	}
 
 	public LinkType createLinkType(ItemType source, int kind, int min, int max, String selection, LinkType inverse) throws CadseException {
-		String id = source.getShortName() + "_to_" + inverse.getSource().getShortName();
+		String id = source.getName() + "_to_" + inverse.getSource().getName();
 		LinkType ret = source.createLinkType(CompactUUID.randomUUID(), 1, id, kind, min, max, selection, inverse);
 		ret.setManager(new TestSenario.LinkManagerTest());
 		add(ret);
@@ -553,4 +548,6 @@ public class TestSenario {
 		listners.add(l);
 		getLogicalWorkspace().addListener(l, eventFilter);
 	}
+
+	
 }

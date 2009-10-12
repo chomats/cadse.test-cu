@@ -106,7 +106,7 @@ public class TestWorkspaceLogique {
 	@Test
 	public void testLoadMetaModel() {
 
-		Item metaItemType = wl.getItem(CadseDomain.META_ITEMTYPE_ID);
+		Item metaItemType = wl.getItem(CadseDomain.ITEMTYPE_ID);
 		assertNotNull(metaItemType);
 		assertTrue(metaItemType instanceof ItemType);
 		fail("Not yet implemented");

@@ -1,7 +1,6 @@
 package test.fede.workspace.domain.internal;
 
 import junit.framework.Assert;
-import fr.imag.adele.cadse.cadseg.WorkspaceCST;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
@@ -14,7 +13,7 @@ import fr.imag.adele.cadse.core.WSModelState;
 import fr.imag.adele.cadse.core.delta.ItemDelta;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
-import fr.imag.adele.cadse.core.CadseRootCST;
+import fr.imag.adele.cadse.core.CadseGCST;
 
 public class TestCadseg {
 	static GeneratorName	generator	= new GeneratorName();
@@ -35,9 +34,9 @@ public class TestCadseg {
 
 		LogicalWorkspaceTransaction copy = wl.createTransaction();
 
-		ItemDelta oper = copy.createItem(WorkspaceCST.CADSE_DEFINITION, null, null);
+		ItemDelta oper = copy.createItem(CadseGCST.CADSE_DEFINITION, null, null);
 		oper.setShortName(cadseName);
-		oper.setAttribute(WorkspaceCST.CADSE_DEFINITION_at_PACKAGENAME_, "fr.test.tset");
+		oper.setAttribute(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_, "fr.test.tset");
 		copy.commit();
 
 
@@ -48,16 +47,16 @@ public class TestCadseg {
 
 
 		copy = wl.createTransaction();
-		oper = copy.createItem(WorkspaceCST.ITEM_TYPE, dataModel, WorkspaceCST.DATA_MODEL_lt_TYPES);
-		oper.setAttribute(CadseRootCST.ITEM_TYPE_at_NAME_, TypeA);
-		oper.setAttribute(WorkspaceCST.ITEM_TYPE_at_HAS_CONTENT_, false);
+		oper = copy.createItem(CadseGCST.ITEM_TYPE, dataModel, CadseGCST.DATA_MODEL_lt_TYPES);
+		oper.setAttribute(CadseGCST.ITEM_at_NAME_, TypeA);
+		oper.setAttribute(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_, false);
 		copy.commit();
 
 
 		copy = wl.createTransaction();
-		oper = copy.createItem(WorkspaceCST.ITEM_TYPE, dataModel, WorkspaceCST.DATA_MODEL_lt_TYPES);
-		oper.setAttribute(CadseRootCST.ITEM_TYPE_at_NAME_, TypeB);
-		oper.setAttribute(WorkspaceCST.ITEM_TYPE_at_HAS_CONTENT_, false);
+		oper = copy.createItem(CadseGCST.ITEM_TYPE, dataModel, CadseGCST.DATA_MODEL_lt_TYPES);
+		oper.setAttribute(CadseGCST.ITEM_at_NAME_, TypeB);
+		oper.setAttribute(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_, false);
 		copy.commit();
 
 		Item ItemTypeA = DataModelManager.getItemType(dataModel, TypeA);
@@ -73,20 +72,20 @@ public class TestCadseg {
 		final String lt_a_to_b = "a_to_b";
 
 		copy = wl.createTransaction();
-		oper = copy.createItem(WorkspaceCST.LINK, ItemTypeA, WorkspaceCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
-		oper.setAttribute(CadseRootCST.ITEM_TYPE_at_NAME_, lt_a_to_b);
-		oper.createLink(WorkspaceCST.LINK_lt_DESTINATION, ItemTypeB);
-		oper.setAttribute(WorkspaceCST.ATTRIBUTE_at_MAX_, -1);
-		oper.setAttribute(WorkspaceCST.ATTRIBUTE_at_MIN_, 0);
+		oper = copy.createItem(CadseGCST.LINK, ItemTypeA, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		oper.setAttribute(CadseGCST.ITEM_at_NAME_, lt_a_to_b);
+		oper.createLink(CadseGCST.LINK_lt_DESTINATION, ItemTypeB);
+		oper.setAttribute(CadseGCST.LINK_at_MAX_, -1);
+		oper.setAttribute(CadseGCST.LINK_at_MIN_, 0);
 		copy.commit();
 
 		Item itemLt_a_to_b = ItemTypeManager.getAttribute(ItemTypeA, lt_a_to_b);
 		Assert.assertNotNull(itemLt_a_to_b);
-		Assert.assertEquals(WorkspaceCST.LINK, itemLt_a_to_b.getType());
+		Assert.assertEquals(CadseGCST.LINK, itemLt_a_to_b.getType());
 
-		Integer min = itemLt_a_to_b.getAttribute(WorkspaceCST.ATTRIBUTE_at_MIN_);
+		Integer min = itemLt_a_to_b.getAttribute(CadseGCST.LINK_at_MIN_);
 		Assert.assertEquals(Integer.valueOf(0), min);
-		Integer max = itemLt_a_to_b.getAttribute(WorkspaceCST.ATTRIBUTE_at_MAX_);
+		Integer max = itemLt_a_to_b.getAttribute(CadseGCST.LINK_at_MAX_);
 		Assert.assertEquals(Integer.valueOf(-1), max);
 
 	}

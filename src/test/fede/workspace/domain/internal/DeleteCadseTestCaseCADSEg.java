@@ -3,12 +3,12 @@ package test.fede.workspace.domain.internal;
 import junit.framework.Assert;
 
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-import fr.imag.adele.cadse.cadseg.WorkspaceCST;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.core.*;
 import fr.imag.adele.cadse.core.impl.*;
@@ -40,7 +40,8 @@ public class DeleteCadseTestCaseCADSEg extends GTCadseTestCase {
 		
 		// a few parameters...
 		// TestUtil.setVelocity(100);
-		GTTestParameters.setTimeout(10000);
+		SWTBotPreferences.TIMEOUT = 10000;
+		
 		GTTestParameters.banner();
 		if (System.getProperty("test.screenshotPath") != null)
 			GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));
@@ -62,12 +63,12 @@ public class DeleteCadseTestCaseCADSEg extends GTCadseTestCase {
 		// CADSE WebAppModel
 		workspaceView.findTree().contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
 				GTCadseRTConstants.CONTEXTMENU_NEW_CADSE_DEFINITION).click();
-		shell = new GTShell(WorkspaceCST.CADSE_DEFINITION);
+		shell = new GTShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
-		shell.findField(CadseRootCST.ITEM_TYPE_at_NAME_).typeText( cadseName);
+		shell.findField(CadseGCST.ITEM_at_NAME_).typeText( cadseName);
 
 		packageName = "model.webapp";
-		shell.findField(WorkspaceCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
+		shell.findField(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
 		workspaceView.show();

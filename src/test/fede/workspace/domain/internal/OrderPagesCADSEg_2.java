@@ -4,7 +4,6 @@ import java.util.Collection;
 import java.util.List;
 
 import junit.framework.Assert;
-import fr.imag.adele.cadse.cadseg.WorkspaceCST;
 import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.cadseg.managers.attributes.LinkManager;
@@ -15,7 +14,7 @@ import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.junit.Test;
 
-import fr.imag.adele.cadse.core.CadseRootCST;
+import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.WSModelState;
@@ -77,7 +76,7 @@ public class OrderPagesCADSEg_2 extends GTCadseTestCase {
 		assertEquals(6, ItemTypeA_creationDialog_pagesItems.size());
 		int i = 1;
 		for (Item p : ItemTypeA_creationDialog_pagesItems) {
-			assertEquals("creation-page"+i, p.getShortName());
+			assertEquals("creation-page"+i, p.getName());
 			i++;
 		}
 
@@ -85,7 +84,7 @@ public class OrderPagesCADSEg_2 extends GTCadseTestCase {
 		assertEquals(6, ItemTypeB_creationDialog_pagesItems.size());
 		i = 1;
 		for (Item p : ItemTypeB_creationDialog_pagesItems) {
-			assertEquals("creation-page"+i, p.getShortName());
+			assertEquals("creation-page"+i, p.getName());
 			i++;
 		}
 
@@ -102,10 +101,10 @@ public class OrderPagesCADSEg_2 extends GTCadseTestCase {
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL,
 				TypeA, "creation dialog").contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
 						GTCadseRTConstants.CONTEXTMENU_PAGE).click();
-		shell = new GTShell(WorkspaceCST.PAGE);
-		shell.findField(CadseRootCST.ITEM_TYPE_at_NAME_).typeText(pageName);
-		shell.findField(WorkspaceCST.PAGE_at_TITLE_).typeText(pageTitle);
-		shell.findField(WorkspaceCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
+		shell = new GTShell(CadseGCST.PAGE);
+		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(pageName);
+		shell.findField(CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
+		shell.findField(CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
 
 		shell.capture();
 		shell.close();

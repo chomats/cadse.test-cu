@@ -21,14 +21,17 @@
  */
 package test.fede.workspace.domain.internal;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
@@ -44,7 +47,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
+import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.core.CadseException;
+import fr.imag.adele.cadse.core.CadseGCST;
+import fr.imag.adele.cadse.core.CadseRuntime;
 import fr.imag.adele.cadse.core.ChangeID;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
@@ -71,15 +79,15 @@ public class TestWorkingLogiqueCopy {
 		Item	d;
 		Link	a_to_d;
 
-		public void beforeCreatingItem(LogicalWorkspaceTransaction wl, ItemDelta item) throws CadseException {
+		public void notifyCreatedItem(LogicalWorkspaceTransaction wl, ItemDelta item) throws CadseException {
 			// LT_A_TO_D
 			d = wl.createItem(TYPE_D, null, null);
 			a_to_d = item.createLink(LT_A_TO_D, d);
 		}
 
 		public void action(Call call) throws CadseException {
-			if (call.getType() == CallType.notifyCreatedItem && call.getOperItem().getType() == TYPE_A) {
-				beforeCreatingItem(call.getLogicalWorkspaceTransaction(), call.getOperItem());
+			if (call.getType() == CallType.notifyCreatedItem && call.getItemDelta().getType() == TYPE_A) {
+				notifyCreatedItem(call.getLogicalWorkspaceTransaction(), call.getItemDelta());
 			}
 		}
 	}
@@ -98,17 +106,21 @@ public class TestWorkingLogiqueCopy {
 		}
 
 		public void action(Call call) throws CadseException {
-			if (call.getType() == CallType.notifyDeletedItem && call.getOperItem().getType() == TYPE_A) {
-				beforeDeletingItem(call.getOperItem());
+			if (call.getType() == CallType.notifyDeletedItem && call.getItemDelta().getType() == TYPE_A) {
+				beforeDeletingItem(call.getItemDelta());
 			}
 		}
 	}
+
+	private static GeneratorName static_generator;
 
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+		
+		static_generator		= new GeneratorName();
 	}
 
 	/**
@@ -116,6 +128,7 @@ public class TestWorkingLogiqueCopy {
 	 */
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		static_generator = null;
 	}
 
 	private ItemType	TYPE_A;
@@ -127,6 +140,7 @@ public class TestWorkingLogiqueCopy {
 	private LinkType	LT_D_TO_B;
 	private LinkType	LT_A_TO_C;
 	private LinkType	LT_A_TO_C_NO_PART;
+	private LinkType    LT_A_TO_B_ONE_MAX;
 	TestSenario			senario;
 
 	/**
@@ -149,6 +163,7 @@ public class TestWorkingLogiqueCopy {
 		TYPE_B = senario.createItemType(null, false, false);
 		TYPE_C = senario.createItemType(null, false, false);
 		TYPE_D = senario.createItemType(null, false, false);
+		LT_A_TO_B_ONE_MAX = senario.createLinkType(TYPE_A, LinkType.AGGREGATION, 0, 1, null, TYPE_B);
 		LT_A_TO_B = senario.createLinkType(TYPE_A, LinkType.AGGREGATION, 0, -1, null, TYPE_B);
 		LT_A_TO_D = senario.createLinkType(TYPE_A, LinkType.AGGREGATION, 0, -1, null, TYPE_D);
 		LT_A_TO_C = senario.createLinkType(TYPE_A, LinkType.PART + LinkType.AGGREGATION, 0, -1, null, TYPE_C);
@@ -268,7 +283,7 @@ Item currentItem;
 		MyListner2 myListner = new MyListner2(ListenerKind.UI);
 		senario.addListener(myListner, 0x7F);
 		Item a = copy.createItem(TYPE_A, null, null);
-		a.setShortName(senario.newName());
+		a.setName(senario.newName());
 		copy.commit();
 
 		senario.getLogicalWorkspace().getCadseDomain().waitEndAsyncEvents(10000);
@@ -292,7 +307,7 @@ Item currentItem;
 	public void testItemListener() throws CadseException, CoreException, InterruptedException, TimeoutException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item a = copy.createItem(TYPE_A, null, null);
-		a.setShortName(senario.newName());
+		a.setName(senario.newName());
 		copy.commit();
 		MyItemDeltaListner myItemDeltaListner = new MyItemDeltaListner(ListenerKind.UI);
 		a = senario.getLogicalWorkspace().getItem(a.getId());
@@ -301,7 +316,7 @@ Item currentItem;
 
 		copy = senario.getLogicalWorkspace().createTransaction();
 		Item a2 = copy.createItem(TYPE_A, null, null);
-		a2.setShortName(senario.newName());
+		a2.setName(senario.newName());
 		copy.commit();
 		senario.getLogicalWorkspace().getCadseDomain().waitEndAsyncEvents(10000);
 		Assert.assertTrue("Listener called", myItemDeltaListner.count == 1);
@@ -309,7 +324,7 @@ Item currentItem;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		copy.getItem(a.getId()).setAttribute("As", "test");
 		Item b = copy.createItem(TYPE_B, null, null);
-		b.setShortName(senario.newName());
+		b.setName(senario.newName());
 		copy.commit();
 		senario.getLogicalWorkspace().getCadseDomain().waitEndAsyncEvents(10000);
 		Assert.assertTrue("Listener called", myItemDeltaListner.count == 1);
@@ -350,6 +365,16 @@ Item currentItem;
 		assertNotNull(a.getOutgoingLink(LT_A_TO_C, c.getId()));
 	}
 
+	/**
+	 * Create an A implies create an D
+	 * 
+	 * Create A and commit 
+	 * Test 'A' and 'D' is created
+	 * Test link A to D is created
+	 * 
+	 * @throws CadseException
+	 * @throws CoreException
+	 */
 	@Test
 	public void testCreateAImpliesCreateD() throws CadseException, CoreException {
 		Create_ITEM_D_DE_A_TO_D create_ITEM_D_DE_A_TO_D = new Create_ITEM_D_DE_A_TO_D();
@@ -484,6 +509,13 @@ Item currentItem;
 	}
 
 	private void assertMelusineError(CadseException e, String msg, Object... args) throws CadseException {
+		if (e.getMsg().equals(msg) && Arrays.equals(e.getArgs(), args)) {
+			return;
+		}
+		throw e;
+	}
+	
+	private void assertMelusineError(CadseIllegalArgumentException e, String msg, Object... args) throws CadseException {
 		if (e.getMsg().equals(msg) && Arrays.equals(e.getArgs(), args)) {
 			return;
 		}
@@ -734,5 +766,428 @@ Item currentItem;
 	public void testDeletePartLink() {
 
 	}
+	
+	@Test
+	public void testCreateLinkBadDest() throws CadseException {
+		/*TYPE_A = senario.createItemType(null, false, false);
+		TYPE_B = senario.createItemType(null, false, false);
+		TYPE_C = senario.createItemType(null, false, false);
+		TYPE_D = senario.createItemType(null, false, false);*/
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newd = copy.createItem(TYPE_D, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newdC = newd.getBaseItem();
+		
+		try {
+			copy = senario.getLogicalWorkspace().createTransaction();
+			copy.getOrCreateItemOperation(newaC).createLink(LT_A_TO_B, newdC);
+		} catch(CadseException e) {
+			assertMelusineError(e, Messages.cannot_create_link_bad_link_type,
+					newaC.getId(), newaC.getQualifiedName(), newdC.getId(), newdC.getQualifiedName(), LT_A_TO_B.getName(), LT_A_TO_B
+							.getDestination().getName(), newdC.getType().getName());
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testCreateLinkDeletedDest() throws CadseException {
+		/*TYPE_A = senario.createItemType(null, false, false);
+		TYPE_B = senario.createItemType(null, false, false);
+		TYPE_C = senario.createItemType(null, false, false);
+		TYPE_D = senario.createItemType(null, false, false);*/
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		
+		try {
+			copy = senario.getLogicalWorkspace().createTransaction();
+			copy.getOrCreateItemOperation(newbC).delete(true);
+			copy.getOrCreateItemOperation(newaC).createLink(LT_A_TO_B, newbC);
+		} catch(CadseException e) {
+			assertMelusineError(e, Messages.cannot_create_link_to_deleted_destination,
+					newaC, newbC);
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testgetOutgoingLinkFailLinkTypeNull() throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		
+		try {
+			newaC.getOutgoingLink(null);
+		} catch(CadseIllegalArgumentException e) {
+			assertMelusineError(e, Messages.error_linktype_is_null);
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testgetOutgoingLinkMax1() throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		newa.createLink(LT_A_TO_B_ONE_MAX, newb);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		assertNotNull(newaC);
+		assertNotNull(newbC);
+		
+		Link a_to_b = newaC.getOutgoingLink(LT_A_TO_B_ONE_MAX);
+		assertLink(LT_A_TO_B_ONE_MAX, newaC, newbC, a_to_b);
+		
+		
+		Link a_to_b2 = newbC.getIncomingLink(LT_A_TO_B_ONE_MAX, newaC.getId());
+		assertEquals(a_to_b, a_to_b2);
+		
+		List<Link> links = newbC.getIncomingLinks(LT_A_TO_B_ONE_MAX);
+		assertEquals(1, links.size());
+		assertEquals(a_to_b, links.get(0));
+		
+	}
+	
+	@Test
+	public void testgetOutgoingLinkMax1_notfound() throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		assertNotNull(newaC);
+		assertNotNull(newbC);
+		
+		Link a_to_b = newaC.getOutgoingLink(LT_A_TO_B_ONE_MAX);
+		assertNull(a_to_b);
+	}
+
+	private void assertLink(LinkType lt, Item srcItem, Item dstItem, Link link) {
+		assertNotNull(link);
+		assertEquals(srcItem, link.getSource());
+		assertEquals(dstItem, link.getDestination());
+		assertEquals(lt, link.getLinkType());
+	}
+	
+	@Test
+	public void testgetOutgoingLinkFailMax1() throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		newa.createLink(LT_A_TO_B, newb);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		assertNotNull(newaC);
+		assertNotNull(newbC);
+		
+		try {
+			newaC.getOutgoingLink(LT_A_TO_B);
+		} catch(CadseIllegalArgumentException e) {
+			assertMelusineError(e, Messages.error_maximum_cardinality_must_be_one, LT_A_TO_B.getName());
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testgetIncomingLinksFail() throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		
+		try {
+			newaC.getIncomingLinks(null);
+		} catch(CadseIllegalArgumentException e) {
+			assertMelusineError(e, Messages.error_linktype_is_null);
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testMoveLinks_2() throws CadseException {
+		testMoveLinks(2);
+		
+	}
+	
+	@Test
+	public void testMoveLinks_3() throws CadseException {
+		testMoveLinks(3);
+	}
+	
+	@Test
+	public void testMoveLinks_4() throws CadseException {
+		testMoveLinks(4);
+	}
+	
+	@Test
+	public void testMoveLinks_5() throws CadseException {
+		testMoveLinks(5);
+	}
+	
+	@Test
+	public void testMoveLinks_6() throws CadseException {
+		testMoveLinks(6);
+	}
+	
+	
+	public void testMoveLinks(int nb) throws CadseException {
+		Item[] dest= new Item[nb];
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		for (int i = 0; i < dest.length; i++) {
+			dest[i] = copy.createItem(TYPE_B, null, null);
+			dest[i].setName("b"+i);
+			assertNotNull(dest[i]);
+		}
+		for (int i = 0; i < dest.length; i++) {
+			newa.createLink(LT_A_TO_B, dest[i]);
+		}
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		
+		for (int i = 0; i < dest.length; i++) {
+			dest[i] = dest[i].getBaseItem();
+			assertNotNull(dest[i]);
+			checkIncomingLinks(dest[i]);
+		}
+		assertNotNull(newaC);
+		checkIncomingLinks(newaC);
+		
+		// move link_1 before link_0 (1 -> 0)
+		assertMove(newaC, LT_A_TO_B, dest);
+		
+	}
+	
+	private void assertMove(Item srcItem, LinkType lt, Item ...dest) throws CadseException {
+		
+		assertlink(srcItem, lt, dest);
+		int nb = dest.length;
+		int nbcomp = nb*nb - nb;
+		int[] i_comp =  new int[nbcomp];
+		int[] j_comp =  new int[nbcomp];
+		int k = 0;
+		for (int i = 0; i < nb; i++) {
+			for (int j = 0; j < nb; j++) {
+				if (i == j) continue;
+				i_comp[k] = i;
+				j_comp[k] = j;
+				k++;
+			}
+		}
+		
+		for (int z = 0; z < nbcomp; z++) {
+			k = senario.generator.getint(nbcomp);
+			int i = i_comp[k];
+			int j = j_comp[k];
+			List<Link> links = srcItem.getOutgoingLinks(lt);
+			if (i > j) {
+				LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+				copy.getLink(links.get(i)).moveBefore(links.get(j));
+				copy.commit();
+				Item temp = dest[i];
+				System.arraycopy(dest, j, dest, j+1, i-j);
+				dest[j] = temp;				
+			} else {
+				LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+				copy.getLink(links.get(i)).moveAfter(links.get(j));
+				copy.commit();
+				Item temp = dest[i];
+				System.arraycopy(dest, i+1, dest, i, j-i);
+				dest[j] = temp;			
+			}
+			assertlink(srcItem, lt, dest);
+			for (int t = 0; t < dest.length; t++) {
+				checkIncomingLinks(dest[t]);
+			}
+			checkIncomingLinks(srcItem);
+		}		
+	}
+	// key
+	// exist in trans
+	
+	private void assertlink(Item srcItem, LinkType lt, Item ...dest) {
+		List<Link> links = srcItem.getOutgoingLinks(lt);
+		assertEquals(dest.length, links.size());
+		for (int i = 0; i < dest.length; i++) {
+			assertLink(lt, srcItem, dest[i], links.get(i));
+		}
+	}
+	
+
+	@Test
+	public void testCreateLinkDeletedSource() throws CadseException {
+		/*TYPE_A = senario.createItemType(null, false, false);
+		TYPE_B = senario.createItemType(null, false, false);
+		TYPE_C = senario.createItemType(null, false, false);
+		TYPE_D = senario.createItemType(null, false, false);*/
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		
+		try {
+			copy = senario.getLogicalWorkspace().createTransaction();
+			copy.getOrCreateItemOperation(newaC).delete(true);
+			copy.getOrCreateItemOperation(newaC).createLink(LT_A_TO_B, newbC);
+		} catch(CadseException e) {
+			assertMelusineError(e, Messages.cannot_create_link_from_deleted_source,
+					newaC, newbC);
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	
+	@Test
+	public void testCreateLinkUnexistingSource() throws CadseException {
+		/*TYPE_A = senario.createItemType(null, false, false);
+		TYPE_B = senario.createItemType(null, false, false);
+		TYPE_C = senario.createItemType(null, false, false);
+		TYPE_D = senario.createItemType(null, false, false);*/
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		
+		copy = senario.getLogicalWorkspace().createTransaction();
+		copy.getOrCreateItemOperation(newaC).delete(true);
+		copy.commit();
+		try {
+			copy = senario.getLogicalWorkspace().createTransaction();
+			copy.getOrCreateItemOperation(newaC).createLink(LT_A_TO_B, newbC);
+		} catch(CadseException e) {
+			assertMelusineError(e, Messages.cannot_create_link_from_unexisting_source,
+					newaC, newbC);
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testCreateLinkUnexistingDestination() throws CadseException {
+		/*TYPE_A = senario.createItemType(null, false, false);
+		TYPE_B = senario.createItemType(null, false, false);
+		TYPE_C = senario.createItemType(null, false, false);
+		TYPE_D = senario.createItemType(null, false, false);*/
+		
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		Item newa = copy.createItem(TYPE_A, null, null);
+		Item newb = copy.createItem(TYPE_B, null, null);
+		copy.commit();
+		Item newaC = newa.getBaseItem();
+		Item newbC = newb.getBaseItem();
+		
+		copy = senario.getLogicalWorkspace().createTransaction();
+		copy.getOrCreateItemOperation(newbC).delete(true);
+		copy.commit();
+		try {
+			copy = senario.getLogicalWorkspace().createTransaction();
+			copy.getOrCreateItemOperation(newaC).createLink(LT_A_TO_B, newbC);
+		} catch(CadseException e) {
+			assertMelusineError(e, Messages.cannot_create_link_to_unexisting_destination,
+					newaC, newbC);
+			return;
+		}
+		fail("exception not raised!");
+	}
+	
+	@Test
+	public void testCreateCadsegLink() throws CadseException {
+		
+		Item cadseDefCommited = createCadseDefinition();
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemType(dm);
+		Item TypeBCommited = createItemType(dm);
+		
+		ItemDelta LinkA_TypeA = createLinkType(TypeACommited, TypeBCommited);
+		
+		checkIncomingLinks(TypeACommited);
+		checkIncomingLinks(TypeBCommited);
+		checkIncomingLinks(LinkA_TypeA.getBaseItem());
+		checkIncomingLinks(dm);
+		
+	}
+
+	private ItemDelta createLinkType(Item TypeACommited, Item TypeBCommited)
+			throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta LinkA_TypeA = copy.createItem(CadseGCST.LINK, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		LinkA_TypeA.setName(static_generator.newName());
+		LinkA_TypeA.createLink(CadseGCST.LINK_lt_DESTINATION, TypeBCommited);
+		copy.commit();
+		return LinkA_TypeA;
+	}
+
+	private Item createItemType(Item dm) throws CadseException {
+		LogicalWorkspaceTransaction copy;
+		copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta TypeA = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
+		TypeA.setName(static_generator.newName());
+		copy.commit();
+		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
+		
+		return TypeACommited;
+	}
+
+	private Item createCadseDefinition()
+			throws CadseException {
+		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta cadseDef = copy.createItem(CadseGCST.CADSE_DEFINITION, null, null);
+		assertNotNull(cadseDef);
+		cadseDef.setName(static_generator.newName());
+		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_, static_generator.newPackageName(3));
+		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_COMMENTARY_, static_generator.newName());
+		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_VENDOR_NAME_, static_generator.newName());
+		cadseDef.setAttribute(CadseGCST.CADSE_DEFINITION_at_CADSE_NAME_, static_generator.newName());
+		cadseDef.setAttribute(CadseGCST.CADSE_RUNTIME_at_DESCRIPTION_, static_generator.newName());
+		copy.commit();
+		
+		Item cadseDefCommited = senario.getLogicalWorkspace().getItem(cadseDef.getId());
+		return cadseDefCommited;
+	}
+
+	private void checkIncomingLinks(Item itemA) {
+		for (Link l : itemA.getIncomingLinks()) {
+			Link lout = l.getSource().getOutgoingLink(l.getLinkType(), l.getDestinationId());
+			assertNotNull(lout);
+			assertEquals(l, lout);
+		}
+		
+		for (Link l : itemA.getOutgoingLinks()) {
+			Link lin = l.getDestination().getIncomingLink(l.getLinkType(), l.getSourceId());
+			if (lin == null)
+				assertNotNull("not found incoming link : "+l, lin);
+			assertEquals(l, lin);
+		}
+	}
+	
+		
 
 }
