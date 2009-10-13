@@ -35,7 +35,7 @@ public class TestCadseg {
 		LogicalWorkspaceTransaction copy = wl.createTransaction();
 
 		ItemDelta oper = copy.createItem(CadseGCST.CADSE_DEFINITION, null, null);
-		oper.setShortName(cadseName);
+		oper.setName(cadseName);
 		oper.setAttribute(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_, "fr.test.tset");
 		copy.commit();
 

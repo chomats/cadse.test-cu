@@ -105,6 +105,132 @@ CadseDefinition mind<id='e55e9031-58b1-4ea8-961c-d8701f8d33f1' executed='false' 
           --> String id-runtime
           --> Link parent
           --> CreationDialog creation-dialog
+          Field name<position='defaultpos' display-name='name' revModified='false' label='name' editable='false' id='9fbf0cb3-d680-40e1-9ee5-e48e65224051' item-readonly='false' committedDate='0' name='name' committedBy='' item-hidden='false' qualified-name='name' TW-version='0' readonly='false' requireNewRev='true' >
+            --> ContentItem Content of item name (ContentItem)
+            --> ItemType Field
+            --> Link parent
+            --> Boolean revModified
+            --> Link instance-of
+            --> Enum position
+            --> String display-name
+            --> String label
+            --> Boolean editable
+            --> String id
+            --> Boolean item-readonly
+            --> Long committedDate
+            --> String name
+            --> String committedBy
+            --> Boolean item-hidden
+            --> String qualified-name
+            --> Boolean readonly
+            --> Link attribute
+            --> Link display
+            --> Page creation-page-Library
+            --> String name
+            DText display<enable='true' extendsMC='false' id='b419a7fd-e087-4e7d-8da8-8f72385aefd5' committedBy='' name='display' item-hidden='false' extendsIC='false' no-border='false' requireNewRev='true' tool-tip='' wrap-line='false' display-name='display' revModified='false' editable='true' extendsUI='false' committedDate='0' item-readonly='false' vertical-span='1' multi-line='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DText
+              --> Link parent
+              --> Boolean revModified
+              --> Link instance-of
+              --> Boolean enable
+              --> Boolean extendsMC
+              --> String id
+              --> String committedBy
+              --> String name
+              --> Boolean item-hidden
+              --> Boolean extendsIC
+              --> Boolean no-border
+              --> String tool-tip
+              --> Boolean wrap-line
+              --> String display-name
+              --> Boolean editable
+              --> Boolean extendsUI
+              --> Long committedDate
+              --> Boolean item-readonly
+              --> Integer vertical-span
+              --> Boolean multi-line
+              --> String qualified-name
+              --> Link mc
+              --> Field name
+              MC_NameAttribute mc<display-name='Mode controller MC_NameAttribute' revModified='false' id='fde91cd9-fc79-4a97-a9c7-938229d4692a' committedDate='0' item-readonly='false' committedBy='' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='false' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType MC_NameAttribute
+                --> Link parent
+                --> Boolean revModified
+                --> Link instance-of
+                --> String display-name
+                --> String id
+                --> Long committedDate
+                --> Boolean item-readonly
+                --> String committedBy
+                --> String name
+                --> Boolean item-hidden
+                --> String qualified-name
+                --> DText display
+          Field name<position='defaultpos' display-name='name' revModified='false' label='name' editable='false' id='9fbf0cb3-d680-40e1-9ee5-e48e65224051' item-readonly='false' committedDate='0' name='name' committedBy='' item-hidden='false' qualified-name='name' TW-version='0' readonly='false' requireNewRev='true' >
+            --> ContentItem Content of item name (ContentItem)
+            --> ItemType Field
+            --> Link parent
+            --> Boolean revModified
+            --> Link instance-of
+            --> Enum position
+            --> String display-name
+            --> String label
+            --> Boolean editable
+            --> String id
+            --> Boolean item-readonly
+            --> Long committedDate
+            --> String name
+            --> String committedBy
+            --> Boolean item-hidden
+            --> String qualified-name
+            --> Boolean readonly
+            --> Link attribute
+            --> Link display
+            --> Page creation-page-Library
+            --> String name
+            DText display<enable='true' extendsMC='false' id='b419a7fd-e087-4e7d-8da8-8f72385aefd5' committedBy='' name='display' item-hidden='false' extendsIC='false' no-border='false' requireNewRev='true' tool-tip='' wrap-line='false' display-name='display' revModified='false' editable='true' extendsUI='false' committedDate='0' item-readonly='false' vertical-span='1' multi-line='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DText
+              --> Link parent
+              --> Boolean revModified
+              --> Link instance-of
+              --> Boolean enable
+              --> Boolean extendsMC
+              --> String id
+              --> String committedBy
+              --> String name
+              --> Boolean item-hidden
+              --> Boolean extendsIC
+              --> Boolean no-border
+              --> String tool-tip
+              --> Boolean wrap-line
+              --> String display-name
+              --> Boolean editable
+              --> Boolean extendsUI
+              --> Long committedDate
+              --> Boolean item-readonly
+              --> Integer vertical-span
+              --> Boolean multi-line
+              --> String qualified-name
+              --> Link mc
+              --> Field name
+              MC_NameAttribute mc<display-name='Mode controller MC_NameAttribute' revModified='false' id='fde91cd9-fc79-4a97-a9c7-938229d4692a' committedDate='0' item-readonly='false' committedBy='' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='false' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType MC_NameAttribute
+                --> Link parent
+                --> Boolean revModified
+                --> Link instance-of
+                --> String display-name
+                --> String id
+                --> Long committedDate
+                --> Boolean item-readonly
+                --> String committedBy
+                --> String name
+                --> Boolean item-hidden
+                --> String qualified-name
+                --> DText display
           Field packages<position='defaultpos' display-name='packages' revModified='true' label='packages' editable='true' id='69ca3c48-0bcc-4d57-9f44-f1ae7a9ff2b7' item-readonly='false' committedDate='0' name='packages' item-hidden='false' qualified-name='packages' TW-version='0' requireNewRev='true' >
             --> ContentItem Content of item packages (ContentItem)
             --> ItemType Field
@@ -288,9 +414,137 @@ CadseDefinition mind<id='e55e9031-58b1-4ea8-961c-d8701f8d33f1' executed='false' 
           --> String qualified-name
           --> String display-name
           --> String name
+          --> Link fields
           --> String id-runtime
           --> Link parent
+          --> Link fields
           --> CreationDialog creation-dialog
+          Field name<position='defaultpos' display-name='name' revModified='false' label='name' editable='false' id='c7e67ddd-9f17-4a91-850a-5097afa7cb89' item-readonly='false' committedDate='0' name='name' committedBy='' item-hidden='false' qualified-name='name' TW-version='0' readonly='false' requireNewRev='true' >
+            --> ContentItem Content of item name (ContentItem)
+            --> ItemType Field
+            --> Link parent
+            --> Boolean revModified
+            --> Link instance-of
+            --> Enum position
+            --> String display-name
+            --> String label
+            --> Boolean editable
+            --> String id
+            --> Boolean item-readonly
+            --> Long committedDate
+            --> String name
+            --> String committedBy
+            --> Boolean item-hidden
+            --> String qualified-name
+            --> Boolean readonly
+            --> Link attribute
+            --> Link display
+            --> Page creation-page-Package
+            --> String name
+            DText display<enable='true' extendsMC='false' id='44ab74d7-9f59-45a9-9f25-b61b8b23ca84' committedBy='' name='display' item-hidden='false' extendsIC='false' no-border='false' requireNewRev='true' tool-tip='' wrap-line='false' display-name='display' revModified='false' editable='true' extendsUI='false' committedDate='0' item-readonly='false' vertical-span='1' multi-line='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DText
+              --> Link parent
+              --> Boolean revModified
+              --> Link instance-of
+              --> Boolean enable
+              --> Boolean extendsMC
+              --> String id
+              --> String committedBy
+              --> String name
+              --> Boolean item-hidden
+              --> Boolean extendsIC
+              --> Boolean no-border
+              --> String tool-tip
+              --> Boolean wrap-line
+              --> String display-name
+              --> Boolean editable
+              --> Boolean extendsUI
+              --> Long committedDate
+              --> Boolean item-readonly
+              --> Integer vertical-span
+              --> Boolean multi-line
+              --> String qualified-name
+              --> Link mc
+              --> Field name
+              MC_NameAttribute mc<display-name='Mode controller MC_NameAttribute' revModified='false' id='c43456a2-5a0d-4fce-9a3a-a51e263b5ac4' committedDate='0' item-readonly='false' committedBy='' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='false' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType MC_NameAttribute
+                --> Link parent
+                --> Boolean revModified
+                --> Link instance-of
+                --> String display-name
+                --> String id
+                --> Long committedDate
+                --> Boolean item-readonly
+                --> String committedBy
+                --> String name
+                --> Boolean item-hidden
+                --> String qualified-name
+                --> DText display
+          Field name<position='defaultpos' display-name='name' revModified='false' label='name' editable='false' id='c7e67ddd-9f17-4a91-850a-5097afa7cb89' item-readonly='false' committedDate='0' name='name' committedBy='' item-hidden='false' qualified-name='name' TW-version='0' readonly='false' requireNewRev='true' >
+            --> ContentItem Content of item name (ContentItem)
+            --> ItemType Field
+            --> Link parent
+            --> Boolean revModified
+            --> Link instance-of
+            --> Enum position
+            --> String display-name
+            --> String label
+            --> Boolean editable
+            --> String id
+            --> Boolean item-readonly
+            --> Long committedDate
+            --> String name
+            --> String committedBy
+            --> Boolean item-hidden
+            --> String qualified-name
+            --> Boolean readonly
+            --> Link attribute
+            --> Link display
+            --> Page creation-page-Package
+            --> String name
+            DText display<enable='true' extendsMC='false' id='44ab74d7-9f59-45a9-9f25-b61b8b23ca84' committedBy='' name='display' item-hidden='false' extendsIC='false' no-border='false' requireNewRev='true' tool-tip='' wrap-line='false' display-name='display' revModified='false' editable='true' extendsUI='false' committedDate='0' item-readonly='false' vertical-span='1' multi-line='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DText
+              --> Link parent
+              --> Boolean revModified
+              --> Link instance-of
+              --> Boolean enable
+              --> Boolean extendsMC
+              --> String id
+              --> String committedBy
+              --> String name
+              --> Boolean item-hidden
+              --> Boolean extendsIC
+              --> Boolean no-border
+              --> String tool-tip
+              --> Boolean wrap-line
+              --> String display-name
+              --> Boolean editable
+              --> Boolean extendsUI
+              --> Long committedDate
+              --> Boolean item-readonly
+              --> Integer vertical-span
+              --> Boolean multi-line
+              --> String qualified-name
+              --> Link mc
+              --> Field name
+              MC_NameAttribute mc<display-name='Mode controller MC_NameAttribute' revModified='false' id='c43456a2-5a0d-4fce-9a3a-a51e263b5ac4' committedDate='0' item-readonly='false' committedBy='' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='false' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType MC_NameAttribute
+                --> Link parent
+                --> Boolean revModified
+                --> Link instance-of
+                --> String display-name
+                --> String id
+                --> Long committedDate
+                --> Boolean item-readonly
+                --> String committedBy
+                --> String name
+                --> Boolean item-hidden
+                --> String qualified-name
+                --> DText display
       ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='fe16e021-bab4-41a5-990f-a65f552b2da0' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
         --> ContentItem Content of item modification dialog (ContentItem)
         --> ItemType ModificationDialog
@@ -541,9 +795,137 @@ CadseDefinition mind<id='e55e9031-58b1-4ea8-961c-d8701f8d33f1' executed='false' 
           --> String qualified-name
           --> String display-name
           --> String name
+          --> Link fields
           --> String id-runtime
           --> Link parent
+          --> Link fields
           --> CreationDialog creation-dialog
+          Field name<position='defaultpos' display-name='name' revModified='false' label='name' editable='false' id='0c3eae3b-acef-4cac-bc23-556450766d01' item-readonly='false' committedDate='0' name='name' committedBy='' item-hidden='false' qualified-name='name' TW-version='0' readonly='false' requireNewRev='true' >
+            --> ContentItem Content of item name (ContentItem)
+            --> ItemType Field
+            --> Link parent
+            --> Boolean revModified
+            --> Link instance-of
+            --> Enum position
+            --> String display-name
+            --> String label
+            --> Boolean editable
+            --> String id
+            --> Boolean item-readonly
+            --> Long committedDate
+            --> String name
+            --> String committedBy
+            --> Boolean item-hidden
+            --> String qualified-name
+            --> Boolean readonly
+            --> Link attribute
+            --> Link display
+            --> Page creation-page-Component
+            --> String name
+            DText display<enable='true' extendsMC='false' id='40ad1fc8-c423-430c-974f-7231e61b78f5' committedBy='' name='display' item-hidden='false' extendsIC='false' no-border='false' requireNewRev='true' tool-tip='' wrap-line='false' display-name='display' revModified='false' editable='true' extendsUI='false' committedDate='0' item-readonly='false' vertical-span='1' multi-line='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DText
+              --> Link parent
+              --> Boolean revModified
+              --> Link instance-of
+              --> Boolean enable
+              --> Boolean extendsMC
+              --> String id
+              --> String committedBy
+              --> String name
+              --> Boolean item-hidden
+              --> Boolean extendsIC
+              --> Boolean no-border
+              --> String tool-tip
+              --> Boolean wrap-line
+              --> String display-name
+              --> Boolean editable
+              --> Boolean extendsUI
+              --> Long committedDate
+              --> Boolean item-readonly
+              --> Integer vertical-span
+              --> Boolean multi-line
+              --> String qualified-name
+              --> Link mc
+              --> Field name
+              MC_NameAttribute mc<display-name='Mode controller MC_NameAttribute' revModified='false' id='cf641085-f1eb-4566-9da2-6c903ad90a7c' committedDate='0' item-readonly='false' committedBy='' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='false' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType MC_NameAttribute
+                --> Link parent
+                --> Boolean revModified
+                --> Link instance-of
+                --> String display-name
+                --> String id
+                --> Long committedDate
+                --> Boolean item-readonly
+                --> String committedBy
+                --> String name
+                --> Boolean item-hidden
+                --> String qualified-name
+                --> DText display
+          Field name<position='defaultpos' display-name='name' revModified='false' label='name' editable='false' id='0c3eae3b-acef-4cac-bc23-556450766d01' item-readonly='false' committedDate='0' name='name' committedBy='' item-hidden='false' qualified-name='name' TW-version='0' readonly='false' requireNewRev='true' >
+            --> ContentItem Content of item name (ContentItem)
+            --> ItemType Field
+            --> Link parent
+            --> Boolean revModified
+            --> Link instance-of
+            --> Enum position
+            --> String display-name
+            --> String label
+            --> Boolean editable
+            --> String id
+            --> Boolean item-readonly
+            --> Long committedDate
+            --> String name
+            --> String committedBy
+            --> Boolean item-hidden
+            --> String qualified-name
+            --> Boolean readonly
+            --> Link attribute
+            --> Link display
+            --> Page creation-page-Component
+            --> String name
+            DText display<enable='true' extendsMC='false' id='40ad1fc8-c423-430c-974f-7231e61b78f5' committedBy='' name='display' item-hidden='false' extendsIC='false' no-border='false' requireNewRev='true' tool-tip='' wrap-line='false' display-name='display' revModified='false' editable='true' extendsUI='false' committedDate='0' item-readonly='false' vertical-span='1' multi-line='false' qualified-name='display' TW-version='0' >
+              --> ContentItem Content of item display (ContentItem)
+              --> ItemType DText
+              --> Link parent
+              --> Boolean revModified
+              --> Link instance-of
+              --> Boolean enable
+              --> Boolean extendsMC
+              --> String id
+              --> String committedBy
+              --> String name
+              --> Boolean item-hidden
+              --> Boolean extendsIC
+              --> Boolean no-border
+              --> String tool-tip
+              --> Boolean wrap-line
+              --> String display-name
+              --> Boolean editable
+              --> Boolean extendsUI
+              --> Long committedDate
+              --> Boolean item-readonly
+              --> Integer vertical-span
+              --> Boolean multi-line
+              --> String qualified-name
+              --> Link mc
+              --> Field name
+              MC_NameAttribute mc<display-name='Mode controller MC_NameAttribute' revModified='false' id='cf641085-f1eb-4566-9da2-6c903ad90a7c' committedDate='0' item-readonly='false' committedBy='' name='mc' item-hidden='false' qualified-name='mc' TW-version='0' requireNewRev='false' >
+                --> ContentItem Content of item mc (ContentItem)
+                --> ItemType MC_NameAttribute
+                --> Link parent
+                --> Boolean revModified
+                --> Link instance-of
+                --> String display-name
+                --> String id
+                --> Long committedDate
+                --> Boolean item-readonly
+                --> String committedBy
+                --> String name
+                --> Boolean item-hidden
+                --> String qualified-name
+                --> DText display
       ModificationDialog modification-dialog<display-name='modification dialog' revModified='true' id='54f84cfe-768d-480b-9dff-a5847fbe33a0' committedDate='0' item-readonly='false' name='modification-dialog' item-hidden='false' qualified-name='<no value>' TW-version='0' requireNewRev='true' >
         --> ContentItem Content of item modification dialog (ContentItem)
         --> ItemType ModificationDialog

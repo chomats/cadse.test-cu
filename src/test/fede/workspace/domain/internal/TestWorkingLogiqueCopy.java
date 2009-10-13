@@ -55,6 +55,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jdt.core.IJavaModelMarker;
 import org.eclipse.jdt.core.IJavaProject;
@@ -75,6 +76,7 @@ import fede.workspace.tool.loadmodel.model.jaxb.ObjectFactory;
 import fr.imag.adele.cadse.cadseg.contents.CadseDefinitionContent;
 import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
+import fr.imag.adele.cadse.cadseg.managers.attributes.LinkManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.CreationDialogManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.PageManager;
@@ -1663,6 +1665,31 @@ Item currentItem;
 	}
 	
 	@Test
+	public void testGenerateShortNameCadseg() throws CadseException, CoreException {
+		
+		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
+		
+		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
+
+		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+cadseDefCommited.getName(), cadseDefCommited.getQualifiedName());
+		
+		Item TypeACommited = createItemType(dm);
+		ItemType TypeBCommited = createItemType(dm);
+		TypeBCommited.setAttribute(CadseGCST.ITEM_TYPE_at_IS_ABSTRACT_, true);
+		ItemDelta LinkA_TypeA = createLinkType(TypeACommited, TypeBCommited, LinkType.PART);
+		Item TypeBbisCommited = createItemType(dm, null, TypeBCommited);
+		Item creationDialog = ItemTypeManager.getCreationDialog(TypeBbisCommited);
+		creationDialog.setAttribute(CadseGCST.CREATION_DIALOG_at_AUTOMATIC_SHORT_NAME_, true);
+		creationDialog.setAttribute(CadseGCST.CREATION_DIALOG_at_GENERATE_AUTOMATIC_SHORT_NAME_, true);
+		creationDialog.setAttribute(CadseGCST.CREATION_DIALOG_at_DEFAULT_SHORT_NAME_, "${id}");
+		IJavaProject jp = cadseDefCommited.getMainMappingContent(IJavaProject.class);
+		
+		checkError(jp, new NullProgressMonitor());
+		
+		
+	}
+	
+	@Test
 	public void testHeritageContentCadseg() throws CadseException, CoreException {
 		
 		Item cadseDefCommited = createCadseDefinition(static_generator.newName());
@@ -1811,12 +1838,26 @@ Item currentItem;
 		copy.commit();
 		return fc.getBaseItem();
 	}
-
+	
 	private ItemDelta createLinkType(Item TypeACommited, Item TypeBCommited)
+	throws CadseException {
+		return createLinkType(TypeACommited, TypeBCommited, 0);
+	}
+	
+	private ItemDelta createLinkType(Item TypeACommited, Item TypeBCommited, int kind)
 			throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta LinkA_TypeA = copy.createItem(CadseGCST.LINK, TypeACommited, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		if ((kind & LinkType.PART) != 0) {
+			LinkManager.setPartAttribute(LinkA_TypeA, true);
+		}
+		if ((kind & LinkType.AGGREGATION) != 0) {
+			LinkManager.setAggregationAttribute(LinkA_TypeA, true);
+		}
+		if ((kind & LinkType.REQUIRE) != 0) {
+			LinkManager.setRequireAttribute(LinkA_TypeA, true);
+		}
 		LinkA_TypeA.setName(static_generator.newName());
 		LinkA_TypeA.createLink(CadseGCST.LINK_lt_DESTINATION, TypeBCommited);
 		copy.commit();
@@ -1880,26 +1921,24 @@ Item currentItem;
 		return attrLong.getBaseItem();
 	}
 
-	private Item createItemType(Item dm) throws CadseException {
+	private ItemType createItemType(Item dm) throws CadseException {
 		return createItemType(dm, null, null);
 	}
 	
 	
 	
-	private Item createItemType(Item dm, String name, ItemType superType) throws CadseException {
+	private ItemType createItemType(Item dm, String name, ItemType superType) throws CadseException {
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
-		ItemDelta TypeA = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
+		ItemDelta newType = copy.createItem(CadseGCST.ITEM_TYPE, dm, CadseGCST.DATA_MODEL_lt_TYPES);
 		if (name == null)
 			name = static_generator.newName();
-		TypeA.setName(name);
+		newType.setName(name);
 		if (superType != null)
-			TypeA.setOutgoingItem(CadseGCST.ITEM_TYPE_lt_SUPER_TYPE, superType);
+			newType.setOutgoingItem(CadseGCST.ITEM_TYPE_lt_SUPER_TYPE, superType);
 		copy.commit();
-		Item TypeACommited = senario.getLogicalWorkspace().getItem(TypeA.getId());
 		
-		
-		return TypeACommited;
+		return (ItemType) newType.getBaseItem();
 	}
 	
 	private Item createEnumType(Item dm, int nbValues) throws CadseException {
