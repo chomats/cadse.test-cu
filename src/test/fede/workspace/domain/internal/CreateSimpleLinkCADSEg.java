@@ -65,8 +65,9 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		// TestUtil.setVelocity(100);
 		SWTBotPreferences.TIMEOUT = 10000;
 		GTTestParameters.banner();
-		if (System.getProperty("test.screenshotPath") != null)
-			GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));
+		//set org.eclipse.swtbot.screenshots.dir
+		//if (System.getProperty("test.screenshotPath") != null)
+		//	SWTBotPreferences.SCREENSHOTS_DIR = System.getProperty("test.screenshotPath");
 	}
 
 	

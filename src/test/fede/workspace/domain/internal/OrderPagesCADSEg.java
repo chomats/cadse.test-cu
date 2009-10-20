@@ -64,8 +64,9 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		SWTBotPreferences.TIMEOUT = 10000;
 		
 		GTTestParameters.banner();
-		if (System.getProperty("test.screenshotPath") != null)
-			GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));
+		//set org.eclipse.swtbot.screenshots.dir
+		//if (System.getProperty("test.screenshotPath") != null)
+		//	GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));
 	}
 	
 	@Test

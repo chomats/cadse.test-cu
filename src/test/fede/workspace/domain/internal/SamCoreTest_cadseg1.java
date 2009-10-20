@@ -48,7 +48,8 @@ public class SamCoreTest_cadseg1 extends GTCadseTestCase {
 		GTTestParameters.banner();
 		//SWTBotPreferences.PLAYBACK_DELAY = 100;
 		SWTBotPreferences.TIMEOUT = 500000;
-		GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));
+		//set org.eclipse.swtbot.screenshots.dir
+		//GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));
 	}
 
 	/**
