@@ -11,6 +11,7 @@ Require-Bundle: org.junit4,
  Model.Workspace.sam.core;bundle-version="2.2.1"
 Import-Package: fede.workspace.tool.loadmodel.model.jaxb;version="1.0.0",
  fr.imag.adele.cadse.cadseg.generate,
+ fr.imag.adele.cadse.cadseg.managers.attributes;version="2.2.1",
  fr.imag.adele.cadse.cadseg.managers.dataModel;version="2.2.1",
  fr.imag.adele.cadse.cadseg.managers.ui;version="2.2.1",
  fr.imag.adele.cadse.cadseg.operation;version="2.2.1",
