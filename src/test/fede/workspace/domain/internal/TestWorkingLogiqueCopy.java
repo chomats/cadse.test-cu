@@ -411,7 +411,7 @@ Item currentItem;
 	/**
 	 * Create a --> c (link of type part)
 	 * try to delete parent --> fail
-	 * try to set paren to null  --> fail
+	 * try to set parent to null  --> fail
 	 * try to change parent --> sucess
 	 * 
 	 * 	@Test
@@ -422,6 +422,7 @@ Item currentItem;
 	public void testCreateAndDeleteItemPart() throws CadseException, CoreException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item a = copy.createItem(TYPE_A, null, null);
+		a.setName("a");
 		copy.commit();
 		
 		assertNotNull(senario.getLogicalWorkspace().getItem(a.getId()));
@@ -431,6 +432,7 @@ Item currentItem;
 		
 		copy = senario.getLogicalWorkspace().createTransaction();
 		Item c = copy.createItem(TYPE_C, a, LT_A_TO_C);
+		c.setName("c");
 		assertEquals(a, c.getPartParent());
 		copy.commit();
 		assertNotNull(senario.getLogicalWorkspace().getItem(c.getId()));
@@ -463,6 +465,7 @@ Item currentItem;
 		
 		copy = senario.getLogicalWorkspace().createTransaction();
 		Item a2 = copy.createItem(TYPE_A, null, null);
+		a2.setName("a2");
 		copy.commit();
 		
 		a2 = a2.getBaseItem();
@@ -1156,7 +1159,8 @@ Item currentItem;
 		Item cadseDefCommited = createCadseDefinition(nameCadse);
 		
 		Item dm = cadseDefCommited.getOutgoingItem(CadseGCST.CADSE_DEFINITION_lt_DATA_MODEL, true);
-
+		assertNotNull(dm);
+		
 		assertEquals(CadseRuntime.CADSE_NAME_SUFFIX+nameCadse, cadseDefCommited.getQualifiedName());
 		
 		Item TypeACommited = createItemTypeAndCheck(dm);
