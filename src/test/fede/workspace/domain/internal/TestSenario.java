@@ -37,7 +37,7 @@ import test.fede.workspace.domain.internal.TestWorkingLogiqueCopy.MyListner2;
 import junit.framework.Assert;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseRuntime;
-import fr.imag.adele.cadse.core.CompactUUID;
+import java.util.UUID;
 import fr.imag.adele.cadse.core.ContentChangeInfo;
 import fr.imag.adele.cadse.core.DefaultItemManager;
 import fr.imag.adele.cadse.core.ILinkTypeManager;
@@ -457,7 +457,7 @@ public class TestSenario {
 
 		String newName = generator.newName();
 		String name = "TYPE_" + newName;
-		final ItemType createItemType = wl.createItemType(null, getCadseRuntimeTest(), superType, 1, CompactUUID
+		final ItemType createItemType = wl.createItemType(null, getCadseRuntimeTest(), superType, 1, UUID
 				.randomUUID(), newName, name, hasContent, isAbstract, new ItemTypeManagerTest());
 		add(createItemType);
 		return createItemType;
@@ -469,14 +469,14 @@ public class TestSenario {
 
 	private CadseRuntime getCadseRuntimeTest() {
 		if (_cadseRuntimeTest == null) {
-			_cadseRuntimeTest = wl.createCadseRuntime(CadseRuntime.CADSE_NAME_SUFFIX+"test", CompactUUID.randomUUID(), CompactUUID.randomUUID());
+			_cadseRuntimeTest = wl.createCadseRuntime(CadseRuntime.CADSE_NAME_SUFFIX+"test", UUID.randomUUID(), UUID.randomUUID());
 		}
 		return _cadseRuntimeTest;
 	}
 
 	public LinkType createLinkType(ItemType source, int kind, int min, int max, String selection, ItemType destination) throws CadseException {
 		String id = source.getName() + "_to_" + destination.getName() + "_" + generator.newName();
-		LinkType ret = source.createLinkType(CompactUUID.randomUUID(), 1, id, kind, min, max, selection, destination);
+		LinkType ret = source.createLinkType(UUID.randomUUID(), 1, id, kind, min, max, selection, destination);
 		ret.setManager(new TestSenario.LinkManagerTest());
 		add(ret);
 		return ret;
@@ -488,13 +488,13 @@ public class TestSenario {
 
 	public LinkType createLinkType(ItemType source, int kind, int min, int max, String selection, LinkType inverse) throws CadseException {
 		String id = source.getName() + "_to_" + inverse.getSource().getName();
-		LinkType ret = source.createLinkType(CompactUUID.randomUUID(), 1, id, kind, min, max, selection, inverse);
+		LinkType ret = source.createLinkType(UUID.randomUUID(), 1, id, kind, min, max, selection, inverse);
 		ret.setManager(new TestSenario.LinkManagerTest());
 		add(ret);
 		return ret;
 	}
 
-	public Item getItem(CompactUUID id) {
+	public Item getItem(UUID id) {
 		return wl.getItem(id);
 	}
 

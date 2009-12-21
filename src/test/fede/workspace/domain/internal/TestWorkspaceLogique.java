@@ -34,7 +34,7 @@ import org.junit.Test;
 
 import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.CadseRuntime;
-import fr.imag.adele.cadse.core.CompactUUID;
+import java.util.UUID;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.impl.CadseCore;
@@ -85,7 +85,7 @@ public class TestWorkspaceLogique {
 	 */
 	@Test
 	public void testSetCadseName() {
-		CadseRuntime cr = wl.createCadseRuntime("a", CompactUUID.randomUUID(), CompactUUID.randomUUID());
+		CadseRuntime cr = wl.createCadseRuntime("a", UUID.randomUUID(), UUID.randomUUID());
 		assertArrayEquals(new String[] { "a" }, wl.getCadseName());
 		assertArrayEquals(new int[] { 1 }, wl.getCadseVersion());
 		if (wl.getCadseRuntime() == null) {
@@ -140,10 +140,10 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.CompactUUID, java.lang.String, java.lang.String)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.UUID, java.lang.String, java.lang.String)}.
 	 */
 	@Test
-	public void testCreateItemItemTypeItemLinkTypeCompactUUIDStringString() {
+	public void testCreateItemItemTypeItemLinkTypeUUIDStringString() {
 		fail("Not yet implemented");
 	}
 
@@ -176,19 +176,19 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#createOrphanItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.CompactUUID, java.lang.String, java.lang.String)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#createOrphanItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.UUID, java.lang.String, java.lang.String)}.
 	 */
 	@Test
-	public void testCreateOrphanItemItemTypeItemLinkTypeCompactUUIDStringString() {
+	public void testCreateOrphanItemItemTypeItemLinkTypeUUIDStringString() {
 		fail("Not yet implemented");
 	}
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItem(fr.imag.adele.cadse.core.CompactUUID)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItem(fr.imag.adele.cadse.core.UUID)}.
 	 */
 	@Test
-	public void testGetItemCompactUUID() {
+	public void testGetItemUUID() {
 		fail("Not yet implemented");
 	}
 
@@ -284,7 +284,7 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getUnresolvedLink(fr.imag.adele.cadse.core.CompactUUID)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getUnresolvedLink(fr.imag.adele.cadse.core.UUID)}.
 	 */
 	@Test
 	public void testGetUnresolvedLink() {
@@ -410,10 +410,10 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItem(fr.imag.adele.cadse.core.CompactUUID, fr.imag.adele.cadse.core.ItemType, java.lang.String, java.lang.String)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItem(fr.imag.adele.cadse.core.UUID, fr.imag.adele.cadse.core.ItemType, java.lang.String, java.lang.String)}.
 	 */
 	@Test
-	public void testGetItemCompactUUIDItemTypeStringString() {
+	public void testGetItemUUIDItemTypeStringString() {
 		fail("Not yet implemented");
 	}
 
@@ -458,7 +458,7 @@ public class TestWorkspaceLogique {
 	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#loadItems(java.util.Collection, boolean, boolean, boolean, java.util.Map)}.
 	 */
 	@Test
-	public void testLoadItemsCollectionOfItemDescriptionBooleanBooleanBooleanMapOfCompactUUIDString() {
+	public void testLoadItemsCollectionOfItemDescriptionBooleanBooleanBooleanMapOfUUIDString() {
 		fail("Not yet implemented");
 	}
 
@@ -495,7 +495,7 @@ public class TestWorkspaceLogique {
 	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#loadItem(fr.imag.adele.cadse.core.ItemDescription, boolean, boolean, java.util.Map)}.
 	 */
 	@Test
-	public void testLoadItemItemDescriptionBooleanBooleanMapOfCompactUUIDString() {
+	public void testLoadItemItemDescriptionBooleanBooleanMapOfUUIDString() {
 		fail("Not yet implemented");
 	}
 
@@ -504,16 +504,16 @@ public class TestWorkspaceLogique {
 	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItemType(fr.imag.adele.cadse.core.ItemDescriptionRef, java.util.Map)}.
 	 */
 	@Test
-	public void testGetItemTypeItemDescriptionRefMapOfCompactUUIDString() {
+	public void testGetItemTypeItemDescriptionRefMapOfUUIDString() {
 		fail("Not yet implemented");
 	}
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItemType(fr.imag.adele.cadse.core.CompactUUID)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItemType(fr.imag.adele.cadse.core.UUID)}.
 	 */
 	@Test
-	public void testGetItemTypeCompactUUID() {
+	public void testGetItemTypeUUID() {
 		fail("Not yet implemented");
 	}
 
@@ -537,7 +537,7 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#createItemType(java.lang.String, fr.imag.adele.cadse.core.ItemType, int, fr.imag.adele.cadse.core.CompactUUID, java.lang.String, java.lang.String, boolean, boolean)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#createItemType(java.lang.String, fr.imag.adele.cadse.core.ItemType, int, fr.imag.adele.cadse.core.UUID, java.lang.String, java.lang.String, boolean, boolean)}.
 	 */
 	@Test
 	public void testCreateItemType() {

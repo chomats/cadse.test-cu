@@ -12,7 +12,7 @@ import org.osgi.framework.Bundle;
 
 import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.CadseGCST;
-import fr.imag.adele.cadse.core.CompactUUID;
+import java.util.UUID;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.Link;
 import fr.imag.adele.cadse.core.LinkType;
@@ -45,7 +45,7 @@ public class TestIncomings {
 					LogicalWorkspaceTransaction workspaceLogiqueWorkingCopy,
 					List<ItemDelta> loadedItems) {
 				for (ItemDelta itemDelta : loadedItems) {
-					if (itemDelta.getId().equals(new CompactUUID("25ffd055-8316-4436-850a-65de41805145"))) {
+					if (itemDelta.getId().equals(new UUID("25ffd055-8316-4436-850a-65de41805145"))) {
 						System.out.println(itemDelta);;
 					}
 				}
@@ -65,13 +65,13 @@ public class TestIncomings {
 	public void testD() throws InterruptedException {
 		
 		while (true) {
-			Item c = senario.getLogicalWorkspace().getItem(new CompactUUID("25ffd055-8316-4436-850a-65de41805145"));
+			Item c = senario.getLogicalWorkspace().getItem(new UUID("25ffd055-8316-4436-850a-65de41805145"));
 			if (c != null) break;
 			Thread.sleep(100);
 		}
 		senario.getLogicalWorkspace().getCadseDomain().beginOperation("test");
 		try {
-			Item c = senario.getLogicalWorkspace().getItem(new CompactUUID("25ffd055-8316-4436-850a-65de41805145"));
+			Item c = senario.getLogicalWorkspace().getItem(new UUID("25ffd055-8316-4436-850a-65de41805145"));
 			for(Link l : c.getIncomingLinks(CadseGCST.ITEM_TYPE_lt_LINK_TYPE)) {
 				Link lout = l.getSource().getOutgoingLink(CadseGCST.ITEM_TYPE_lt_LINK_TYPE, l.getDestinationId());
 				assertNotNull(lout);

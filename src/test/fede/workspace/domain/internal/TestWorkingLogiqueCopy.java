@@ -286,12 +286,12 @@ Item currentItem;
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.WorkingLogiqueCopy#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.CompactUUID, java.lang.String, java.lang.String)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.WorkingLogiqueCopy#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.UUID, java.lang.String, java.lang.String)}.
 	 *
 	 * @throws CadseException
 	 */
 	@Test
-	public void testCreateItemItemTypeItemLinkTypeCompactUUIDStringString() throws CadseException {
+	public void testCreateItemItemTypeItemLinkTypeUUIDStringString() throws CadseException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 
 		Item a = copy.createItem(TYPE_A, null, null);
@@ -306,7 +306,7 @@ Item currentItem;
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.WorkingLogiqueCopy#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.CompactUUID, java.lang.String, java.lang.String)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.WorkingLogiqueCopy#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.UUID, java.lang.String, java.lang.String)}.
 	 *
 	 * @throws CadseException
 	 * @throws CoreException
@@ -338,7 +338,7 @@ Item currentItem;
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.WorkingLogiqueCopy#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.CompactUUID, java.lang.String, java.lang.String)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.WorkingLogiqueCopy#createItem(fr.imag.adele.cadse.core.ItemType, fr.imag.adele.cadse.core.Item, fr.imag.adele.cadse.core.LinkType, fr.imag.adele.cadse.core.UUID, java.lang.String, java.lang.String)}.
 	 *
 	 * @throws CadseException
 	 * @throws CoreException
@@ -380,7 +380,7 @@ Item currentItem;
 	}
 
 	@Test
-	public void testCreateItemItemTypeItemLinkTypeCompactUUIDStringString2() throws CadseException {
+	public void testCreateItemItemTypeItemLinkTypeUUIDStringString2() throws CadseException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item a = copy.createItem(TYPE_A, null, null);
 		Item a2 = copy.getItem(a.getId());
@@ -788,7 +788,7 @@ Item currentItem;
 	}
 
 	@Test
-	public void testDeleteItemItemTypeItemLinkTypeCompactUUIDStringString2() throws CadseException, CoreException {
+	public void testDeleteItemItemTypeItemLinkTypeUUIDStringString2() throws CadseException, CoreException {
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item a = copy.createItem(TYPE_A, null, null);
 		Item a2 = copy.getItem(a.getId());
