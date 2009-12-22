@@ -98,12 +98,12 @@ import fr.imag.adele.cadse.core.WorkspaceListener.ListenerKind;
 import fr.imag.adele.cadse.core.attribute.BooleanAttributeType;
 import fr.imag.adele.cadse.core.attribute.CheckStatus;
 import fr.imag.adele.cadse.core.attribute.IAttributeType;
-import fr.imag.adele.cadse.core.delta.ImmutableWorkspaceDelta;
-import fr.imag.adele.cadse.core.delta.ItemDelta;
-import fr.imag.adele.cadse.core.delta.LinkKey;
-import fr.imag.adele.cadse.core.delta.LinkDelta;
+import fr.imag.adele.cadse.core.transaction.delta.ImmutableWorkspaceDelta;
+import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
+import fr.imag.adele.cadse.core.transaction.delta.LinkKey;
+import fr.imag.adele.cadse.core.transaction.delta.LinkDelta;
 import fr.imag.adele.cadse.core.impl.CadseIllegalArgumentException;
-import fr.imag.adele.cadse.core.key.ISpaceKey;
+import fr.imag.adele.cadse.core.key.Key;
 import fr.imag.adele.cadse.core.key.SpaceKeyType;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.ui.IPageFactory;
@@ -1047,7 +1047,7 @@ Item currentItem;
 
 		
 		//rename
-		ISpaceKey key = newaC.getKey();
+		Key key = newaC.getKey();
 		copy = senario.getLogicalWorkspace().createTransaction();
 		a1 = copy.getItem(newaC.getId(), false);
 		assertNotNull(a1);

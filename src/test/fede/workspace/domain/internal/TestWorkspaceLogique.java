@@ -302,10 +302,10 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItem(fr.imag.adele.cadse.core.key.ISpaceKey)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#getItem(fr.imag.adele.cadse.core.key.Key)}.
 	 */
 	@Test
-	public void testGetItemISpaceKey() {
+	public void testGetItemKey() {
 		fail("Not yet implemented");
 	}
 
@@ -365,7 +365,7 @@ public class TestWorkspaceLogique {
 
 	/**
 	 * Test method for
-	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#containsSpaceKey(fr.imag.adele.cadse.core.key.ISpaceKey)}.
+	 * {@link fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl#containsSpaceKey(fr.imag.adele.cadse.core.key.Key)}.
 	 */
 	@Test
 	public void testContainsSpaceKey() {

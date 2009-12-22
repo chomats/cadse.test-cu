@@ -27,11 +27,11 @@ import fr.imag.adele.cadse.core.ContentChangeInfo;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.Link;
-import fr.imag.adele.cadse.core.delta.ItemDelta;
-import fr.imag.adele.cadse.core.delta.LinkDelta;
-import fr.imag.adele.cadse.core.delta.MappingOperation;
-import fr.imag.adele.cadse.core.delta.OrderOperation;
-import fr.imag.adele.cadse.core.delta.SetAttributeOperation;
+import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
+import fr.imag.adele.cadse.core.transaction.delta.LinkDelta;
+import fr.imag.adele.cadse.core.transaction.delta.MappingOperation;
+import fr.imag.adele.cadse.core.transaction.delta.OrderOperation;
+import fr.imag.adele.cadse.core.transaction.delta.SetAttributeOperation;
 
 public class Call {
 	private CallType						_type;
