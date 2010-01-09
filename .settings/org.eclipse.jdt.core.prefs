@@ -1,4 +1,4 @@
-#Wed Mar 25 16:59:40 CET 2009
+#Sat Jan 09 11:05:43 CET 2010
 eclipse.preferences.version=1
 org.eclipse.jdt.core.builder.invalidClasspath=ignore
 org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch,*.groovy
@@ -10,3 +10,6 @@ org.eclipse.jdt.core.codeComplete.localPrefixes=
 org.eclipse.jdt.core.codeComplete.localSuffixes=
 org.eclipse.jdt.core.codeComplete.staticFieldPrefixes=
 org.eclipse.jdt.core.codeComplete.staticFieldSuffixes=
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
+org.eclipse.jdt.core.compiler.compliance=1.6
+org.eclipse.jdt.core.compiler.source=1.6
