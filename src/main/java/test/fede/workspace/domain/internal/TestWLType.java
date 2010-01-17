@@ -54,13 +54,13 @@ public class TestWLType {
 		Assert.assertNotNull(senario.getItem(TYPE_B.getId()));
 		LT_A_TO_B = senario.createLinkType(TYPE_A, LinkType.AGGREGATION, 0, -1, null, TYPE_B);
 		Assert.assertNotNull(LT_A_TO_B);
-		Assert.assertNotNull(TYPE_A.getOutgoingLink(CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES, LT_A_TO_B
+		Assert.assertNotNull(TYPE_A.getOutgoingLink(CadseGCST.TYPE_DEFINITION_lt_ATTRIBUTES, LT_A_TO_B
 				.getId()));
 		Assert.assertNotNull(TYPE_A.getOutgoingLinkType(TYPE_B, LT_A_TO_B.getName()));
 		Assert.assertNotNull(senario.getItem(LT_A_TO_B.getId()));
 
 		Assert.assertNotNull(TYPE_B.getIncomingLinkType(LT_A_TO_B.getName()));
-		Assert.assertNotNull(LT_A_TO_B.getIncomingLink(CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES, TYPE_A
+		Assert.assertNotNull(LT_A_TO_B.getIncomingLink(CadseGCST.TYPE_DEFINITION_lt_ATTRIBUTES, TYPE_A
 				.getId()));
 	}
 
@@ -74,13 +74,13 @@ public class TestWLType {
 		Assert.assertNotNull(senario.getItem(TYPE_B.getId()));
 		LT_A_TO_B = senario.createLinkType(TYPE_A, LinkType.AGGREGATION, 0, -1, null, TYPE_B);
 		Assert.assertNotNull(LT_A_TO_B);
-		Assert.assertNotNull(TYPE_A.getOutgoingLink(CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES, LT_A_TO_B
+		Assert.assertNotNull(TYPE_A.getOutgoingLink(CadseGCST.TYPE_DEFINITION_lt_ATTRIBUTES, LT_A_TO_B
 				.getId()));
 		Assert.assertNotNull(TYPE_A.getOutgoingLinkType(TYPE_B, LT_A_TO_B.getName()));
 		Assert.assertNotNull(senario.getItem(LT_A_TO_B.getId()));
 
 		Assert.assertNotNull(TYPE_B.getIncomingLinkType(LT_A_TO_B.getName()));
-		Assert.assertNotNull(LT_A_TO_B.getIncomingLink(CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES, TYPE_A
+		Assert.assertNotNull(LT_A_TO_B.getIncomingLink(CadseGCST.TYPE_DEFINITION_lt_ATTRIBUTES, TYPE_A
 				.getId()));
 
 		Assert.assertNotNull(TYPE_A);
@@ -92,7 +92,7 @@ public class TestWLType {
 		Assert.assertNotNull(senario.getItem(LT_A_TO_B.getId()));
 		LT_A_TO_B.delete();
 		Assert.assertNull(TYPE_A.getOutgoingLinkType(TYPE_B, LT_A_TO_B.getName()));
-		Assert.assertNull(TYPE_A.getOutgoingLink(CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES, LT_A_TO_B
+		Assert.assertNull(TYPE_A.getOutgoingLink(CadseGCST.TYPE_DEFINITION_lt_ATTRIBUTES, LT_A_TO_B
 				.getId()));
 		Assert.assertNull(senario.getItem(LT_A_TO_B.getId()));
 		Assert.assertNull(TYPE_B.getIncomingLinkType(LT_A_TO_B.getName()));

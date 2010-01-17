@@ -64,28 +64,28 @@ public class TestCadseg {
 		Item ItemTypeB = DataModelManager.getItemType(dataModel, TypeB);
 		Assert.assertNotNull(ItemTypeB);
 
-		Item ItemTypeA_creationDialog = ItemTypeManager.getCreationDialog(ItemTypeA);
-		Assert.assertNotNull(ItemTypeA_creationDialog);
-
-		Item ItemTypeB_creationDialog = ItemTypeManager.getCreationDialog(ItemTypeB);
-		Assert.assertNotNull(ItemTypeB_creationDialog);
+//		Item ItemTypeA_creationDialog = ItemTypeManager.getCreationDialog(ItemTypeA);
+//		Assert.assertNotNull(ItemTypeA_creationDialog);
+//
+//		Item ItemTypeB_creationDialog = ItemTypeManager.getCreationDialog(ItemTypeB);
+//		Assert.assertNotNull(ItemTypeB_creationDialog);
 		final String lt_a_to_b = "a_to_b";
 
 		copy = wl.createTransaction();
-		oper = copy.createItem(CadseGCST.LINK, ItemTypeA, CadseGCST.ABSTRACT_ITEM_TYPE_lt_ATTRIBUTES);
+		oper = copy.createItem(CadseGCST.LINK_TYPE, ItemTypeA, CadseGCST.TYPE_DEFINITION_lt_ATTRIBUTES);
 		oper.setAttribute(CadseGCST.ITEM_at_NAME_, lt_a_to_b);
-		oper.createLink(CadseGCST.LINK_lt_DESTINATION, ItemTypeB);
-		oper.setAttribute(CadseGCST.LINK_at_MAX_, -1);
-		oper.setAttribute(CadseGCST.LINK_at_MIN_, 0);
+		oper.createLink(CadseGCST.LINK_TYPE_lt_DESTINATION, ItemTypeB);
+		oper.setAttribute(CadseGCST.LINK_TYPE_at_MAX_, -1);
+		oper.setAttribute(CadseGCST.LINK_TYPE_at_MIN_, 0);
 		copy.commit();
 
 		Item itemLt_a_to_b = ItemTypeManager.getAttribute(ItemTypeA, lt_a_to_b);
 		Assert.assertNotNull(itemLt_a_to_b);
-		Assert.assertEquals(CadseGCST.LINK, itemLt_a_to_b.getType());
+		Assert.assertEquals(CadseGCST.LINK_TYPE, itemLt_a_to_b.getType());
 
-		Integer min = itemLt_a_to_b.getAttribute(CadseGCST.LINK_at_MIN_);
+		Integer min = itemLt_a_to_b.getAttribute(CadseGCST.LINK_TYPE_at_MIN_);
 		Assert.assertEquals(Integer.valueOf(0), min);
-		Integer max = itemLt_a_to_b.getAttribute(CadseGCST.LINK_at_MAX_);
+		Integer max = itemLt_a_to_b.getAttribute(CadseGCST.LINK_TYPE_at_MAX_);
 		Assert.assertEquals(Integer.valueOf(-1), max);
 
 	}
