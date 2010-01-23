@@ -27,9 +27,15 @@ import fr.imag.adele.cadse.core.ui.UIField;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLinkType;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
+import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
+import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
+import fr.imag.adele.graphictests.test.GTTestParameters;
 
 public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
-	GTShell				shell;
+	GTCadseShell				shell;
 
 	private static String	packageName;
 
@@ -75,7 +81,7 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		/* CADSEs selection in startup window */
 		/* ================================== */
 
-		shell =  new GTShell(GTCadseRTConstants.CADSE_SELECTOR_SHELL_TITLE);
+		shell =  new GTCadseShell(GTCadseRTConstants.CADSE_SELECTOR_SHELL_TITLE);
 		shell.selectCadses(GTCadseRTConstants.CADSEG_MODEL);
 		shell.capture();
 		shell.close();
@@ -93,12 +99,12 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		// CADSE WebAppModel
 		workspaceView.findTree().contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
 				GTCadseRTConstants.CONTEXTMENU_NEW_CADSE_DEFINITION).click();
-		shell = new GTShell(CadseGCST.CADSE_DEFINITION);
+		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText( cadseName);
+		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText( cadseName);
 
 		packageName = "model.webapp";
-		shell.findField(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
+		GTCadseFactory.findField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
@@ -120,9 +126,9 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
 				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
 
-		shell = new GTShell(CadseGCST.ITEM_TYPE);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(TypeA);
-		shell.findField(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
+		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeA);
+		GTCadseFactory.findField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
@@ -134,9 +140,9 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		String TypeB = "B";
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
 				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
-		shell = new GTShell(CadseGCST.ITEM_TYPE);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(TypeB);
-		shell.findField(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
+		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeB);
+		GTCadseFactory.findField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
@@ -147,16 +153,16 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		final String lt_a_to_b = "a_to_b";
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA)
 				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Link").click();
-		shell = new GTShell(CadseGCST.LINK);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(lt_a_to_b);
-		shell.findField(CadseGCST.LINK_lt_DESTINATION).browser(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
+		shell = new GTCadseShell(CadseGCST.LINK_TYPE);
+		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(lt_a_to_b);
+		GTCadseFactory.findField(shell,CadseGCST.LINK_TYPE_lt_DESTINATION).browser(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
 		// shell.findField(WorkspaceCST.LINK_at_AGGREGATION_, true);
 		// shell.findField(WorkspaceCST.LINK_at_REQUIRE_, true);
 		// shell.findField(WorkspaceCST.LINK_at_PART_, true);
 		Pages pages = getPages(shell);
 		ItemDelta linkCreating = (ItemDelta) pages.getItem();
-		assertEquals(Integer.valueOf(0), linkCreating.getAttribute(CadseGCST.LINK_at_MIN_, false));
-		assertEquals(Integer.valueOf(-1), linkCreating.getAttribute(CadseGCST.LINK_at_MAX_, false));
+		assertEquals(Integer.valueOf(0), linkCreating.getAttribute(CadseGCST.LINK_TYPE_at_MIN_, false));
+		assertEquals(Integer.valueOf(-1), linkCreating.getAttribute(CadseGCST.LINK_TYPE_at_MAX_, false));
 
 		shell.capture();
 		shell.close();
@@ -176,21 +182,21 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		Assert.assertNotNull(ItemTypeB);
 		Item itemLt_a_to_b = ItemTypeManager.getAttribute(ItemTypeA, lt_a_to_b);
 		Assert.assertNotNull(itemLt_a_to_b);
-		Assert.assertEquals(CadseGCST.LINK, itemLt_a_to_b.getType());
+		Assert.assertEquals(CadseGCST.LINK_TYPE, itemLt_a_to_b.getType());
 
-		Integer min = itemLt_a_to_b.getAttribute(CadseGCST.LINK_at_MIN_);
+		Integer min = itemLt_a_to_b.getAttribute(CadseGCST.LINK_TYPE_at_MIN_);
 		assertEquals(Integer.valueOf(0), min);
-		Integer max = itemLt_a_to_b.getAttribute(CadseGCST.LINK_at_MAX_);
+		Integer max = itemLt_a_to_b.getAttribute(CadseGCST.LINK_TYPE_at_MAX_);
 		assertEquals(Integer.valueOf(-1), max);
 
-		int min_ = LinkManager.getMin(itemLt_a_to_b);
+		int min_ = LinkTypeManager.getMin(itemLt_a_to_b);
 		assertEquals(min_, 0);
-		min_ = LinkManager.getMinAttribute(itemLt_a_to_b);
+		min_ = LinkTypeManager.getMinAttribute(itemLt_a_to_b);
 		assertEquals(min_, 0);
 
-		int max_ = LinkManager.getMax(itemLt_a_to_b);
+		int max_ = LinkTypeManager.getMax(itemLt_a_to_b);
 		assertEquals(max_, -1);
-		max_ = LinkManager.getMaxAttribute(itemLt_a_to_b);
+		max_ = LinkTypeManager.getMaxAttribute(itemLt_a_to_b);
 		assertEquals(max_, -1);
 
 		CCadse ccadse = GenerateCadseDefinitionModel.generateCADSE(cadseDefinition);

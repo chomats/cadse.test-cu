@@ -6,8 +6,6 @@ import java.util.List;
 import junit.framework.Assert;
 import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
-import fr.imag.adele.cadse.cadseg.managers.attributes.LinkManager;
-import fr.imag.adele.cadse.cadseg.managers.dataModel.CreationDialogManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 
@@ -27,14 +25,15 @@ import fr.imag.adele.cadse.core.ui.UIField;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLinkType;
-import fr.imag.adele.cadse.test.GTCadseRTConstants;
-import fr.imag.adele.cadse.test.GTCadseTestCase;
-import fr.imag.adele.cadse.test.GTScreenshot;
-import fr.imag.adele.cadse.test.GTTestParameters;
-import fr.imag.adele.cadse.test.gtworkbench_part.GTShell;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
+import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
+import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
+import fr.imag.adele.graphictests.test.GTTestParameters;
 
 public class OrderPagesCADSEg extends GTCadseTestCase {
-	GTShell				shell;
+	GTCadseShell				shell;
 
 	private static String	packageName;
 
@@ -77,7 +76,7 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		/* CADSEs selection in startup window */
 		/* ================================== */
 
-		shell =  new GTShell(GTCadseRTConstants.CADSE_SELECTOR_SHELL_TITLE);
+		shell =  new GTCadseShell(GTCadseRTConstants.CADSE_SELECTOR_SHELL_TITLE);
 		shell.selectCadses(GTCadseRTConstants.CADSEG_MODEL);
 		shell.capture();
 		shell.close();
@@ -95,12 +94,12 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		// CADSE WebAppModel
 		workspaceView.findTree().contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
 				GTCadseRTConstants.CONTEXTMENU_NEW_CADSE_DEFINITION).click();
-		shell = new GTShell(CadseGCST.CADSE_DEFINITION);
+		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText( cadseName);
+		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText( cadseName);
 
 		packageName = "model.webapp";
-		shell.findField(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
+		GTCadseFactory.findField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
@@ -122,9 +121,9 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
 		.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
 
-		shell = new GTShell(CadseGCST.ITEM_TYPE);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(TypeA);
-		shell.findField(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
+		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText(TypeA);
+		GTCadseFactory.findField(shell, CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
@@ -142,9 +141,9 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		String TypeB = "B";
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
 				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
-		shell = new GTShell(CadseGCST.ITEM_TYPE);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(TypeB);
-		shell.findField(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
+		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText(TypeB);
+		GTCadseFactory.findField(shell, CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
@@ -204,10 +203,10 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL,
 				TypeA, "creation dialog").contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
 						GTCadseRTConstants.CONTEXTMENU_PAGE).click();
-		shell = new GTShell(CadseGCST.PAGE);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText(pageName);
-		shell.findField(CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
-		shell.findField(CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
+		shell = new GTCadseShell(CadseGCST.PAGE);
+		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText(pageName);
+		GTCadseFactory.findField(shell, CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
+		GTCadseFactory.findField(shell, CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
 
 		shell.capture();
 		shell.close();

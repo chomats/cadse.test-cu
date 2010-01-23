@@ -23,8 +23,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.imag.adele.cadse.core.LogicalWorkspace;
-import fr.imag.adele.cadse.core.transaction.delta.revision.ITeamRevisionService;
-import fr.imag.adele.cadse.core.transaction.delta.revision.WorkspaceLogiqueRevisionDelta;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 
 

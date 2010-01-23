@@ -16,17 +16,12 @@ import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
 
 
-import fr.imag.adele.cadse.test.GTCadseRTConstants;
-import fr.imag.adele.cadse.test.GTCadseTestCase;
-import fr.imag.adele.cadse.test.GTEclipseConstants;
-import fr.imag.adele.cadse.test.GTScreenshot;
-import fr.imag.adele.cadse.test.GTTestParameters;
-import fr.imag.adele.cadse.test.gtmenu.GTMenu;
-import fr.imag.adele.cadse.test.gttree.GTTreeNode;
-import fr.imag.adele.cadse.test.gttree.GTTreePath;
-import fr.imag.adele.cadse.test.gtworkbench_part.GTShell;
-
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
+import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
+import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
+import fr.imag.adele.graphictests.test.GTTestParameters;
 import fr.imag.adele.sam.core.SamCoreCST;
 
 /**
@@ -34,7 +29,7 @@ import fr.imag.adele.sam.core.SamCoreCST;
  */
 public class SamCoreTest_cadseg1 extends GTCadseTestCase {
 
-	private GTShell shell;
+	private GTCadseShell shell;
 
 	/**
 	 * Performs initializations for this test.
@@ -60,7 +55,7 @@ public class SamCoreTest_cadseg1 extends GTCadseTestCase {
 	@Test
 	public void test_selection() throws Exception {
 
-		shell = new GTShell(GTCadseRTConstants.CADSE_SELECTOR_SHELL_TITLE);
+		shell = new GTCadseShell(GTCadseRTConstants.CADSE_SELECTOR_SHELL_TITLE);
 		shell.selectCadses("sam.core");
 		shell.capture("image020");
 		shell.close();
