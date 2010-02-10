@@ -38,6 +38,7 @@ import java.util.UUID;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.impl.CadseCore;
+import fr.imag.adele.cadse.core.impl.internal.CadseDomainImpl;
 import fr.imag.adele.cadse.core.impl.internal.LogicalWorkspaceImpl;
 
 /**
@@ -68,7 +69,7 @@ public class TestWorkspaceLogique {
 	@Before
 	public void setUp() throws Exception {
 		CadseDomain wd = CadseCore.getCadseDomain();
-		wl = new LogicalWorkspaceImpl(wd);
+		wl = new LogicalWorkspaceImpl((CadseDomainImpl) wd);
 	}
 
 	/**

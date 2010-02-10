@@ -20,6 +20,7 @@ package test.fede.workspace.domain.internal;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import java.util.UUID;
 
 import junit.framework.Assert;
 
@@ -32,8 +33,11 @@ import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemDescription;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.LinkType;
+import fr.imag.adele.cadse.core.attribute.IAttributeType;
 import fr.imag.adele.cadse.core.impl.CadseCore;
+import fr.imag.adele.cadse.core.impl.attribute.StringAttributeType;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
+import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.fede.workspace.si.persistence.Persistence;
 
 public class TestPersistence {
@@ -45,6 +49,8 @@ public class TestPersistence {
 	private ItemType	TYPE_B;
 	private ItemType	TYPE_C;
 	private ItemType	TYPE_D;
+	private IAttributeType<String> A1;
+	private IAttributeType<String> A2;
 	private LinkType	LT_A_TO_B;
 	private LinkType	LT_A_TO_D;
 	private LinkType	LT_D_TO_B;
@@ -62,6 +68,10 @@ public class TestPersistence {
 		senario.init();
 
 		TYPE_A = senario.createItemType(null, false, false);
+		A1 = new StringAttributeType(UUID.randomUUID(), 0, "A1", null);
+		TYPE_A.addAttributeType(A1);
+		A2 = new StringAttributeType(UUID.randomUUID(), 0, "A1", null);
+		TYPE_A.addAttributeType(A2);
 		TYPE_B = senario.createItemType(null, false, false);
 		TYPE_C = senario.createItemType(null, false, false);
 		TYPE_D = senario.createItemType(null, false, false);
@@ -78,8 +88,8 @@ public class TestPersistence {
 
 		LogicalWorkspaceTransaction copy = senario.getLogicalWorkspace().createTransaction();
 		Item a = copy.createItem(TYPE_A, null, null);
-		a.setAttribute("A1", "sqtqu");
-		a.setAttribute("A2", "A5");
+		a.setAttribute(A1, "sqtqu");
+		a.setAttribute(A2, "A5");
 		Item b = copy.createItem(TYPE_B, null, null);
 		a.createLink(LT_A_TO_B, b);
 		copy.commit();
@@ -87,9 +97,9 @@ public class TestPersistence {
 
 		byte[] a_byte = Persistence.itemToByteArray(a);
 
-	
-		ItemDescription a_desc = Persistence.readFromByteArray(senario.getLogicalWorkspace(), null, a_byte);
-		Assert.assertEquals(a_desc, new ItemDescription(a));
+		LogicalWorkspaceTransaction t = senario.getLogicalWorkspace().createTransaction();
+		ItemDelta a_desc = Persistence.readFromByteArray(t, null, a_byte);
+		Assert.assertEquals(new ItemDescription(a_desc), new ItemDescription(a));
 	}
 
 }

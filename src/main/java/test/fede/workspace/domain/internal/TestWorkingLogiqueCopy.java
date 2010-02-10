@@ -66,7 +66,6 @@ import org.osgi.framework.Bundle;
 
 import fr.imag.adele.cadse.cadseg.managers.attributes.LinkTypeManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
-import fr.imag.adele.cadse.cadseg.operation.ImportCadseUtil;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.CadseRuntime;
@@ -96,6 +95,7 @@ import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItem;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLink;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.ObjectFactory;
+import fr.imag.adele.cadse.si.workspace.uiplatform.swt.exportimport.ExportImportCadseFunction;
 
 /**
  * @author chomats
@@ -2031,7 +2031,7 @@ Item currentItem;
 	@Test
 	public void testImportCadseg() throws CadseException, IOException, JAXBException {
 		URL importCadseZip = TestActivator.findResource("ImportCadse.zip");
-		Item cadse = ImportCadseUtil.importCadse(null, importCadseZip.openStream());
+		Item cadse = ExportImportCadseFunction.importCadse(null, importCadseZip.openStream());
 		assertNotNull(cadse);
 		
 		generateAssert(cadse, "cadseg");
@@ -2040,7 +2040,7 @@ Item currentItem;
 	@Test
 	public void testImportMind() throws CadseException, IOException, JAXBException {
 		URL importCadseZip = TestActivator.findResource("Model.Workspace.mind-src.zip");
-		Item cadse = ImportCadseUtil.importCadse(null, importCadseZip.openStream());
+		Item cadse = ExportImportCadseFunction.importCadse(null, importCadseZip.openStream());
 		assertNotNull(cadse);
 		
 		generateAssert(cadse, "mind");
