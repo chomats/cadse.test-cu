@@ -1099,10 +1099,10 @@ Item currentItem;
 		assertEquals(dm, lw.getItem(CadseGCST.DATA_MODEL.getKeyDefinition().computeKey(cadseDefCommited.getKey(), dm.getName())));
 		
 		assertEquals(TypeACommited, lw.getItem(TypeACommited.getKey()));
-		assertEquals(TypeACommited, lw.getItem(CadseGCST.ITEM_TYPE.getKeyDefinition().computeKey(cadseDefCommited.getKey(), TypeACommited.getName(), cadseDefCommited)));
+		assertEquals(TypeACommited, lw.getItem(CadseGCST.ITEM_TYPE.getKeyDefinition().computeKey(cadseDefCommited.getKey(), TypeACommited.getName())));
 
 		assertEquals(TypeBCommited, lw.getItem(TypeBCommited.getKey()));
-		assertEquals(TypeBCommited, lw.getItem(CadseGCST.ITEM_TYPE.getKeyDefinition().computeKey(cadseDefCommited.getKey(), TypeBCommited.getName(), cadseDefCommited)));
+		assertEquals(TypeBCommited, lw.getItem(CadseGCST.ITEM_TYPE.getKeyDefinition().computeKey(cadseDefCommited.getKey(), TypeBCommited.getName())));
 		
 		assertEquals(attrBool1, lw.getItem(attrBool1.getKey()));
 		assertEquals(attrBool1, lw.getItem(CadseGCST.ATTRIBUTE.getKeyDefinition().computeKey(TypeACommited.getKey(), attrBool1.getName())));
