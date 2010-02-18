@@ -183,7 +183,7 @@ public class TestWorkingLogiqueCopy {
 		/* Initializations */
 		/* =============== */
 
-		Bundle b = Platform.getBundle("fr.imag.adele.cadse.si.workspace.view");
+		Bundle b = Platform.getBundle("fr.imag.adele.cadse.si.view");
 		b.start();
 		//assertEquals(b.getState(), Bundle.ACTIVE);
 		
@@ -207,7 +207,12 @@ public class TestWorkingLogiqueCopy {
 	 */
 	@After
 	public void tearDown() throws Exception {
-		senario.stop();
+		try {
+			senario.stop();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
