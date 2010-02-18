@@ -30,6 +30,7 @@ import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 
 public class OrderPagesCADSEg_2 extends GTCadseTestCase {
@@ -101,13 +102,11 @@ public class OrderPagesCADSEg_2 extends GTCadseTestCase {
 	}
 
 	private void createCreationPage(String TypeA, String pageName, String pageTitle, String pageDescription) {
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL,
-				TypeA, "creation dialog").contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
-						GTCadseRTConstants.CONTEXTMENU_PAGE).click();
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA, "creation dialog"), GTCadseRTConstants.CONTEXTMENU_PAGE).click();
 		shell = new GTCadseShell(CadseGCST.PAGE);
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(pageName);
-		GTCadseFactory.findField(shell,CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
-		GTCadseFactory.findField(shell,CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(pageName);
+		GTCadseFactory.findCadseField(shell,CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
+		GTCadseFactory.findCadseField(shell,CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
 
 		shell.capture();
 		shell.close();

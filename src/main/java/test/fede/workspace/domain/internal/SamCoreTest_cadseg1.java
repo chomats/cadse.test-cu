@@ -17,12 +17,14 @@ import fr.imag.adele.cadse.core.Item;
 
 
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 import fr.imag.adele.graphictests.test.GTTestParameters;
-import fr.imag.adele.sam.core.SamCoreCST;
+
 
 /**
  * Performs the official simple tutorial
@@ -75,25 +77,23 @@ public class SamCoreTest_cadseg1 extends GTCadseTestCase {
 
 		// Sam package "sam package 1"
 		workspaceView.contextMenu(null, GTCadseRTConstants.CONTEXTMENU_NEW, "sam package").click();
-		shell = new GTShell(CadseGCST.CADSE_DEFINITION);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText("sam package 1");
+		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_at_NAME_).typeText("sam package 1");
 		shell.capture();
 		shell.close();
 		
 		GTTreePath samPackage1 = new GTTreePath("sam package 1");
 		
 
-		GTTreeNode cadseWebAppModelNode = workspaceView.findTree().selectNode(samPackage1);
-		
-		Item cadseWebApp = cadseWebAppModelNode.getItem();
+		Item cadseWebApp = workspaceView.findTree().getItem(new GTTreePath(samPackage1));
 		assertNotNull(cadseWebApp);
 		assertEquals("sam package 1", cadseWebApp.getName());
 
 		// Item Type WebApp
 		workspaceView.contextMenu(samPackage1, GTCadseRTConstants.CONTEXTMENU_NEW, "Service Specification").click();
-		shell = new GTShell(CadseGCST.ITEM_TYPE);
-		shell.findField(CadseGCST.ITEM_at_NAME_).typeText("s1");
-		shell.findField(SamCoreCST.SERVICE_SPECIFICATION_at_INTERFACE_).typeText("s1");
+		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_at_NAME_).typeText("s1");
+		GTCadseFactory.findCadseField(shell, SamCoreCST.SERVICE_SPECIFICATION_at_INTERFACE_).typeText("s1");
 		shell.capture();
 		shell.close();
 		
@@ -101,6 +101,4 @@ public class SamCoreTest_cadseg1 extends GTCadseTestCase {
 		workspaceView.findTree().selectNode(p1_s1); /* Assert item has been displayed */
 		workspaceView.capture();
 	}
-
-	
 }

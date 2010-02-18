@@ -31,6 +31,7 @@ import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 import fr.imag.adele.graphictests.test.GTTestParameters;
 
@@ -97,24 +98,23 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 		/* =================== */
 
 		// CADSE WebAppModel
-		workspaceView.findTree().contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
-				GTCadseRTConstants.CONTEXTMENU_NEW_CADSE_DEFINITION).click();
+		workspaceView.contextMenuNew(CadseGCST.CADSE_DEFINITION).click();
 		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText( cadseName);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText( cadseName);
 
 		packageName = "model.webapp";
-		GTCadseFactory.findField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
+		GTCadseFactory.findCadseField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
-		workspaceView.findTree().selectNode(cadseName).expand();
+		workspaceView.findTree().selectNode(new GTTreePath(cadseName), true);
 
 
 		packageExplorerView.show();
-		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName).expand();
-		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName, "sources").expand();
+		packageExplorerView.selectNode("Model.Workspace." + cadseName);
+		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName, "sources");
 		packageExplorerView.capture();
 		workspaceView.show();
 	}
@@ -123,39 +123,35 @@ public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
 	public void test_createTypeA_TypeB_Link_lt_a_to_b() throws Exception {
 		// Item Type A
 		String TypeA = "A";
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
-				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
-
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL), "Item type").click();
 		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeA);
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeA);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA).expand();
+		workspaceView.selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA);
 		workspaceView.capture();
 
 		// Item Type B
 		String TypeB = "B";
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
-				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL), "Item type").click();
 		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeB);
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeB);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB).expand();
+		workspaceView.selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
 		workspaceView.capture();
 
 		// hasComp link
 		final String lt_a_to_b = "a_to_b";
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA)
-				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Link").click();
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA), "Link").click();
 		shell = new GTCadseShell(CadseGCST.LINK_TYPE);
-		GTCadseFactory.findField(shell,CadseGCST.ITEM_at_NAME_).typeText(lt_a_to_b);
-		GTCadseFactory.findField(shell,CadseGCST.LINK_TYPE_lt_DESTINATION).browser(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
+		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(lt_a_to_b);
+		GTCadseFactory.findCadseField(shell,CadseGCST.LINK_TYPE_lt_DESTINATION).browser(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
 		// shell.findField(WorkspaceCST.LINK_at_AGGREGATION_, true);
 		// shell.findField(WorkspaceCST.LINK_at_REQUIRE_, true);
 		// shell.findField(WorkspaceCST.LINK_at_PART_, true);

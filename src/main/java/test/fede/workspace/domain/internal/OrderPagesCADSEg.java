@@ -29,6 +29,7 @@ import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 import fr.imag.adele.graphictests.test.GTTestParameters;
 
@@ -92,24 +93,23 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 		/* =================== */
 
 		// CADSE WebAppModel
-		workspaceView.findTree().contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
-				GTCadseRTConstants.CONTEXTMENU_NEW_CADSE_DEFINITION).click();
+		workspaceView.contextMenuNew(CadseGCST.CADSE_DEFINITION).click();
 		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
-		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText( cadseName);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_at_NAME_).typeText( cadseName);
 
 		packageName = "model.webapp";
-		GTCadseFactory.findField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
+		GTCadseFactory.findCadseField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
-		workspaceView.findTree().selectNode(cadseName).expand();
+		workspaceView.findTree().selectNode(cadseName);
 
 
 		packageExplorerView.show();
-		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName).expand();
-		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName, "sources").expand();
+		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName);
+		packageExplorerView.findTree().selectNode("Model.Workspace." + cadseName, "sources");
 		packageExplorerView.capture();
 		workspaceView.show();
 	}
@@ -118,17 +118,16 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 	public void test_createTypeA_TypeB_Link_lt_a_to_b() throws Exception {
 		// Item Type A
 		String TypeA = "A";
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
-		.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL), "Item type").click();
 
 		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
-		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText(TypeA);
-		GTCadseFactory.findField(shell, CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_at_NAME_).typeText(TypeA);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA).expand();
+		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA);
 		workspaceView.capture();
 
 		createCreationPage(TypeA, "creation-page2", "Title 2", "Desciption 2");
@@ -139,15 +138,14 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 
 		// Item Type B
 		String TypeB = "B";
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL)
-				.contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu("Item type").click();
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL), "Item type").click();
 		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
-		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText(TypeB);
-		GTCadseFactory.findField(shell, CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_at_NAME_).typeText(TypeB);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB).expand();
+		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
 		workspaceView.capture();
 
 		createCreationPage(TypeB, "creation-page2", "Title 2", "Desciption 2");
@@ -200,13 +198,11 @@ public class OrderPagesCADSEg extends GTCadseTestCase {
 	}
 
 	private void createCreationPage(String TypeA, String pageName, String pageTitle, String pageDescription) {
-		workspaceView.findTree().selectNode(cadseName, CadseDefinitionManager.DATA_MODEL,
-				TypeA, "creation dialog").contextMenu(GTCadseRTConstants.CONTEXTMENU_NEW).menu(
-						GTCadseRTConstants.CONTEXTMENU_PAGE).click();
+		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA, "creation dialog"), GTCadseRTConstants.CONTEXTMENU_PAGE).click();
 		shell = new GTCadseShell(CadseGCST.PAGE);
-		GTCadseFactory.findField(shell, CadseGCST.ITEM_at_NAME_).typeText(pageName);
-		GTCadseFactory.findField(shell, CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
-		GTCadseFactory.findField(shell, CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
+		GTCadseFactory.findCadseField(shell, CadseGCST.ITEM_at_NAME_).typeText(pageName);
+		GTCadseFactory.findCadseField(shell, CadseGCST.PAGE_at_TITLE_).typeText(pageTitle);
+		GTCadseFactory.findCadseField(shell, CadseGCST.PAGE_at_DESCRIPTION_).typeText(pageDescription);
 
 		shell.capture();
 		shell.close();
