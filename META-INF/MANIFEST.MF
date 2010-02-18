@@ -92,4 +92,6 @@ Import-Package: fr.imag.adele.cadse.cadseg.managers,
  test.groovy
 Bundle-SymbolicName: TEST.CU.Workspace.Workspace;singleton:=true
 Bundle-DocURL: http://www-adele.imag.fr/
+Bundle-Activator: test.fede.workspace.domain.internal.TestActivator
+Bundle-ActivationPolicy: lazy
 

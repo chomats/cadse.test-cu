@@ -37,7 +37,10 @@
 							!org.codehaus.groovy.runtime.callsite,
 							!org.codehaus.groovy.runtime.typehandling,
 							org.eclipse.core.runtime;registry=!,
-							javax.xml.bind*;version=!, *</Import-Package>
+							javax.xml.bind*;version=!, *
+					</Import-Package>
+					<Bundle-Activator>test.fede.workspace.domain.internal.TestActivator</Bundle-Activator>
+					<Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
 					</instructions>
 				</configuration>
 			</plugin>
