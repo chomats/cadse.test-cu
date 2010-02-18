@@ -419,7 +419,7 @@ public class TestSenario {
 		try {
 			Bundle b = Platform.getBundle("fr.imag.adele.cadse.si.view");
 			b.start();
-			b = Platform.getBundle("fr.imag.adele.ipojo.autostart");
+			b = Platform.getBundle("fr.imag.adele.cadse.ipojo.autostart");
 			b.start();
 			b = Platform.getBundle("org.apache.felix.ipojo");
 			b.start();
