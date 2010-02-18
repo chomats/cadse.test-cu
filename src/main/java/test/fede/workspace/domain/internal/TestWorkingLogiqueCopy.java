@@ -21,6 +21,7 @@
  */
 package test.fede.workspace.domain.internal;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -35,6 +36,7 @@ import java.io.StringWriter;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -2008,6 +2010,14 @@ Item currentItem;
 		Item cadseDefCommited = senario.getLogicalWorkspace().getItem(cadseDef.getId());
 		return cadseDefCommited;
 	}
+	
+	@Test
+	public void testIncomingsLinks() throws Exception {
+		Collection<Item> items = senario.getLogicalWorkspace().getItems();
+		for (Item item : items) {
+			checkIncomingLinks(item);
+		}
+	}
 
 	private void checkIncomingLinks(Item itemA) {
 		for (Link l : itemA.getIncomingLinks()) {
@@ -2018,8 +2028,7 @@ Item currentItem;
 		
 		for (Link l : itemA.getOutgoingLinks()) {
 			Link lin = l.getDestination().getIncomingLink(l.getLinkType(), l.getSourceId());
-			if (lin == null)
-				assertNotNull("not found incoming link : "+l, lin);
+			assertNotNull("Not found incoming link : "+l, lin);
 			assertEquals(l, lin);
 		}
 	}
