@@ -60,7 +60,7 @@
 <booleanAttribute key="includeOptional" value="true"/>
 <stringAttribute key="location" value="${workspace_loc}/../junit-workspace"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/TEST.CU.Workspace.Workspace/src/test/fede/workspace/domain/internal/TestWorkingLogiqueCopy.java"/>
+<listEntry value="/TEST.CU.Workspace.Workspace/src/main/java/test/fede/workspace/domain/internal/TestWorkingLogiqueCopy.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
