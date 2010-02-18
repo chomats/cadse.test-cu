@@ -1693,9 +1693,8 @@ Item currentItem;
 		Item TypeBCommited = createItemType(dm, null, (ItemType) TypeACommited);
 		
 		// create content
-		
-		createFileContent(TypeACommited, true, "a","a");
-		createFileContent(TypeBCommited, true, "a","a");
+		createFileContent(TypeACommited, true, "a/a");
+		createFileContent(TypeBCommited, true, "a/a");
 		
 		checkError(cadseDefCommited.getMainMappingContent(IJavaProject.class), null);
 		
@@ -1817,13 +1816,11 @@ Item currentItem;
 			fail("compilation error on "+jp.getElementName()+"\n"+errors);
 		}
 	}
-	private Item createFileContent(Item typeACommited, boolean ext,
-			String fileName, String filePath) throws CadseException {
+	private Item createFileContent(Item typeACommited, boolean ext,	String filePath) throws CadseException {
 		Item managerA = ItemTypeManager.getManager(typeACommited);
 		LogicalWorkspaceTransaction copy;
 		copy = senario.getLogicalWorkspace().createTransaction();
 		ItemDelta fc = copy.createItem(CadseGCST.FILE_CONTENT_MODEL, managerA, CadseGCST.MANAGER_lt_CONTENT_MODEL);
-		fc.setAttribute(CadseGCST.FILE_CONTENT_MODEL_at_FILE_NAME_, fileName);
 		fc.setAttribute(CadseGCST.FILE_CONTENT_MODEL_at_FILE_PATH_, filePath);
 		fc.setAttribute(CadseGCST.CONTENT_ITEM_TYPE_at_EXTENDS_CLASS_, ext);
 		copy.commit();
