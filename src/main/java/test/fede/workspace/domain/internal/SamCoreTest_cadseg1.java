@@ -15,21 +15,22 @@ import org.junit.Test;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
 
-
-import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
-import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
+import fr.imag.adele.graphictests.test.GTTestCase;
 import fr.imag.adele.graphictests.test.GTTestParameters;
 
+
+import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.*;
 
 /**
  * Performs the official simple tutorial
  */
-public class SamCoreTest_cadseg1 extends GTCadseTestCase {
+public class SamCoreTest_cadseg1 extends GTTestCase {
 
 	private GTCadseShell shell;
 

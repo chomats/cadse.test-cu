@@ -1,9 +1,6 @@
 package test.fede.workspace.domain.internal;
 
 import junit.framework.Assert;
-import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
-import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
-import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 
 import org.junit.Test;
 
@@ -14,6 +11,8 @@ import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.CadseGCST;
+
+import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.*;
 
 public class TestCadseg {
 	static GeneratorName	generator	= new GeneratorName();

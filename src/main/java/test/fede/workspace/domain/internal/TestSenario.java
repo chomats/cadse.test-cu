@@ -59,10 +59,6 @@ import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransactionListener;
 import fr.imag.adele.fede.workspace.as.initmodel.ErrorWhenLoadedModel;
 import fr.imag.adele.fede.workspace.as.initmodel.IInitModel;
-import fr.imag.adele.fede.workspace.si.initmodel.InitModel;
-import fr.imag.adele.melusine.as.findmodel.CheckModel;
-import fr.imag.adele.melusine.as.findmodel.IFindModel;
-import fr.imag.adele.melusine.as.findmodel.ModelEntry;
 import fr.imag.adele.cadse.util.Nullable;
 
 /**

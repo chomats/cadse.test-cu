@@ -3,11 +3,6 @@ package test.fede.workspace.domain.internal;
 import java.util.List;
 
 import junit.framework.Assert;
-import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
-import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
-import fr.imag.adele.cadse.cadseg.managers.attributes.LinkTypeManager;
-import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
-import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 
 import org.eclipse.core.internal.registry.osgi.OSGIUtils;
 import org.eclipse.core.runtime.Platform;
@@ -30,12 +25,14 @@ import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLinkType;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
-import fr.imag.adele.graphictests.cadse.test.GTCadseTestCase;
+import fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
+import fr.imag.adele.graphictests.test.GTTestCase;
 import fr.imag.adele.graphictests.test.GTTestParameters;
+import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.*;
 
-public class CreateSimpleLinkCADSEg extends GTCadseTestCase {
+public class CreateSimpleLinkCADSEg extends GTTestCase {
 	GTCadseShell				shell;
 
 	private static String	packageName;
