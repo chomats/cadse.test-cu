@@ -34,8 +34,7 @@ Export-Package: test.fede.workspace.domain.internal;version="2.3.0";
    org.eclipse.jdt.core,
    fr.imag.adele.cadse.core.key,
    javax.xml.bind,
-   fr.imag.adele.cadse.core.impl.internal",
- test.groovy
+   fr.imag.adele.cadse.core.impl.internal"
 Ignore-Package: groovy.lang,org.codehaus.groovy.runtime.typehandling,o
  rg.codehaus.groovy.reflection,org.codehaus.groovy.runtime,org.codehau
  s.groovy.runtime.callsite
@@ -88,8 +87,7 @@ Import-Package: fr.imag.adele.cadse.cadseg.managers,
  org.junit.runner,
  org.junit.runners,
  org.osgi.framework,
- test.fede.workspace.domain.internal;version="2.3",
- test.groovy
+ test.fede.workspace.domain.internal;version="2.3"
 Bundle-SymbolicName: TEST.CU.Workspace.Workspace;singleton:=true
 Bundle-DocURL: http://www-adele.imag.fr/
 Bundle-Activator: test.fede.workspace.domain.internal.TestActivator
