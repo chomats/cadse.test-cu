@@ -57,6 +57,10 @@
 		</dependency>
 		<dependency>
 			<groupId>fr.imag.adele.cadse</groupId>
+			<artifactId>si.initmodel</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr.imag.adele.cadse</groupId>
 			<artifactId>util</artifactId>
 		</dependency>
 		<dependency>

@@ -21,7 +21,13 @@
  */
 package test.fede.workspace.domain.internal;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.IOException;
@@ -59,12 +65,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-import test.fede.workspace.domain.internal.TestSenario.ItemTypeManagerTest;
-
+import fr.imag.adele.cadse.cadseg.managers.attributes.LinkTypeManager;
+import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.CadseRuntime;
-import fr.imag.adele.cadse.core.ChangeID;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.ItemType;
 import fr.imag.adele.cadse.core.Link;
@@ -85,14 +90,12 @@ import fr.imag.adele.cadse.core.transaction.delta.ImmutableWorkspaceDelta;
 import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.transaction.delta.LinkDelta;
 import fr.imag.adele.cadse.core.transaction.delta.LinkKey;
+import fr.imag.adele.cadse.si.workspace.uiplatform.swt.exportimport.ExportImportCadseFunction;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItem;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLink;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CValuesType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.ObjectFactory;
-import fr.imag.adele.cadse.si.workspace.uiplatform.swt.exportimport.ExportImportCadseFunction;
-import fr.imag.adele.cadse.cadseg.managers.attributes.*;
-import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 
 /**
  * @author chomats
