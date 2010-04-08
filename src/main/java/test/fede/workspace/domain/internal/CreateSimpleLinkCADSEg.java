@@ -1,17 +1,15 @@
 package test.fede.workspace.domain.internal;
 
+import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.workspaceView;
+
 import java.util.List;
 
 import junit.framework.Assert;
 
-import org.eclipse.core.internal.registry.osgi.OSGIUtils;
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.swt.SWT;
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
-import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
-import org.osgi.framework.BundleException;
 
 import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
@@ -19,11 +17,10 @@ import fr.imag.adele.cadse.cadseg.managers.attributes.LinkTypeManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import fr.imag.adele.cadse.core.CadseGCST;
-import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Item;
-import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
+import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.impl.CadseCore;
-import fr.imag.adele.cadse.core.ui.Pages;
+import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.ui.UIField;
 import fr.imag.adele.cadse.si.workspace.uiplatform.swt.SWTUIPlatform;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
@@ -32,12 +29,10 @@ import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLinkType;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
-import fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 import fr.imag.adele.graphictests.test.GTTestCase;
 import fr.imag.adele.graphictests.test.GTTestParameters;
-import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.*;
 
 public class CreateSimpleLinkCADSEg extends GTTestCase {
 	GTCadseShell				shell;
@@ -231,7 +226,7 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		return null;
 	}
 
-	private SWTUIPlatform getSwtUIPlatform(final GTShell shell) {
+	public static SWTUIPlatform getSwtUIPlatform(final GTShell shell) {
 		final SWTUIPlatform[] ret = new SWTUIPlatform[1];
 		Runnable r = new Runnable() {
 			public void run() {
