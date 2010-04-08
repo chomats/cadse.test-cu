@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.osgi.framework.Bundle;
 
 
+import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.core.*;
 import fr.imag.adele.cadse.core.impl.*;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;

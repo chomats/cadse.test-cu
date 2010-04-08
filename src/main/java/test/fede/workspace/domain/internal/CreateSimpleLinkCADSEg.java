@@ -6,12 +6,18 @@ import junit.framework.Assert;
 
 import org.eclipse.core.internal.registry.osgi.OSGIUtils;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.swt.SWT;
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleException;
 
+import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
+import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
+import fr.imag.adele.cadse.cadseg.managers.attributes.LinkTypeManager;
+import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
+import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.Item;
@@ -19,6 +25,7 @@ import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.cadse.core.ui.Pages;
 import fr.imag.adele.cadse.core.ui.UIField;
+import fr.imag.adele.cadse.si.workspace.uiplatform.swt.SWTUIPlatform;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLinkType;
@@ -152,8 +159,8 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		// shell.findField(WorkspaceCST.LINK_at_AGGREGATION_, true);
 		// shell.findField(WorkspaceCST.LINK_at_REQUIRE_, true);
 		// shell.findField(WorkspaceCST.LINK_at_PART_, true);
-		Pages pages = getPages(shell);
-		ItemDelta linkCreating = (ItemDelta) pages.getItem();
+		SWTUIPlatform swtuiPlatform = getSwtUIPlatform(shell);
+		ItemDelta linkCreating = (ItemDelta) swtuiPlatform.getItem();
 		assertEquals(Integer.valueOf(0), linkCreating.getAttribute(CadseGCST.LINK_TYPE_at_MIN_, false));
 		assertEquals(Integer.valueOf(-1), linkCreating.getAttribute(CadseGCST.LINK_TYPE_at_MAX_, false));
 
@@ -224,14 +231,14 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		return null;
 	}
 
-	private Pages getPages(final GTShell shell) {
-		final Pages[] ret = new Pages[1];
+	private SWTUIPlatform getSwtUIPlatform(final GTShell shell) {
+		final SWTUIPlatform[] ret = new SWTUIPlatform[1];
 		Runnable r = new Runnable() {
 			public void run() {
-				ret[0] = (Pages) shell.getSWTBotWidget().widget.getData(UIField.CADSE_MODEL_KEY);
+				ret[0] =  (SWTUIPlatform) shell.getRootWidget().getData(UIField.CADSE_MODEL_KEY);
 			}
 		};
-		shell.getSWTBotWidget().widget.getDisplay().syncExec(r);
+		shell.bot().getDisplay().syncExec(r);
 		return ret[0];
 	}
 }
