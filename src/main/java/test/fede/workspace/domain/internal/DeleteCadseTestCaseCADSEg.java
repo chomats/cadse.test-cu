@@ -1,28 +1,23 @@
 package test.fede.workspace.domain.internal;
 
+import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.workspaceView;
 import junit.framework.Assert;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
-import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
-import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
-import fr.imag.adele.cadse.core.*;
-import fr.imag.adele.cadse.core.impl.*;
+import fr.imag.adele.cadse.core.CadseGCST;
+import fr.imag.adele.cadse.core.Item;
+import fr.imag.adele.cadse.core.LogicalWorkspace;
+import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
-import fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
-import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 import fr.imag.adele.graphictests.test.GTTestCase;
-import fr.imag.adele.graphictests.test.GTTestParameters;
-
-import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.*;
 
 public class DeleteCadseTestCaseCADSEg extends GTTestCase {
 	GTCadseShell				shell;
@@ -47,7 +42,6 @@ public class DeleteCadseTestCaseCADSEg extends GTTestCase {
 		// TestUtil.setVelocity(100);
 		SWTBotPreferences.TIMEOUT = 10000;
 		
-		GTTestParameters.banner();
 		//set org.eclipse.swtbot.screenshots.dir
 		//if (System.getProperty("test.screenshotPath") != null)
 		//	GTScreenshot.setScreenshotPath(System.getProperty("test.screenshotPath"));

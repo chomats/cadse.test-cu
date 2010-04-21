@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.ItemType;
-import fr.imag.adele.cadse.core.LinkType;;
+import fr.imag.adele.cadse.core.LinkType;
 
 public class TestWLType {
 	private static TestSenario	senario;

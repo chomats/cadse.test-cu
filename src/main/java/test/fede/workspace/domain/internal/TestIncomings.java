@@ -3,6 +3,7 @@ package test.fede.workspace.domain.internal;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.eclipse.core.runtime.Platform;
 import org.junit.After;
@@ -10,15 +11,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-import fr.imag.adele.cadse.core.CadseDomain;
 import fr.imag.adele.cadse.core.CadseGCST;
-import java.util.UUID;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.Link;
-import fr.imag.adele.cadse.core.LinkType;
-import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.transaction.AbstractLogicalWorkspaceTransactionListener;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
+import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 
 public class TestIncomings {
 	TestSenario			senario;

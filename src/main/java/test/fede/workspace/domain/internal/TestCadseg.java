@@ -7,15 +7,13 @@ import org.junit.Test;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
-import fr.imag.adele.cadse.core.LogicalWorkspace;
+import fr.imag.adele.cadse.core.CadseGCST;
 import fr.imag.adele.cadse.core.Item;
+import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.WSModelState;
-import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
-import fr.imag.adele.cadse.core.CadseGCST;
-
-import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.*;
+import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 
 public class TestCadseg {
 	static GeneratorName	generator	= new GeneratorName();

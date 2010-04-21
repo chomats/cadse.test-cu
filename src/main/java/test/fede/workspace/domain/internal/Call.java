@@ -24,15 +24,14 @@ package test.fede.workspace.domain.internal;
 import java.util.List;
 
 import fr.imag.adele.cadse.core.ContentChangeInfo;
-import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.Link;
+import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
 import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.transaction.delta.LinkDelta;
 import fr.imag.adele.cadse.core.transaction.delta.MappingOperation;
 import fr.imag.adele.cadse.core.transaction.delta.OrderOperation;
 import fr.imag.adele.cadse.core.transaction.delta.SetAttributeOperation;
-import fr.imag.adele.cadse.core.internal.delta.InternalItemDelta;
 
 public class Call {
 	private CallType						_type;

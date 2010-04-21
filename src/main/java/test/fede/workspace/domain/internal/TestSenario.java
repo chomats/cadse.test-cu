@@ -28,16 +28,15 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
+
+import junit.framework.Assert;
 
 import org.eclipse.core.runtime.Platform;
 import org.osgi.framework.Bundle;
 
-import test.fede.workspace.domain.internal.TestWorkingLogiqueCopy.MyListner2;
-
-import junit.framework.Assert;
 import fr.imag.adele.cadse.core.CadseException;
 import fr.imag.adele.cadse.core.CadseRuntime;
-import java.util.UUID;
 import fr.imag.adele.cadse.core.ContentChangeInfo;
 import fr.imag.adele.cadse.core.DefaultItemManager;
 import fr.imag.adele.cadse.core.ILinkTypeManager;
@@ -48,22 +47,21 @@ import fr.imag.adele.cadse.core.LinkType;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.WSModelState;
 import fr.imag.adele.cadse.core.WorkspaceListener;
+import fr.imag.adele.cadse.core.impl.CadseCore;
+import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
+import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransactionListener;
 import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.transaction.delta.LinkDelta;
 import fr.imag.adele.cadse.core.transaction.delta.MappingOperation;
 import fr.imag.adele.cadse.core.transaction.delta.OrderOperation;
 import fr.imag.adele.cadse.core.transaction.delta.SetAttributeOperation;
-import fr.imag.adele.cadse.core.impl.CadseCore;
-import fr.imag.adele.cadse.core.impl.internal.CadseDomainImpl;
-import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
-import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransactionListener;
+import fr.imag.adele.cadse.util.Nullable;
 import fr.imag.adele.fede.workspace.as.initmodel.ErrorWhenLoadedModel;
 import fr.imag.adele.fede.workspace.as.initmodel.IInitModel;
 import fr.imag.adele.fede.workspace.si.initmodel.InitModel;
 import fr.imag.adele.melusine.as.findmodel.CheckModel;
 import fr.imag.adele.melusine.as.findmodel.IFindModel;
 import fr.imag.adele.melusine.as.findmodel.ModelEntry;
-import fr.imag.adele.cadse.util.Nullable;
 
 /**
  * @author chomats

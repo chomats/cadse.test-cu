@@ -32,7 +32,6 @@ import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.gtworkbench_part.GTShell;
 import fr.imag.adele.graphictests.test.GTTestCase;
-import fr.imag.adele.graphictests.test.GTTestParameters;
 
 public class CreateSimpleLinkCADSEg extends GTTestCase {
 	GTCadseShell				shell;
@@ -65,7 +64,6 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		// a few parameters...
 		// TestUtil.setVelocity(100);
 		SWTBotPreferences.TIMEOUT = 10000;
-		GTTestParameters.banner();
 		//set org.eclipse.swtbot.screenshots.dir
 		//if (System.getProperty("test.screenshotPath") != null)
 		//	SWTBotPreferences.SCREENSHOTS_DIR = System.getProperty("test.screenshotPath");
