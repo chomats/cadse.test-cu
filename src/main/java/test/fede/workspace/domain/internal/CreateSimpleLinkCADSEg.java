@@ -26,7 +26,6 @@ import fr.imag.adele.cadse.si.workspace.uiplatform.swt.SWTUIPlatform;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItemType;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLinkType;
-import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseFactory;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
@@ -98,10 +97,10 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		workspaceView.contextMenuNew(CadseGCST.CADSE_DEFINITION).click();
 		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
-		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText( cadseName);
+		shell.findCadseField(CadseGCST.ITEM_at_NAME_).typeText( cadseName);
 
 		packageName = "model.webapp";
-		GTCadseFactory.findCadseField(shell, CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
+		shell.findCadseField(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
@@ -122,8 +121,8 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		String TypeA = "A";
 		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL), "Item type").click();
 		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
-		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeA);
-		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		shell.findCadseField(CadseGCST.ITEM_at_NAME_).typeText(TypeA);
+		shell.findCadseField(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.capture();
 		shell.close();
 		workspaceView.show();
@@ -135,8 +134,8 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		String TypeB = "B";
 		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL), "Item type").click();
 		shell = new GTCadseShell(CadseGCST.ITEM_TYPE);
-		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(TypeB);
-		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
+		shell.findCadseField(CadseGCST.ITEM_at_NAME_).typeText(TypeB);
+		shell.findCadseField(CadseGCST.ITEM_TYPE_at_HAS_CONTENT_).check(false);
 		shell.close();
 		workspaceView.show();
 		workspaceView.capture();
@@ -147,8 +146,8 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		final String lt_a_to_b = "a_to_b";
 		workspaceView.contextMenuNew(new GTTreePath(cadseName, CadseDefinitionManager.DATA_MODEL, TypeA), "Link").click();
 		shell = new GTCadseShell(CadseGCST.LINK_TYPE);
-		GTCadseFactory.findCadseField(shell,CadseGCST.ITEM_at_NAME_).typeText(lt_a_to_b);
-		GTCadseFactory.findCadseField(shell,CadseGCST.LINK_TYPE_lt_DESTINATION).browser(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
+		shell.findCadseField(CadseGCST.ITEM_at_NAME_).typeText(lt_a_to_b);
+		shell.findCadseField(CadseGCST.LINK_TYPE_lt_DESTINATION).browser(cadseName, CadseDefinitionManager.DATA_MODEL, TypeB);
 		// shell.findField(WorkspaceCST.LINK_at_AGGREGATION_, true);
 		// shell.findField(WorkspaceCST.LINK_at_REQUIRE_, true);
 		// shell.findField(WorkspaceCST.LINK_at_PART_, true);
