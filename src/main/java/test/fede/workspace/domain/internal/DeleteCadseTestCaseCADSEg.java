@@ -1,6 +1,5 @@
 package test.fede.workspace.domain.internal;
 
-import static fr.imag.adele.graphictests.cadse.test.GTCadseHelperMethods.workspaceView;
 import junit.framework.Assert;
 
 import org.eclipse.core.runtime.Platform;
@@ -14,6 +13,7 @@ import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.impl.CadseCore;
 import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseShell;
+import fr.imag.adele.graphictests.cadse.gtcadseworkbench_part.GTCadseView;
 import fr.imag.adele.graphictests.cadse.test.GTCadseRTConstants;
 import fr.imag.adele.graphictests.gttree.GTTreePath;
 import fr.imag.adele.graphictests.test.GTTestCase;
@@ -53,14 +53,14 @@ public class DeleteCadseTestCaseCADSEg extends GTTestCase {
 		shell.selectCadses(GTCadseRTConstants.CADSEG_MODEL);
 		shell.capture();
 		shell.close();
-		welcomeView.close();
+		GTCadseView.welcomeView.close();
 		
 		/* =================== */
 		/* data-model creation */
 		/* =================== */
 
 		// CADSE WebAppModel
-		workspaceView.contextMenuNew(CadseGCST.CADSE_DEFINITION).click();
+		GTCadseView.workspaceView.contextMenuNew(CadseGCST.CADSE_DEFINITION).click();
 		shell = new GTCadseShell(CadseGCST.CADSE_DEFINITION);
 		cadseName = "Cadse_" + generator.newName();
 		shell.findCadseField(CadseGCST.ITEM_at_NAME_).typeText( cadseName);
@@ -69,9 +69,9 @@ public class DeleteCadseTestCaseCADSEg extends GTTestCase {
 		shell.findCadseField(CadseGCST.CADSE_DEFINITION_at_PACKAGENAME_).typeText( packageName);
 		shell.capture();
 		shell.close();
-		workspaceView.show();
-		workspaceView.capture();
-		workspaceView.selectNode(cadseName);
+		GTCadseView.workspaceView.show();
+		GTCadseView.workspaceView.capture();
+		GTCadseView.workspaceView.selectNode(cadseName);
 
 		//captureView(CadseRTConstants.WORKSPACE_VIEW);
 		//showView(CadseRTConstants.PACKAGE_EXPLORER_VIEW);
@@ -86,10 +86,10 @@ public class DeleteCadseTestCaseCADSEg extends GTTestCase {
 		Item dataModel = CadseDefinitionManager.getDataModel(cadseDefinition);
 		Assert.assertNotNull(dataModel);
 
-		workspaceView.selectNode(cadseName);
+		GTCadseView.workspaceView.selectNode(cadseName);
 		//showMenu(selectTreeInView);
 
-		workspaceView.contextMenu(new GTTreePath(cadseName), "Delete " + cadseName).click();
+		GTCadseView.workspaceView.contextMenu(new GTTreePath(cadseName), "Delete " + cadseName).click();
 
 		shell = new GTCadseShell("Deleted items");
 		shell.close();
