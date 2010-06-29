@@ -414,7 +414,6 @@ public class TestSenario {
 	}
 
 	public void init() throws Exception {
-		try {
 			Bundle b = Platform.getBundle("fr.imag.adele.cadse.si.view");
 			b.start();
 			b = Platform.getBundle("fr.imag.adele.cadse.ipojo.autostart");
@@ -428,15 +427,7 @@ public class TestSenario {
 					return;
 				Thread.sleep(100);
 			}
-		} catch (NullPointerException e) {
-			e.printStackTrace();
-//			CadseDomainImpl dm = new CadseDomainImpl();
-//			dm.start();
-//			wl = dm.getLogicalWorkspace();
-//			findModel = new TestFindModel();
-//			initModel = new InitModel(findModel, dm);
-//			initModel.loadCadses();
-		}
+		
 	}
 
 	public LogicalWorkspace getLogicalWorkspace() {
