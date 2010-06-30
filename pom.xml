@@ -1,14 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>fr.imag.adele.cadse</groupId>
+	<groupId>fr.imag.adele.cadse.runtime</groupId>
 	<artifactId>TEST.CU.Workspace.Workspace</artifactId>
 	<packaging>bundle</packaging>
 	<name>TEST.CU.Workspace.Workspace</name>
 	<version>2.3.0-SNAPSHOT</version>
 	<parent>
 		<artifactId>fr.imag.adele.cadse.parent.osgi</artifactId>
-		<groupId>fr.imag.adele.cadse</groupId>
+		<groupId>fr.imag.adele.cadse.runtime</groupId>
 		<version>2.3.0-SNAPSHOT</version>
 		<relativePath>../fr.imag.adele.cadse.parent.osgi</relativePath>
 	</parent>
@@ -48,41 +48,41 @@
 	</build>
 	<dependencies>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>as.cu</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>as.initmodel</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>si.initmodel</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>util</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>fr.imag.adele.graphictests.cadse</artifactId>
 			<version>2.3.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>fr.imag.adele.graphictests</artifactId>
 			<version>2.3.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>si.uiplatform.swt</artifactId>
 		</dependency>		
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>Model.Workspace.CadseG</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>fr.imag.adele.cadse</groupId>
+			<groupId>fr.imag.adele.cadse.runtime</groupId>
 			<artifactId>si.persistence</artifactId>
 			<version>2.3.0-SNAPSHOT</version>
 			<type>bundle</type>
