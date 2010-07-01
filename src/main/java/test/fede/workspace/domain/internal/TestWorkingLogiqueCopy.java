@@ -83,6 +83,7 @@ import fr.imag.adele.cadse.core.attribute.CheckStatus;
 import fr.imag.adele.cadse.core.attribute.IAttributeType;
 import fr.imag.adele.cadse.core.content.ContentItem;
 import fr.imag.adele.cadse.core.impl.CadseIllegalArgumentException;
+import fr.imag.adele.cadse.core.impl.ExportImportCadseFunction;
 import fr.imag.adele.cadse.core.key.DefaultKeyDefinitionImpl;
 import fr.imag.adele.cadse.core.key.Key;
 import fr.imag.adele.cadse.core.transaction.LogicalWorkspaceTransaction;
@@ -90,7 +91,6 @@ import fr.imag.adele.cadse.core.transaction.delta.ImmutableWorkspaceDelta;
 import fr.imag.adele.cadse.core.transaction.delta.ItemDelta;
 import fr.imag.adele.cadse.core.transaction.delta.LinkDelta;
 import fr.imag.adele.cadse.core.transaction.delta.LinkKey;
-import fr.imag.adele.cadse.si.workspace.uiplatform.swt.exportimport.ExportImportCadseFunction;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CCadse;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CItem;
 import fr.imag.adele.fede.workspace.as.initmodel.jaxb.CLink;
@@ -2040,7 +2040,7 @@ Item currentItem;
 	@Test
 	public void testImportCadseg() throws CadseException, IOException, JAXBException {
 		URL importCadseZip = TestActivator.findResource("ImportCadse.zip");
-		Item cadse = ExportImportCadseFunction.importCadse(null, importCadseZip.openStream());
+		Item cadse = new ExportImportCadseFunction().importCadse(null, importCadseZip.openStream());
 		assertNotNull(cadse);
 		
 		generateAssert(cadse, "cadseg");
@@ -2049,7 +2049,7 @@ Item currentItem;
 	@Test
 	public void testImportMind() throws CadseException, IOException, JAXBException {
 		URL importCadseZip = TestActivator.findResource("Model.Workspace.mind-src.zip");
-		Item cadse = ExportImportCadseFunction.importCadse(null, importCadseZip.openStream());
+		Item cadse =new ExportImportCadseFunction().importCadse(null, importCadseZip.openStream());
 		assertNotNull(cadse);
 		
 		generateAssert(cadse, "mind");
