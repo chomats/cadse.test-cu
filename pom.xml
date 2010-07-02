@@ -24,7 +24,6 @@
 						<Import-Package>org.apache.log4j,
 							org.apache.felix.ipojo;version="1.4.0",
 							fr.imag.adele.graphictests.test,
-							fr.imag.adele.graphictests.test,
 							org.eclipse.swtbot.eclipse.finder,
 							org.eclipse.swtbot.swt.finder,
 							org.eclipse.swt.widgets,
