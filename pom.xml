@@ -90,5 +90,11 @@
 			<artifactId>si.persistence</artifactId>
 			<version>2.3.3-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>fr.imag.adele.cadse</groupId>
+			<artifactId>cadseg.generator</artifactId>
+			<version>2.3.3-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 </project>

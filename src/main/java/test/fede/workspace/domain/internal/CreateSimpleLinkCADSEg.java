@@ -30,12 +30,13 @@ import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
 import org.junit.Test;
 import org.osgi.framework.Bundle;
 
-import fr.imag.adele.cadse.cadseg.generate.GenerateCadseDefinitionModel;
+import fr.imag.adele.cadse.cadseg.generator.gclass.GenerateCadseDefinitionModel;
 import fr.imag.adele.cadse.cadseg.managers.CadseDefinitionManager;
 import fr.imag.adele.cadse.cadseg.managers.attributes.LinkTypeManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.DataModelManager;
 import fr.imag.adele.cadse.cadseg.managers.dataModel.ItemTypeManager;
 import fr.imag.adele.cadse.core.CadseGCST;
+import fr.imag.adele.cadse.core.GenContext;
 import fr.imag.adele.cadse.core.Item;
 import fr.imag.adele.cadse.core.LogicalWorkspace;
 import fr.imag.adele.cadse.core.impl.CadseCore;
@@ -211,7 +212,7 @@ public class CreateSimpleLinkCADSEg extends GTTestCase {
 		max_ = LinkTypeManager.getMaxAttribute(itemLt_a_to_b);
 		assertEquals(max_, -1);
 
-		CCadse ccadse = GenerateCadseDefinitionModel.generateCADSE(cadseDefinition);
+		CCadse ccadse = new GenerateCadseDefinitionModel().generateCADSE(cadseDefinition, new GenContext(null));
 		CItemType citemTypeA = findType(ccadse, TypeA);
 		assertNotNull(citemTypeA);
 		CLinkType clt_a_to_b = findLinkType(citemTypeA, lt_a_to_b);
